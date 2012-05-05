@@ -1,0 +1,399 @@
+<?php
+$this->headLink()->appendStylesheet($this->baseUrl . '/css/site.css', 'screen, projection');
+$this->headLink()->appendStylesheet($this->baseUrl . '/css/index.css', 'screen, projection');
+$this->headScript()->appendFile($this->baseUrl . '/js/index.js');
+?>
+
+<div class="banners" id="header_banners">
+    <div class="banner-content"><img src="/upload/banner-600x90.jpg" alt="banner-600x90.jpg" width="600" height="90" /></div>
+    <div class="banner-content"><img src="/upload/banner-360x60.jpg" alt="banner-360x60.jpg" width="360" height="90" /></div>
+</div><!-- #header_banners-->
+
+<div id="section-top">
+    <div class="section-top-container">
+        <div class="section-top-content">
+            <?= $this->getHotNews() ?>
+            <div class="section-top-banners">
+                <img src="/upload/banner-580x73.jpg" width="580" height="73" alt="banner-580x73" />
+            </div><!-- .section-top-banners-->
+        </div><!-- .section-top-content -->
+    </div><!-- .section-top-container -->
+
+    <div class="section-top-right-column">
+        <div class="posts-strips">
+            <ul class="strips-menu">
+                <li><a href="#news">News Roll</a></li>
+                <li><a href="#popular">Popular</a></li>
+                <li><a href="#blogs">Last Blogs</a></li>
+                <li><a href="#partner">Partner News</a></li>
+            </ul>
+            <?= $this->getNewsRoll() ?>
+            <?= $this->getNewsRollPopular() ?>
+            <div id="blogs" class="strip-tab scroller">
+                <ul>
+                    <li><a href="#">Six CSS Layout Features To Look Forward</a><span class="post-date">today, 15:32</span></li>
+                    <li><a href="#">The Smashing Deals Countdown For Christmas</a><span class="post-date">today, 15:26</span></li>
+                    <li><a href="#">The Messy Art Of UX Sketching</a><span class="post-date">today, 15:20</span></li>
+                    <li><a href="#" class="hot">An Introduction To Object Oriented CSS (OOCSS)</a><span class="post-date">today, 15:16</span></li>
+                    <li><a href="#">Clear Indications That It’s Time To Redesign</a><span class="post-date">today, 15:08</span></li>
+                    <li><a href="#">Six CSS Layout Features To Look Forward</a><span class="post-date">today, 15:32</span></li>
+                    <li><a href="#">The Smashing Deals Countdown For Christmas</a><span class="post-date">today, 15:26</span></li>
+                    <li><a href="#">The Messy Art Of UX Sketching</a><span class="post-date">today, 15:20</span></li>
+                </ul>
+            </div>
+            <div id="partner" class="strip-tab scroller">
+                <ul>
+                    <li><a href="#">Six CSS Layout Features To Look Forward</a><span class="post-date">today, 15:32</span></li>
+                    <li><a href="#">The Smashing Deals Countdown For Christmas</a><span class="post-date">today, 15:26</span></li>
+                    <li><a href="#">The Messy Art Of UX Sketching</a><span class="post-date">today, 15:20</span></li>
+                    <li><a href="#" class="hot">An Introduction To Object Oriented CSS (OOCSS)</a><span class="post-date">today, 15:16</span></li>
+                    <li><a href="#">Clear Indications That It’s Time To Redesign</a><span class="post-date">today, 15:08</span></li>
+                    <li><a href="#">Six CSS Layout Features To Look Forward</a><span class="post-date">today, 15:32</span></li>
+                    <li><a href="#">The Smashing Deals Countdown For Christmas</a><span class="post-date">today, 15:26</span></li>
+                    <li><a href="#">The Messy Art Of UX Sketching</a><span class="post-date">today, 15:20</span></li>
+                </ul>
+            </div>
+        </div><!-- .posts-strips-->
+
+        <div id="section-top-banner" class="banners">
+            <img src="/upload/banner-380x80.jpg" alt="banner-380x80.jpg" width="380" height="80" />
+        </div><!-- .section-top-banner-->
+
+        <div class="weather-exchange-wrap wrap">
+            <div class="weather-section-top">
+                <div class="head"><h3>Weather</h3></div>
+                <p class="weather-label">Weather in <span class="weather-location">Baku, Azerbaijan</span></p>
+                <p class="weather-info cloudly-rainy">
+                    <span class="temperature">+9&deg;C</span>
+                    <span class="description">cloudly, rainy</span>
+                </p>
+            </div><!-- .weather-section-top-->
+
+            <div class="exchange-section-top">
+                <div class="head"><h3>Exchange rates</h3></div>
+                <table>
+                    <tr>
+                        <th><a href="#">USD</a></th>
+                        <td>31,8957</td>
+                        <td><span class="delta-up">0,1256</span></td>
+                    </tr>
+                    <tr class="separator">
+                        <th><a href="#">EUR</a></th>
+                        <td>41,4389</td>
+                        <td><span class="delta-down">0,0456</span></td>
+                    </tr>
+                    <tr>
+                        <th><a href="#">OIL</a></th>
+                        <td>104,31</td>
+                        <td><span class="delta-up">0,87</span></td>
+                    </tr>
+                </table>
+            </div><!-- .exchange-section-top-->
+        </div><!-- .weather-exchange-wrap-->
+
+        <div class="bloggers-section-top">
+            <div class="head"><h3>Top Blogers</h3></div>
+            <div class="bloggers-list">
+                <ul>
+                    <li style="background: url(upload/avatar-01.jpg)"><a href="#" title="blogger name 1"></a></li>
+                    <li style="background: url(upload/avatar-02.jpg)"><a href="#" title="blogger name 2"></a></li>
+                    <li style="background: url(upload/avatar-03.jpg)" class="user-status-vip" title="blogger name 3"><a href="#"></a></li>
+                    <li style="background: url(upload/avatar-04.jpg)"><a href="#" title="blogger name 4"></a></li>
+                    <li style="background: url(upload/avatar-05.jpg)"><a href="#" title="blogger name 5"></a></li>
+                </ul>
+            </div><!-- .bloggers-list-->
+        </div>
+    </div><!-- .section-top-right-column-->
+
+</div><!-- #section_top-->
+
+<div class="banners" id="middle_banners">
+    <div class="banner-content"><img src="/upload/banner-960x90.jpg" alt="banner-960x90.jpg" width="960" height="90" /></div>
+</div><!-- #middle_banners-->
+
+<div id="section-middle">
+    <div class="section-middle-wrap wrap">
+        <?= $this->getNewsHomeBlock() ?>
+
+        <div class="section-middle-right-column">
+            <div class="live-scores-block">
+                <div class="head"><h3>Live Scores</h3></div>
+                <div class="scores-table-wrap scroller">
+                    <h4>Soccer scores</h4>
+                    <table>
+                        <tr>
+                            <th class="title az" colspan="2">Premier League</th>
+                            <th class="date">Dec 16</th>
+                        </tr>
+                        <tr>
+                            <td class="time on">15'</td>
+                            <td class="teams">
+                                Khazar Lenkoran<br/>
+                                FC Kapaz
+                            </td>
+                            <td class="score">1<br/>
+                            1
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="time off">25'</td>
+                            <td class="teams">FC Baku<br/>
+                            FC Qabala</td>
+                            <td class="score">1<br/>1</td>
+                        </tr>
+                        <tr>
+                            <td class="time on">15'</td>
+                            <td class="teams">
+                                Khazar Lenkoran<br/>
+                                FC Kapaz
+                            </td>
+                            <td class="score">1<br/>
+                            1
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="time off">25'</td>
+                            <td class="teams">FC Baku<br/>
+                            FC Qabala</td>
+                            <td class="score">1<br/>1</td>
+                        </tr>
+                    </table>
+                </div><!-- .scores-table-wrap-->
+            </div><!-- .live-scores-block-->
+
+            <div class="social-block">
+                <img src="/upload/social-groups.jpg" alt="" />
+            </div><!-- .social-block-->
+        </div><!-- .section-middle-right-column-->
+    </div><!-- .section-middle-wrap-->
+</div><!-- #section-middle-->
+
+<div id="section-middle-2" class="wrap">
+    <div class="realty-block">
+        <div class="head"><h3>Realty</h3></div>
+        <div class="body">
+            <div class="realty-list scroller">
+                <ul>
+                    <li><a href="#" class="strong">Six CSS Layout Features To Look Forward</a> <span class="post-date">today, 15:32</span></li>
+                    <li><a href="#">The Smashing Deals Countdown For Christmas</a> <span class="post-date">today, 15:26</span></li>
+                    <li><a href="#">The Messy Art Of UX Sketching</a> <span class="post-date">today, 15:20</span></li>
+                    <li><a href="#" class="hot">An Introduction To Object Oriented CSS (OOCSS)</a> <span class="post-date">today, 15:16</span></li>
+                    <li><a href="#">Clear Indications That It’s Time To Redesign</a> <span class="post-date">today, 15:08</span></li>
+                    <li><a href="#" class="strong">Six CSS Layout Features To Look Forward</a> <span class="post-date">today, 15:32</span></li>
+                    <li><a href="#">The Smashing Deals Countdown For Christmas</a> <span class="post-date">today, 15:26</span></li>
+                    <li><a href="#">The Messy Art Of UX Sketching</a> <span class="post-date">today, 15:20</span></li>
+                    <li><a href="#" class="hot">An Introduction To Object Oriented CSS (OOCSS)</a> <span class="post-date">today, 15:16</span></li>
+                    <li><a href="#">Clear Indications That It’s Time To Redesign</a> <span class="post-date">today, 15:08</span></li>
+                </ul>
+            </div><!-- .realty-list-->
+            <?= $this->getAdsHomeRealty() ?>
+        </div>
+    </div><!-- .realty-block-->
+    <div class="horoscope-block">
+        <div class="head"><h3>Horoscope</h3></div>
+        <div class="horoscope-list">
+            <ul>
+                <li><a href="#" class="Aries">Aries</a></li>
+                <li><a href="#" class="Taurus">Taurus</a></li>
+                <li><a href="#" class="Gemini">Gemini</a></li>
+                <li><a href="#" class="Cancer">Cancer</a></li>
+                <li><a href="#" class="Leo">Leo</a></li>
+                <li><a href="#" class="Virgo">Virgo</a></li>
+                <li><a href="#" class="Libra">Libra</a></li>
+                <li><a href="#" class="Scorpio">Scorpio</a></li>
+                <li><a href="#" class="Sagittarius">Sagittarius</a></li>
+                <li><a href="#" class="Capricorn">Capricorn</a></li>
+                <li><a href="#" class="Aquarius">Aquarius</a></li>
+                <li><a href="#" class="Pisces">Pisces</a></li>
+            </ul>
+        </div><!-- .horoscope-list-->
+    </div><!-- .horoscope-block-->
+</div><!-- #section-middle-2-->
+
+<div class="banners" id="bottom_banners">
+    <div class="banner-content"><img src="/upload/banner-960x90-2.jpg" alt="banner-960x90.jpg" width="960" height="90" /></div>
+</div><!-- #bottom_banners-->
+
+<?= $this->getAdsHomePayed() ?>
+
+<div id="section-bottom">
+    <div class="section-bottom-wrap wrap">
+        <div class="section-bottom-main-col">
+            <div class="section-bottom-banner"><img src="/upload/banner-400x160.jpg" alt="banner-400x160" width="400" height="160" /></div>
+            <div class="stars-block">
+                <div class="head"><h3>Stars</h3></div>
+                <div class="stars-slides">
+                    <ul>
+                        <li class="stars-slide active-state">
+                            <div class="stars-slide-link"><a href="#">111</a></div>
+                            <div class="stars-slide-image"><img src="/upload/stars-slide.jpg" /></div>
+                            <div class="stars-slide-label">
+                                <h4><a href="#">Nigar Jamal</a></h4>
+                                <p>A year ago, 20-year-old actress was nominated for "Oscar" for Best Actress</p>
+                            </div>
+                        </li>
+                        <li class="stars-slide">
+                            <div class="stars-slide-link"><a href="#">111</a></div>
+                            <div class="stars-slide-image"><img src="/upload/stars-slide.jpg" /></div>
+                            <div class="stars-slide-label">
+                                <h4><a href="#">Nigar Jamal</a></h4>
+                                <p>A year ago, 20-year-old actress was nominated for "Oscar" for Best Actress</p>
+                            </div>
+                        </li>
+                        <li class="stars-slide">
+                            <div class="stars-slide-link"><a href="#">111</a></div>
+                            <div class="stars-slide-image"><img src="/upload/stars-slide.jpg" /></div>
+                            <div class="stars-slide-label">
+                                <h4><a href="#">Nigar Jamal</a></h4>
+                                <p>A year ago, 20-year-old actress was nominated for "Oscar" for Best Actress</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div><!-- .stars-slides-->
+                <div class="stars-list scroller">
+                    <ul>
+                        <li><a href="#">Tarkan</a></li>
+                        <li><a href="#">Ricky Martin</a></li>
+                        <li><a href="#">Carlos Santana</a></li>
+                        <li><a href="#">Chemical Brothers</a></li>
+                        <li><a href="#">50 cent</a></li>
+                        <li><a href="#">Eminem</a></li>
+                        <li><a href="#">Tarkan</a></li>
+                        <li><a href="#">Ricky Martin</a></li>
+                        <li><a href="#">Carlos Santana</a></li>
+                        <li><a href="#">Chemical Brothers</a></li>
+                        <li><a href="#">50 cent</a></li>
+                        <li><a href="#">Eminem</a></li>
+                        <li><a href="#">Tarkan</a></li>
+                        <li><a href="#">Ricky Martin</a></li>
+                        <li><a href="#">Carlos Santana</a></li>
+                        <li><a href="#">Chemical Brothers</a></li>
+                        <li><a href="#">50 cent</a></li>
+                        <li><a href="#">Eminem</a></li>
+                    </ul>
+                </div><!-- .stars-list-->
+                <div class="stars-all-link">
+                    <a href="#">All stars</a>
+                </div><!-- .stars-all-link-->
+            </div><!-- .stars-block-->
+        </div><!-- .section-bottom-main-col-->
+
+        <?= $this->getAdsHomeVacancy() ?>
+
+        <div class="live-broadcast-block">
+            <div class="head"><h3>Live Broadcast</h3></div>
+            <div class="broadcast-wrap">
+                <div class="broadcast-price">just 20 cents</div>
+                <div class="broadcast-list scroller">
+                    <ul>
+                        <li class="broadcast-item">
+                            <div class="broadcast-item-info">
+                                <p class="post-date">December 16th, 2011</p>
+                                <p class="post-msg">Happy Birthday, Sister! God blessing you!</p>
+                            </div>
+                            <div class="mask"></div>
+                            <div class="broadcast-item-image">
+                                <img src="/upload/avatar-01.jpg" />
+                            </div>
+                        </li><!-- .broadcast-item-->
+                        <li class="broadcast-item">
+                            <div class="broadcast-item-info">
+                                <p class="post-date">December 16th, 2011</p>
+                                <p class="post-msg">All of the competition! Trim the tree http://cards.sfera.az</p>
+                            </div>
+                            <div class="mask"></div>
+                            <div class="broadcast-item-image">
+                                <img src="/upload/avatar-02.jpg" />
+                            </div>
+                        </li><!-- .broadcast-item-->
+                        <li class="broadcast-item">
+                            <div class="broadcast-item-info">
+                                <p class="post-date">December 16th, 2011</p>
+                                <p class="post-msg">Son, happy birthday you !!!!!!!!!!</p>
+                            </div>
+                            <div class="mask"></div>
+                            <div class="broadcast-item-image">
+                                <img src="/upload/avatar-03.jpg" />
+                            </div>
+                        </li><!-- .broadcast-item-->
+                        <li class="broadcast-item">
+                            <div class="broadcast-item-info">
+                                <p class="post-date">December 16th, 2011</p>
+                                <p class="post-msg">Polinochka, Happy Birthday to you, my Docha! You Are My Sun.</p>
+                            </div>
+                            <div class="mask"></div>
+                            <div class="broadcast-item-image">
+                                <img src="/upload/avatar-04.jpg" />
+                            </div>
+                        </li><!-- .broadcast-item-->								<li class="broadcast-item">
+                            <div class="broadcast-item-info">
+                                <p class="post-date">December 16th, 2011</p>
+                                <p class="post-msg">Tom, my son, happy birthday! bless you!</p>
+                            </div>
+                            <div class="mask"></div>
+                            <div class="broadcast-item-image">
+                                <img src="/upload/avatar-05.jpg" />
+                            </div>
+                        </li><!-- .broadcast-item-->
+                        <li class="broadcast-item">
+                            <div class="broadcast-item-info">
+                                <p class="post-date">December 16th, 2011</p>
+                                <p class="post-msg">Happy Birthday, Sister! God blessing you!</p>
+                            </div>
+                            <div class="mask"></div>
+                            <div class="broadcast-item-image">
+                                <img src="/upload/avatar-01.jpg" />
+                            </div>
+                        </li><!-- .broadcast-item-->
+                        <li class="broadcast-item">
+                            <div class="broadcast-item-info">
+                                <p class="post-date">December 16th, 2011</p>
+                                <p class="post-msg">All of the competition! Trim the tree http://cards.sfera.az</p>
+                            </div>
+                            <div class="mask"></div>
+                            <div class="broadcast-item-image">
+                                <img src="/upload/avatar-02.jpg" />
+                            </div>
+                        </li><!-- .broadcast-item-->
+                        <li class="broadcast-item">
+                            <div class="broadcast-item-info">
+                                <p class="post-date">December 16th, 2011</p>
+                                <p class="post-msg">Son, happy birthday you !!!!!!!!!!</p>
+                            </div>
+                            <div class="mask"></div>
+                            <div class="broadcast-item-image">
+                                <img src="/upload/avatar-03.jpg" />
+                            </div>
+                        </li><!-- .broadcast-item-->
+                        <li class="broadcast-item">
+                            <div class="broadcast-item-info">
+                                <p class="post-date">December 16th, 2011</p>
+                                <p class="post-msg">Polinochka, Happy Birthday to you, my Docha! You Are My Sun.</p>
+                            </div>
+                            <div class="mask"></div>
+                            <div class="broadcast-item-image">
+                                <img src="/upload/avatar-04.jpg" />
+                            </div>
+                        </li><!-- .broadcast-item-->
+                        <li class="broadcast-item">
+                            <div class="broadcast-item-info">
+                                <p class="post-date">December 16th, 2011</p>
+                                <p class="post-msg">Tom, my son, happy birthday! bless you!</p>
+                            </div>
+                            <div class="mask"></div>
+                            <div class="broadcast-item-image">
+                                <img src="/upload/avatar-05.jpg" />
+                            </div>
+                        </li><!-- .broadcast-item-->
+                    </ul>
+                </div><!-- .broadcast-list-->
+                <div class="broadcast-send-message">
+                    <a href="#">Send message</a>
+                </div><!-- .broadcast-message-send-->
+                <div class="broadcast-all-link">
+                    <a href="#">See all messages</a>
+                </div><!-- .broadcast-message-all-link-->
+            </div><!-- .lbroadcast-wrap-->
+        </div><!-- .live-broadcast-block-->
+    </div><!-- .section-bottom-wrap-->
+</div>

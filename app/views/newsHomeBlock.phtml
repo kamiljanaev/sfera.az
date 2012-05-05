@@ -1,0 +1,62 @@
+<div class="news-block">
+    <div class="head"><h3>News</h3></div>
+    <div class="body">
+        <div id="news-tabs">
+            <div class="news-categories">
+                <ul>
+                    <?php foreach ($this->newsDataArray as $newsDataItem): ?>
+                    <li><a href="#category-<?= $newsDataItem['id'] ?>"><?= $newsDataItem['title'] ?></a></li>
+                    <?php endforeach; ?>
+                </ul>
+                <div class="scroll prev disabled"><span>previous</span></div>
+                <div class="scroll next disabled"><span>next</span></div>
+            </div>
+            <?php foreach ($this->newsDataArray as $newsDataItem): ?>
+            <div id="category-<?= $newsDataItem['id'] ?>" class="news-content wrap">
+                <?php $newsList = $newsDataItem['news_list']; ?>
+                <?php if (array_key_exists(0, $newsList)): ?>
+                    <?php $lastNews = $newsList[0]; ?>
+                    <div class="post-last">
+                        <p class="post-image">
+                            <img src="<?= Core_Image::getImagePath($lastNews->image, Core_Image::NEWS_MEDIUM) ?>" alt="<?= $lastNews->title ?>" />
+                        </p>
+                        <p class="post-date"><?= $this->formatDate($lastNews->public_date) ?></p>
+                        <h3 class="post-title"><a href="<?= $this->getUrl('news/show/'.$lastNews->id) ?>"><?= $lastNews->title ?></a></h3>
+                        <p class="post-excerpt"><?= $lastNews->short_content ?></p>
+                        <ul class="post-meta">
+                            <li class="post-views"><?= $lastNews->getViewCounter() ?></li>
+                            <li class="post-comments"><a href="<?= $this->getUrl('news/show/'.$lastNews->id.'#comments') ?>"><?= $this->getCommentsCount($lastNews->id, Core_Db_Comments::C_NEWS) ?></a></li>
+                            <li class="post-fav"><?= $this->getFavLink(1, $lastNews->id) ?></li>
+                        </ul>
+                        <div class="facebook-like"><img src="/upload/fb-like.jpg" /></div>
+                    </div>
+                <?php endif; ?>
+                <div class="post-list">
+                    <ul>
+                        <?php $isFirst = true; ?>
+                        <?php $i = 1; ?>
+                        <?php foreach ($newsList as $newsListItem): ?>
+                            <?php if ($isFirst): ?>
+                                <?php $isFirst = false; ?>
+                                <?php continue; ?>
+                            <?php endif; ?>
+                            <li id="post-<?= $i++ ?>" class="post-item">
+                                <div class="post-image">
+                                    <span class="post-image-container">
+                                        <img src="<?= Core_Image::getImagePath($newsListItem->image, Core_Image::NEWS_SMALL) ?>" alt="<?= $newsListItem->title ?>" />
+                                    </span>
+                                </div>
+                                <div class="post-info">
+                                    <h4 class="post-title"><a href="<?= $this->getUrl('news/show/'.$newsListItem->id) ?>"><?= $newsListItem->title ?></a></h4>
+                                    <p class="post-excerpt"><?= $newsListItem->short_content ?></p>
+                                </div>
+                            </li><!-- .post-item -->
+                        <?php endforeach; ?>
+                    </ul>
+                    <div class="more-link"><a href="<?= $this->getUrl('news/category/'.$newsDataItem['category_id']) ?>">All <?= strtolower($newsDataItem['title']) ?> news</a></div>
+                </div><!-- .post-list-->
+            </div><!-- .news-content-wrap-->
+            <?php endforeach; ?>
+        </div>
+    </div>
+</div><!-- .news-block-->

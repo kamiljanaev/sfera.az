@@ -1,0 +1,32 @@
+        <div class="hot-wrap">
+            <?php foreach ($this->newsHotDataArray as $newsItem): ?>
+                <div class="post-item hot">
+                    <div class="post-image">
+                        <span class="post-image-container"><img src="<?= Core_Image::getImagePath($newsItem->image, Core_Image::NEWS_SMALL) ?>" alt="<?= $newsItem->title ?>" /></span>
+                    </div>
+                    <div class="post-info">
+                        <h4 class="post-title"><a href="<?= $this->getUrl('news/show/'.$newsItem->id) ?>"><?= $newsItem->title ?></a></h4>
+                        <p class="post-excerpt"><?= $newsItem->short_content ?></p>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
+	    <?php $i = 1; ?>
+        <?php foreach ($this->newsDataArray as $newsItem): ?>
+            <div class="post-item">
+                <p class="post-date"><?= $this->formatDate($newsItem->public_date) ?></p>
+                <h3 class="post-title"><a href="<?= $this->getUrl('news/show/'.$newsItem->id) ?>"><?= $newsItem->title ?></a></h3>
+                <p class="post-excerpt"><?= $newsItem->short_content ?></p>
+                <ul class="post-meta">
+                    <li class="post-views"><?= $newsItem->getViewCounter() ?></li>
+                    <li class="post-comments"><a href="<?= $this->getUrl('news/show/'.$newsItem->id.'#comments') ?>"><?= $this->getCommentsCount($newsItem->id, Core_Db_Comments::C_NEWS) ?></a></li>
+                    <li class="post-fav"><?= $this->getFavLink(1, $newsItem->id) ?></li>
+                </ul>
+                <div class="facebook-like"><img src="/upload/fb-like.jpg" /></div>
+            </div>
+            <?php if (count($this->newsDataArray) != $i++): ?>
+            <div class="hr"></div>
+            <?php endif; ?>
+        <?php endforeach; ?>
+
+

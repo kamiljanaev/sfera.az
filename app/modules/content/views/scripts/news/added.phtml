@@ -1,0 +1,30 @@
+<?php
+    $this->headLink()->appendStylesheet($this->baseUrl . '/css/jquery.selectBox.css', 'screen, projection');
+    $this->headLink()->appendStylesheet($this->baseUrl . '/css/profile.css', 'screen, projection');
+    $this->headScript()->appendFile($this->baseUrl . '/js/jquery.customselectbox.min.js');
+    $this->headScript()->appendFile($this->baseUrl . '/js/profile.js');
+?>
+
+
+<div id="section-profile">
+    <div class="container">
+        <div class="content">
+
+            <div class="user-edit-profile">
+                <div class="head">
+                    <h1>Add news</h1>
+                </div>
+                <div class="message">
+                    News succesfully added
+                </div>
+                    <div class="submit">
+                        <a href="<?= $this->getUrl('profile')?>">Go to profile</a>
+                    </div>
+                    </form>
+            </div>
+
+        </div><!-- .content -->
+    </div><!-- .container -->
+
+    <?= $this->partial('frontProfileSidebar.phtml', $this) ?>
+</div><!-- #section-profile -->

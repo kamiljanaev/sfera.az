@@ -1,0 +1,52 @@
+<?= $this->flashMessages(); ?>
+<?php
+    $this->headLink()->appendStylesheet($this->baseUrl . '/css/jquery.selectBox.css', 'screen, projection');
+    $this->headLink()->appendStylesheet($this->baseUrl . '/css/profile.css', 'screen, projection');
+    $this->headScript()->appendFile($this->baseUrl . '/js/jquery.customselectbox.min.js');
+    $this->headScript()->appendFile($this->baseUrl . '/js/profile.js');
+?>
+
+
+<div id="section-profile">
+    <div class="container">
+        <div class="content">
+            <div class="user-bookmarks">
+                <div class="head"><h1>My bookmarks</h1></div>
+                <div class="body">
+                    <div class="bookmarks-category-add">
+                    <a href="<?= $this->getUrl('bookmarks/category/add/') ?>">New Category</a>
+                    </div>
+                    <?php $counter = 1; ?>
+                    <?php foreach ($this->categoriesList as $categoryItem): ?>
+                    <?php $bookmarksList = $categoryItem->getBookmarks(); ?>
+                    <div class="bookmarks-category">
+                        <h3 class="bookmarks-category-name hover">
+                            <?= $categoryItem->title ?>
+                            <span class="manage"><a href="<?= $this->getUrl('bookmarks/category/edit/'.$categoryItem->id) ?>" class="edit">edit</a><a href="<?= $this->getUrl('bookmarks/category/remove/'.$categoryItem->id) ?>" class="remove">remove</a><a href="<?= $this->getUrl('bookmarks/add/'.$categoryItem->id) ?>" class="add">add bookmark</a></span>
+                        </h3>
+
+                        <div class="bookmarks-category-contents">
+                            <ul>
+                                <?php foreach ($bookmarksList as $bookmarksItem): ?>
+                                    <li class="hover">
+                                        <a href="<?= $bookmarksItem->url ?>"><?= $bookmarksItem->title ?></a>
+                                        <span class="manage"><a href="<?= $this->getUrl('bookmarks/edit/'.$bookmarksItem->id) ?>" class="edit">edit</a><a href="<?= $this->getUrl('bookmarks/remove/'.$bookmarksItem->id) ?>" class="remove">remove</a></span>
+                                    </li>
+                                <?php endforeach; ?>
+                            </ul>
+                        </div>
+
+                    </div>
+                        <?php if (count($categoryItem) > $counter++): ?>
+                            <div class="hr"></div>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+
+                </div>
+            </div><!-- .user-bookmarks -->
+
+        </div><!-- .content -->
+    </div><!-- .container -->
+
+    <?= $this->partial('frontProfileSidebar.phtml', $this) ?>
+</div><!-- #section-profile -->

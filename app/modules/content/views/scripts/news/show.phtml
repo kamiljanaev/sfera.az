@@ -1,0 +1,182 @@
+<?php
+$this->headLink()->appendStylesheet($this->baseUrl . '/css/jquery.selectBox.css', 'screen, projection');
+$this->headLink()->appendStylesheet($this->baseUrl . '/css/site.css', 'screen, projection');
+$this->headLink()->appendStylesheet($this->baseUrl . '/css/news.css', 'screen, projection');
+$this->headLink()->appendStylesheet($this->baseUrl . '/css/news-colors.css', 'screen, projection');
+$this->headScript()->appendFile($this->baseUrl . '/js/index.js');
+
+?>
+
+
+
+<div id="news-middle">
+    <div class="banners" id="header_banners">
+        <div class="banner-content"><img src="/upload/banner-600x90.jpg" alt="banner-600x90.jpg" width="600" height="90" /></div>
+        <div class="banner-content"><img src="/upload/banner-360x60.jpg" alt="banner-360x60.jpg" width="360" height="90" /></div>
+    </div><!-- #header_banners-->
+
+    <div id="news-container">
+        <div id="news-content">
+            <div class="news-post">
+					<div class="head">
+						<h1><?= $this->newsitem->title ?></h1>
+					</div>
+
+					<div class="body">
+						<ul class="post-meta">
+							<li class="post-views"><?= $this->newsitem->getViewCounter() ?></li>
+							<li class="post-comments"><a href="#comments"><?= $this->getCommentsCount($this->newsitem->id, Core_Db_Comments::C_NEWS) ?></a></li>
+							<li class="post-fav"><?= $this->getFavLink(1, $this->newsitem->id) ?></li>
+							<li class="post-social">
+								<img src="/upload/post-social-dump.jpg" style="vertical-align: middle" />
+							</li>
+						</ul>
+
+						<div class="post-content">
+							<p class="post-date"><?= $this->formatDate($this->newsitem->public_date) ?></p>
+
+                            <?= $this->newsitem->content ?>
+						</div>
+
+						<div class="post-rating">
+							<div class="do-rating">
+								<span class="label">News-rating:</span>
+                                <?php if ($this->profileData): ?>
+								<a href="<?= $this->getUrl('news/rating/down/'.$this->newsitem->id) ?>" class="ratingtrigger"><span class="do down"></span></a>
+                                <?php endif; ?>
+								<span class="value"><?= $this->newsitem->rating ?></span>
+                                <?php if ($this->profileData): ?>
+								<a href="<?= $this->getUrl('news/rating/up/'.$this->newsitem->id) ?>" class="ratingtrigger"><span class="do up"></span></a>
+                                <?php endif; ?>
+							</div>
+
+                            <?php if ($this->profileData): ?>
+                                <div class="complain"><a href="<?= $this->getUrl('content/complain/add/') ?>" class="do-complain" item-id="<?= $this->newsitem->id ?>" item-type="<?= Core_Db_Complains::C_NEWS ?>">Complain</a></div>
+                            <?php endif; ?>
+						</div>
+
+						<div class="hr"></div>
+
+						<div class="tags-trend">
+							<h4>Subscribe Tags</h4>
+							<ul>
+                                <?php $i = 1; ?>
+                                <?php foreach($this->newstags as $tagLinkItem): ?>
+                                    <?php $currentTag = $tagLinkItem->getTag(); ?>
+                                    <?php if($currentTag && $currentTag->is_paid): ?>
+                                        <?php $i++; ?>
+                                        <li>
+                                            <a href="<?= $this->getUrl('news/tags/'.$currentTag->id) ?>">
+                                                <span class="image" style="background: url(<?= $currentTag->getLogo() ?>)"></span>
+                                                <span class="name"><?= $currentTag->title ?></span>
+                                                <span class="followers"><?= $currentTag->getCountSubscribers() ?> followers</span>
+                                            </a>
+                                            <?= $this->getTagFollowLink($currentTag) ?>
+                                        </li>
+                                    <?php endif; ?>
+                                    <?php if($i == 5): ?>
+                            </ul>
+                            <div class="hr"></div>
+                            <div class="all-link">
+                                <a href="#" id="toggle-tags-block">See all tags</a>
+                            </div>
+                            <div id="other-tags-link-block" style="display: none;">
+                            <ul>
+                                    <?php endif; ?>
+                                <?php endforeach; ?>
+                            </ul>
+                            <?php if($i > 4): ?>
+							</div>
+                            <?php endif; ?>
+						</div>
+
+						<div class="hr"></div>
+
+                    <?php if (count($this->newsHotDataArray)): ?>
+						<div class="news-block">
+							<h3>Other news</h3>
+							<div class="post-list">
+							<ul>
+                                <?php $i = 1; ?>
+                                <?php foreach ($this->newsHotDataArray as $newsListItem): ?>
+                                    <?php if ($newsListItem->id == $this->newsitem->id): ?>
+                                    <?php continue; ?>
+                                    <?php endif; ?>
+                                    <li id="post-<?= $i++ ?>" class="post-item">
+                                        <div class="post-image">
+                                            <span class="post-image-container">
+                                                <img src="<?= Core_Image::getImagePath($newsListItem->image, Core_Image::NEWS_HOME_LIST) ?>" alt="<?= $newsListItem->title ?>" />
+                                            </span>
+                                        </div>
+                                        <div class="post-info">
+                                            <h4 class="post-title"><a href="<?= $this->getUrl('news/show/'.$newsListItem->id) ?>"><?= $newsListItem->title ?></a></h4>
+                                            <p class="post-excerpt"><?= $newsListItem->short_content ?></p>
+                                        </div>
+                                    </li><!-- .post-item -->
+                                <?php endforeach; ?>
+							</ul>
+							</div>
+						</div>
+                    <?php endif; ?>
+						<div class="hr"></div>
+
+						<div class="comments" id="comments">
+
+                            <?= $this->getComments($this->newsitem->id, Core_Db_Comments::C_NEWS) ?>
+
+<?php if ($this->profileData): ?>
+							<div class="add-comment">
+								<div class="head">
+									<h4>Add comment</h4>
+								</div>
+
+								<div class="body">
+                                    <form action="<?= $this->getUrl('/content/comment/add') ?>" method="POST" id="addCommentForm">
+									<div class="comment-image" style="background: url(<?= $this->profileData->getAvatar(Core_Image::AVATAR_70) ?>)"></div>
+									<div class="label"><span class="name"><?= $this->profileData->getFullName() ?></span> commenting</div>
+									<div class="textarea">
+										<label for="comment-text-textarea">You text comment</label>
+                                        <input type="hidden" name="item_id" id="comment_item_id" value="<?= $this->newsitem->id ?>" />
+                                        <input type="hidden" name="type_id" id="comment_type_id" value="<?= Core_Db_Comments::C_NEWS ?>" />
+										<textarea name="comment" id="comment-text-textarea"></textarea>
+									</div>
+									<div class="submit">
+										<input type="submit" value="Add comment" />
+									</div>
+                                    </form>
+								</div>
+							</div>
+    <?php endif; ?>
+						</div>
+					</div>
+				</div>
+
+        </div><!-- #news-content -->
+    </div><!-- #news-container -->
+
+    <?= $this->partial('news/sidebar.phtml', $this) ?>
+
+
+</div><!-- #news-middle -->
+
+<div id="complain" title="Complain" style="display: none;">
+	<p>Пожалуйста, выберите причину, по которой Вы хотите сообщить администрации сайта об этой записи.</p>
+	<p>
+		<select name="reason" id="complainValue" class="selectBox">
+			<option value="">Выберите причину...</option>
+			<option value="Взрослый контент">Взрослый контент</option>
+			<option value="Детская порнография">Детская порнография</option>
+			<option value="Экстремизм">Экстремизм</option>
+			<option value="Насилие">Насилие</option>
+			<option value="Пропаганда наркотиков">Пропаганда наркотиков</option>
+		</select>
+	</p>
+</div>
+
+<div id="complain-response" title="Complain has ben sent">
+	<p>Your message has been sent to administration.</p>
+</div>
+
+<div id="complain-error" title="Complain has ben sent with error">
+	<p>Error.</p>
+</div>

@@ -1,0 +1,64 @@
+<?php
+	$this->headTitle($this->msgAdminViewTitle);
+    $this->headScript()->appendScript($this->render('admin/news/js/view.js'));
+?>
+<div id="main">
+	<div class="content">
+		<div id="head">
+			<h2><?= $this->msgAdminViewTitle ?></h2>
+		</div>
+        <div class="control">
+            <span class="button reset">
+                <a href="<?php echo $this->getUrl($this->baseUrl); ?>" class="cancel-action"><?= $this->msgButtonBack ?></a>
+            </span>
+        </div>
+		<div id="viewContent">
+			<table>
+                <tr>
+                    <td class="title"><?= $this->translate('ads-admin-form-public-date') ?></td>
+                    <td class="value"><?= $this->controller->getListItemValue($this->dataRow, 'public_date'); ?></td>
+                </tr>
+                <tr>
+                    <td class="title"><?= $this->translate('ads-admin-form-to-date') ?></td>
+                    <td class="value"><?= $this->controller->getListItemValue($this->dataRow, 'to_date'); ?></td>
+                </tr>
+                <tr>
+                    <td class="title"><?= $this->translate('ads-admin-form-is-payed') ?></td>
+                    <td class="value"><?= $this->controller->getListItemValue($this->dataRow, 'is_payed'); ?></td>
+                </tr>
+                <tr>
+                    <td class="title"><?= $this->translate('ads-admin-form-activated') ?></td>
+                    <td class="value"><?= $this->controller->getListItemValue($this->dataRow, 'activated'); ?></td>
+                </tr>
+                <tr>
+                    <td class="title"><?= $this->translate('ads-admin-form-user-id') ?></td>
+                    <td class="value"><?= $this->controller->getListItemValue($this->dataRow, 'user_id'); ?></td>
+                </tr>
+                <tr>
+                    <td class="title"><?= $this->translate('ads-admin-form-category-id') ?></td>
+                    <td class="value"><?= $this->controller->getListItemValue($this->dataRow, 'category_id'); ?></td>
+                </tr>
+                <tr>
+                    <td class="title"><?= $this->translate('ads-admin-form-title') ?></td>
+                    <td class="value"><?= $this->controller->getListItemValue($this->dataRow, 'title'); ?></td>
+                </tr>
+                <tr>
+                    <td class="title"><?= $this->translate('ads-admin-form-value') ?></td>
+                    <td class="value"><?= $this->controller->getListItemValue($this->dataRow, 'value'); ?></td>
+                </tr>
+				<tr>
+					<td class="title"><?= $this->translate('ads-admin-form-image') ?></td>
+					<td class="value"><?= $this->controller->getListItemValue($this->dataRow, 'image'); ?></td>
+				</tr>
+                <tr>
+                    <td class="title"><?= $this->translate('ads-admin-form-short-content') ?></td>
+                    <td class="value"><?= $this->controller->getListItemValue($this->dataRow, 'short_content'); ?></td>
+                </tr>
+				<tr>
+					<td class="title"><?= $this->translate('ads-admin-form-content') ?></td>
+					<td class="value"><?= $this->dataRow->content ?></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>

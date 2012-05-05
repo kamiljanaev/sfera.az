@@ -1,0 +1,15 @@
+<div class="vacancies-block">
+    <div class="head"><h3>Vacancies</h3></div>
+    <div class="body">
+        <div class="vacancies-list scroller">
+            <table>
+                <?php foreach ($this->adsDataArray as $adsDataItem): ?>
+                <tr>
+                    <td class="vacancy-name"><a href="#"><?= $adsDataItem->title ?></a></td>
+                    <td class="vacancy-salary"><span><?= $adsDataItem->value ?></span> azn</td>
+                </tr>
+                <?php endforeach; ?>
+            </table>
+        </div>
+    </div>
+</div><!-- .vacancies-block-->

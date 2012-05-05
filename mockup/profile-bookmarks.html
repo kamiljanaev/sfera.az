@@ -1,0 +1,342 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Sfera.AZ - profile bookmarks</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link rel="stylesheet" href="css/reset.css"  type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="css/header.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="css/footer.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="css/scrollbar.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="css/jquery.selectBox.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="css/post-meta.css" type="text/css" media="screen, projection" />
+
+	<link rel="stylesheet" href="css/profile.css" type="text/css" media="screen, projection" />
+
+	<script src="jscripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+	<script src="jscripts/jquery-ui-1.8.18.custom.min.js" type="text/javascript"></script>
+	<script src="jscripts/jquery.tinyscrollbar.min.js" type="text/javascript"></script>
+	<script src="jscripts/jquery.customselectbox.min.js" type="text/javascript"></script>
+	<script src="jscripts/site.js" type="text/javascript"></script>
+	<script src="jscripts/profile.js" type="text/javascript"></script>
+	<!--script src="http://platform.twitter.com/anywhere.js?id=7ttxjSdhTYxUrZ1to1GrAg&v=1" type="text/javascript"></script-->
+</head>
+
+<body>
+
+<div id="header-banner">
+	<img src="upload/banner-header.jpg" alt="banner-header" width="960" height="116" />
+</div><!-- #header-banner-->
+
+<div id="wrapper">
+
+	<div id="header">
+		<div class="logo"><span class="title">SFERA.AZ</span></div><!-- .logo-->
+
+		<div class="signin">
+			<span class="span-welcome">Welcome to Sfera.az! You can</span>
+			<!--img src="upload/facebook-signin.jpg" alt="facebook-signin" width="150" height="22" /-->
+
+			<div id="fb-root"></div>
+			<!--<script type="text/javascript">
+			  /*window.fbAsyncInit = function() {
+			    FB.init({
+			      appId      : 311758472198961,
+			      status     : true, 
+			      cookie     : true,
+			      xfbml      : true,
+			      oauth      : true,
+			    });
+			  };
+			  (function(d){
+			     var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+			     js = d.createElement('script'); js.id = id; js.async = true;
+			     js.src = "//connect.facebook.net/en_US/all.js";
+			     d.getElementsByTagName('head')[0].appendChild(js);
+			   }(document));*/
+			</script>-->
+			<!--<script type="text/javascript">
+			/* 
+			  twttr.anywhere(function (T) {
+			    T("#twitter-login").connectButton();
+			  });*/
+			 
+			</script>-->
+
+			<div class="fb-login-button">Login with Facebook</div>
+
+			<span class="span-or">- or -</span>
+			<span id="twitter-login"></span>
+		</div><!-- .signin-->
+
+		<div class="search">
+			<ul>
+				<li><a href="#search-site">Sfera search</a></li>
+				<li><a href="#search-web">Web search</a></li>
+			</ul>
+			<div id="search-site">
+				<form action="">
+					<p>
+						<label for="site-search-input">Search the site Sfera.az</label>
+						<input type="text" id="site-search-input" name="site-search-input" class="hidelabel" name="" />
+						<input type="submit" value="Search" />
+					</p>
+				</form>
+			</div>
+			<div id="search-web">
+				<form action="">
+					<p>
+						<label for="web-search-input">Search the web</label>
+						<input type="text" id="web-search-input" name="web-search-input" class="hidelabel" name="" />
+						<input type="submit" value="Search" />
+					</p>
+				</form>
+			</div>
+		</div><!-- .search-->
+		
+		<div class="auth-links">
+			<p class="links">
+				<a href="#" class="signin-link">Sign in</a>
+				or
+				<a href="#" class="joinus-link">Join us!</a>
+			</p>
+			<p class="users">
+				<span class="users-count">12752</span> users
+			</p>	
+		</div><!-- .auth-links-->
+		
+		<div class="menu" id="header-menu">
+			<ul>
+				<li class="menu-item news item-inactive"><a href="#">News</a></li>
+				<li class="menu-item blogs item-inactive"><a href="#">Blogs</a></li>
+				<li class="menu-item job item-inactive"><a href="#">Job</a></li>
+				<li class="menu-item realty item-inactive"><a href="#">Realty</a></li>
+				<li class="menu-item weather item-inactive"><a href="#">Weather</a></li>
+				<li class="menu-item horoscope item-inactive"><a href="#">Horoscope</a></li>
+				<li class="menu-item ads item-inactive"><a href="#">Ads</a></li>
+				<li class="all-services"><a href="#">All services</a></li>
+			</ul>
+		</div><!-- .menu -->
+	</div><!-- #header-->
+	
+	<div id="section-profile">
+		<div class="container">
+			<div class="content">
+				<div class="user-bookmarks">
+					<div class="head"><h1>My bookmarks</h1></div>
+					<div class="body">
+						<div class="bookmarks-category">
+							
+							<h3 class="bookmarks-category-name hover">
+								My bookmarks 2012
+							<span class="manage"><a href="#" class="edit">edit</a><a href="#" class="remove">remove</a><a href="#" class="add">add bookmark</a></span>
+							</h3>
+							
+							<div class="bookmarks-category-contents">
+								<ul>
+									<li class="hover">
+										<a href="#">Lorem Ipsum is simply dummy text Lorem Ipsum is simply dummy text Lorem Ipsum is simply dummy text Lorem Ipsum is simply dummy text Lorem Ipsum is simply dummy text</a>
+										<span class="manage"><a href="#" class="edit">edit</a><a href="#" class="remove">remove</a></span>
+									</li>
+									<li class="hover">
+										<a href="#">of the printing and typesetting industry.</a>
+										<span class="manage"><a href="#" class="edit">edit</a><a href="#" class="remove">remove</a></span>
+									</li>
+									<li class="hover">
+										<a href="#">Lorem Ipsum has been the industry's standard</a>
+										<span class="manage"><a href="#" class="edit">edit</a><a href="#" class="remove">remove</a></span>
+									</li>
+									<li class="hover">
+										<a href="#">dummy text ever since the 1500s</a>
+										<span class="manage"><a href="#" class="edit">edit</a><a href="#" class="remove">remove</a></span>
+									</li>
+								</ul>
+							</div>
+							
+						</div>
+
+						<div class="hr"></div>
+
+						<div class="bookmarks-category">
+							<h3 class="bookmarks-category-name">
+								My bookmarks 2012
+							</h3>
+							
+							<div class="bookmarks-category-contents">
+								<ul>
+									<li><a href="#">Lorem Ipsum is simply dummy text</a></li>
+									<li><a href="#">of the printing and typesetting industry.</a></li>
+									<li><a href="#">Lorem Ipsum has been the industry's standard</a></li>
+									<li><a href="#">dummy text ever since the 1500s</a></li>
+								</ul>
+							</div>
+							
+						</div>
+
+						<div class="hr"></div>
+
+						<div class="bookmarks-category">
+							<h3 class="bookmarks-category-name">
+								My bookmarks 2012
+							</h3>
+							
+							<div class="bookmarks-category-contents">
+								<ul>
+									<li><a href="#">Lorem Ipsum is simply dummy text</a></li>
+									<li><a href="#">of the printing and typesetting industry.</a></li>
+									<li><a href="#">Lorem Ipsum has been the industry's standard</a></li>
+									<li><a href="#">dummy text ever since the 1500s</a></li>
+								</ul>
+							</div>
+							
+						</div>
+					</div>
+				</div><!-- .user-bookmarks -->
+			</div><!-- .content -->
+		</div><!-- .container -->
+		
+		<div id="profile-sidebar">
+			<div class="follow-link-block gradient"><a href="#">Follow this user</a></div>
+			<div class="edit-profile-block gradient"><a href="#">Edit profile</a></div>
+			<div class="user-info-block">
+				<div class="user-avatar" style="background: url(upload/avatar-100x100.jpg)"><div class="vip"></div></div>
+				<div class="user-info-content">
+					<div class="user-name">Susan Beal</div>
+					<div class="user-status">Happy birthday sweety, wish you all the best</div>
+					<div class="user-balance-sf val"><span class="label">Balance:</span> 2.45 MAN / 3 SF</div>
+					<div class="user-balance-sms val"><span class="label">SMS-balance:</span> 20 bal</div>
+					<div class="real-user val">REAL USER</div>
+					<div class="user-id val"><span class="label">User ID:</span>123456789</div>
+				</div>
+			</div>
+			<div class="user-rating-block"><span class="label">User rating:</span> <span class="value">7.98</span> <span class="voters">(99999)</span></div>
+			<div class="awards-block">
+				<ul>
+					<li><span title="Award Name 1"><img src="images/awards/award01.png" /></span></li>
+					<li><span title="Award Name 2"><img src="images/awards/award02.png" /></span></li>
+					<li><span title="Award Name 3"><img src="images/awards/award03.png" /></span></li>
+					<li><span title="Award Name 4"><img src="images/awards/award04.png" /></span></li>
+					<li><span title="Award Name 5"><img src="images/awards/award05.png" /></span></li>
+				</ul>
+			</div>
+			<div class="send-private-message-block">
+				<a href="#">Send private message</a>
+			</div>
+			<div class="subscribers-list-block my-subscribers">
+				<div class="head gradient">
+					<h3>My subscribers</h3>
+					<p class="link-all"><a href="#">See all</a></p>
+				</div>
+				<div class="body">
+					<ul class="user-list">
+						<li style="background: url(upload/avatar-01.jpg)"><a href="#" title="blogger name 1"></a></li>
+						<li style="background: url(upload/avatar-02.jpg)"><a href="#" title="blogger name 2"></a></li>
+						<li style="background: url(upload/avatar-03.jpg)" class="user-status-vip"><a href="#" title="blogger name 3"></a></li>
+						<li style="background: url(upload/avatar-04.jpg)"><a href="#" title="blogger name 4"></a></li>
+						<li style="background: url(upload/avatar-05.jpg)"><a href="#" title="blogger name 5"></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="subscribers-list-block i-subscribed">
+				<div class="head gradient">
+					<h3>I subscribed</h3>
+					<p class="link-all"><a href="#">See all</a></p>
+				</div>
+				<div class="body">
+					<ul class="user-list">
+						<li style="background: url(upload/avatar-01.jpg)"><a href="#" title="blogger name 1"></a></li>
+						<li style="background: url(upload/avatar-02.jpg)"><a href="#" title="blogger name 2"></a></li>
+						<li style="background: url(upload/avatar-03.jpg)" class="user-status-vip"><a href="#" title="blogger name 3"></a></li>
+						<li style="background: url(upload/avatar-04.jpg)"><a href="#" title="blogger name 4"></a></li>
+						<li style="background: url(upload/avatar-05.jpg)"><a href="#" title="blogger name 5"></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="subscribers-list-block subscriptions">
+				<div class="head gradient">
+					<h3>Subscriptions</h3>
+					<p class="link-all"><a href="#">See all</a></p>
+				</div>
+				<div class="body">
+					<ul class="subscriptions-list">
+						<li>
+							<span class="name"><a href="#">Economics</a></span>
+							<span class="updates">6</span>
+						</li>
+						<li>
+							<span class="name"><a href="#">Science</a></span>
+							<span class="updates">2</span>
+						</li>
+						<li>
+							<span class="name"><a href="#">Google (tag)</a></span>
+							<span class="updates">26</span>
+						</li>
+						<li>
+							<span class="name"><a href="#">Apple (tag)</a></span>
+							<span class="updates">1</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="personal-links-block">
+				<ul>
+					<li class="gradient"><a href="#">My bookmarks</a></li>
+					<li class="gradient"><a href="#">My gifts</a></li>
+					<li class="gradient"><a href="#">My horoscope</a></li>
+					<li class="gradient"><a href="#">My ads</a></li>
+					<li class="gradient"><a href="#">My favorites</a></li>
+					<li class="gradient"><a href="#">Add news</a></li>
+				</ul>
+			</div>			
+		</div><!-- .sidebar -->
+	</div><!-- #section-profile -->
+	
+	<div id="footer">
+		<div class="logo">Sfera</div>
+		<div class="footer-menu">
+			<ul>
+				<li><a href="#">Sfera ADs</a></li>
+				<li><a href="#">About us</a></li>
+				<li><a href="#">Sfera News</a></li>
+				<li><a href="#">Features</a></li>
+				<li><a href="#">Sfera Blogs</a></li>
+				<li><a href="#">FAQ</a></li>
+				<li><a href="#">Weather</a></li>
+				<li><a href="#">User info</a></li>
+			</ul>
+		</div><!-- .footer-menu-->
+		<div class="connect-with-us block">
+			<div class="head"><h4>Connect with us</h4></div>
+			<div class="list">
+				<ul>
+					<li><a href="#" class="fb">Facebook</a></li>
+					<li><a href="#" class="tw">Twitter</a></li>
+					<li><a href="#" class="gp">Google+</a></li>
+				</ul>
+			</div>	
+		</div>
+		<div class="support-center block">
+			<div class="head"><h4>Support Center</h4></div>
+			<div class="list">
+				<ul>
+					<li>Tel: (844) 221-28-20</li>
+					<li>Fax: (844) 221-28-20</li>
+					<li>Email: <a href="mailto:contact@sfera.az">contact@sfera.az</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="copyright">
+			<p>&copy; 2012 Sfera.az. All rights reserved</p>
+		</div>
+		
+		<div class="artgen">
+			<a href="http://www.artgen.com.ua/">Site development</a> Art generation studio
+		</div>
+	</div><!-- #footer -->
+
+</div><!-- #wrapper -->
+
+</body>
+</html>

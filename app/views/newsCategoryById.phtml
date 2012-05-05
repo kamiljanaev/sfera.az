@@ -1,0 +1,10 @@
+<div class="category-news <?= $this->newsCategory->alias ?>">
+    <div class="head">
+        <h3><?= $this->newsCategory->title ?> news</h3>
+    </div>
+					
+    <div class="body">
+        <?= $this->partial('newsCategory.phtml', $this) ?>
+        <div class="more-link"><a href="<?= $this->getUrl('news/category/'.$this->newsCategory->id) ?>">All <?= $this->newsCategory->title ?> news</a></div>
+    </div>
+</div><!-- .category-news.baku -->

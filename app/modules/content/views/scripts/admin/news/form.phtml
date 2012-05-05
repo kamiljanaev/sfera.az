@@ -1,0 +1,137 @@
+<?php
+$baseUrl = '/admin/module/content/news';
+?>
+<form action="<?= $this->form->getAction() ?>" method="<?= $this->form->getMethod() ?>" class="w800px" id="add-form" enctype="multipart/form-data">
+	<div id="admin-add-row" class="properties content inputrow">
+        <ul class="form wide">
+            <?= $this->form->id ?>
+            <li class="panel">
+                <label for="dt_day" class="required"><?= $this->translate('news-admin-form-public-date') ?></label>
+                <span class="field">
+                    <select name="dt_day" id="dt_day" style="width:50px;">
+                        <option value="01" <?php if ($this->dt_day == '01'): ?>selected<?php endif; ?>>01</option>
+                        <option value="02" <?php if ($this->dt_day == '02'): ?>selected<?php endif; ?>>02</option>
+                        <option value="03" <?php if ($this->dt_day == '03'): ?>selected<?php endif; ?>>03</option>
+                        <option value="04" <?php if ($this->dt_day == '04'): ?>selected<?php endif; ?>>04</option>
+                        <option value="05" <?php if ($this->dt_day == '05'): ?>selected<?php endif; ?>>05</option>
+                        <option value="06" <?php if ($this->dt_day == '06'): ?>selected<?php endif; ?>>06</option>
+                        <option value="07" <?php if ($this->dt_day == '07'): ?>selected<?php endif; ?>>07</option>
+                        <option value="08" <?php if ($this->dt_day == '08'): ?>selected<?php endif; ?>>08</option>
+                        <option value="09" <?php if ($this->dt_day == '09'): ?>selected<?php endif; ?>>09</option>
+                        <option value="10" <?php if ($this->dt_day == '10'): ?>selected<?php endif; ?>>10</option>
+                        <option value="11" <?php if ($this->dt_day == '11'): ?>selected<?php endif; ?>>11</option>
+                        <option value="12" <?php if ($this->dt_day == '12'): ?>selected<?php endif; ?>>12</option>
+                        <option value="13" <?php if ($this->dt_day == '13'): ?>selected<?php endif; ?>>13</option>
+                        <option value="14" <?php if ($this->dt_day == '14'): ?>selected<?php endif; ?>>14</option>
+                        <option value="15" <?php if ($this->dt_day == '15'): ?>selected<?php endif; ?>>15</option>
+                        <option value="16" <?php if ($this->dt_day == '16'): ?>selected<?php endif; ?>>16</option>
+                        <option value="17" <?php if ($this->dt_day == '17'): ?>selected<?php endif; ?>>17</option>
+                        <option value="18" <?php if ($this->dt_day == '18'): ?>selected<?php endif; ?>>18</option>
+                        <option value="19" <?php if ($this->dt_day == '19'): ?>selected<?php endif; ?>>19</option>
+                        <option value="20" <?php if ($this->dt_day == '20'): ?>selected<?php endif; ?>>20</option>
+                        <option value="21" <?php if ($this->dt_day == '21'): ?>selected<?php endif; ?>>21</option>
+                        <option value="22" <?php if ($this->dt_day == '22'): ?>selected<?php endif; ?>>22</option>
+                        <option value="23" <?php if ($this->dt_day == '23'): ?>selected<?php endif; ?>>23</option>
+                        <option value="24" <?php if ($this->dt_day == '24'): ?>selected<?php endif; ?>>24</option>
+                        <option value="25" <?php if ($this->dt_day == '25'): ?>selected<?php endif; ?>>25</option>
+                        <option value="26" <?php if ($this->dt_day == '26'): ?>selected<?php endif; ?>>26</option>
+                        <option value="27" <?php if ($this->dt_day == '27'): ?>selected<?php endif; ?>>27</option>
+                        <option value="28" <?php if ($this->dt_day == '28'): ?>selected<?php endif; ?>>28</option>
+                        <option value="29" <?php if ($this->dt_day == '29'): ?>selected<?php endif; ?>>29</option>
+                        <option value="30" <?php if ($this->dt_day == '30'): ?>selected<?php endif; ?>>30</option>
+                        <option value="31" <?php if ($this->dt_day == '31'): ?>selected<?php endif; ?>>31</option>
+                    </select>&nbsp;
+                    <select name="dt_month" id="dt_month" style="width:100px;">
+                        <option value="01" <?php if ($this->dt_month == '01'): ?>selected<?php endif; ?>>Январь</option>
+                        <option value="02" <?php if ($this->dt_month == '02'): ?>selected<?php endif; ?>>Февраль</option>
+                        <option value="03" <?php if ($this->dt_month == '03'): ?>selected<?php endif; ?>>Март</option>
+                        <option value="04" <?php if ($this->dt_month == '04'): ?>selected<?php endif; ?>>Апрель</option>
+                        <option value="05" <?php if ($this->dt_month == '05'): ?>selected<?php endif; ?>>Май</option>
+                        <option value="06" <?php if ($this->dt_month == '06'): ?>selected<?php endif; ?>>Июнь</option>
+                        <option value="07" <?php if ($this->dt_month == '07'): ?>selected<?php endif; ?>>Июль</option>
+                        <option value="08" <?php if ($this->dt_month == '08'): ?>selected<?php endif; ?>>Август</option>
+                        <option value="09" <?php if ($this->dt_month == '09'): ?>selected<?php endif; ?>>Сентябрь</option>
+                        <option value="10" <?php if ($this->dt_month == '10'): ?>selected<?php endif; ?>>Октябрь</option>
+                        <option value="11" <?php if ($this->dt_month == '11'): ?>selected<?php endif; ?>>Ноябрь</option>
+                        <option value="12" <?php if ($this->dt_month == '12'): ?>selected<?php endif; ?>>Декабрь</option>
+                    </select>&nbsp;
+                    <select name="dt_year" id="dt_year" style="width:70px;">
+                        <option value="2010" <?php if ($this->dt_year == '2010'): ?>selected<?php endif; ?>>2010</option>
+                        <option value="2011" <?php if ($this->dt_year == '2011'): ?>selected<?php endif; ?>>2011</option>
+                        <option value="2012" <?php if ($this->dt_year == '2012'): ?>selected<?php endif; ?>>2012</option>
+                        <option value="2013" <?php if ($this->dt_year == '2013'): ?>selected<?php endif; ?>>2013</option>
+                        <option value="2014" <?php if ($this->dt_year == '2014'): ?>selected<?php endif; ?>>2014</option>
+                        <option value="2015" <?php if ($this->dt_year == '2015'): ?>selected<?php endif; ?>>2015</option>
+                        <option value="2016" <?php if ($this->dt_year == '2016'): ?>selected<?php endif; ?>>2016</option>
+                    </select>&nbsp;
+                    <select name="dt_hour" id="dt_hour" style="width:50px;">
+                        <option value="00" <?php if ($this->dt_hour == '00'): ?>selected<?php endif; ?>>00</option>
+                        <option value="01" <?php if ($this->dt_hour == '01'): ?>selected<?php endif; ?>>01</option>
+                        <option value="02" <?php if ($this->dt_hour == '02'): ?>selected<?php endif; ?>>02</option>
+                        <option value="03" <?php if ($this->dt_hour == '03'): ?>selected<?php endif; ?>>03</option>
+                        <option value="04" <?php if ($this->dt_hour == '04'): ?>selected<?php endif; ?>>04</option>
+                        <option value="05" <?php if ($this->dt_hour == '05'): ?>selected<?php endif; ?>>05</option>
+                        <option value="06" <?php if ($this->dt_hour == '06'): ?>selected<?php endif; ?>>06</option>
+                        <option value="07" <?php if ($this->dt_hour == '07'): ?>selected<?php endif; ?>>07</option>
+                        <option value="08" <?php if ($this->dt_hour == '08'): ?>selected<?php endif; ?>>08</option>
+                        <option value="09" <?php if ($this->dt_hour == '09'): ?>selected<?php endif; ?>>09</option>
+                        <option value="10" <?php if ($this->dt_hour == '10'): ?>selected<?php endif; ?>>10</option>
+                        <option value="11" <?php if ($this->dt_hour == '11'): ?>selected<?php endif; ?>>11</option>
+                        <option value="12" <?php if ($this->dt_hour == '12'): ?>selected<?php endif; ?>>12</option>
+                        <option value="13" <?php if ($this->dt_hour == '13'): ?>selected<?php endif; ?>>13</option>
+                        <option value="14" <?php if ($this->dt_hour == '14'): ?>selected<?php endif; ?>>14</option>
+                        <option value="15" <?php if ($this->dt_hour == '15'): ?>selected<?php endif; ?>>15</option>
+                        <option value="16" <?php if ($this->dt_hour == '16'): ?>selected<?php endif; ?>>16</option>
+                        <option value="17" <?php if ($this->dt_hour == '17'): ?>selected<?php endif; ?>>17</option>
+                        <option value="18" <?php if ($this->dt_hour == '18'): ?>selected<?php endif; ?>>18</option>
+                        <option value="19" <?php if ($this->dt_hour == '19'): ?>selected<?php endif; ?>>19</option>
+                        <option value="20" <?php if ($this->dt_hour == '20'): ?>selected<?php endif; ?>>20</option>
+                        <option value="21" <?php if ($this->dt_hour == '21'): ?>selected<?php endif; ?>>21</option>
+                        <option value="22" <?php if ($this->dt_hour == '22'): ?>selected<?php endif; ?>>22</option>
+                        <option value="23" <?php if ($this->dt_hour == '23'): ?>selected<?php endif; ?>>23</option>
+                    </select>&nbsp;
+                    <select name="dt_min" id="dt_min" style="width:50px;">
+                        <option value="00" <?php if ($this->dt_min == '00'): ?>selected<?php endif; ?>>00</option>
+                        <option value="05" <?php if ($this->dt_min == '05'): ?>selected<?php endif; ?>>05</option>
+                        <option value="10" <?php if ($this->dt_min == '10'): ?>selected<?php endif; ?>>10</option>
+                        <option value="15" <?php if ($this->dt_min == '15'): ?>selected<?php endif; ?>>15</option>
+                        <option value="20" <?php if ($this->dt_min == '20'): ?>selected<?php endif; ?>>20</option>
+                        <option value="25" <?php if ($this->dt_min == '25'): ?>selected<?php endif; ?>>25</option>
+                        <option value="30" <?php if ($this->dt_min == '30'): ?>selected<?php endif; ?>>30</option>
+                        <option value="35" <?php if ($this->dt_min == '35'): ?>selected<?php endif; ?>>35</option>
+                        <option value="40" <?php if ($this->dt_min == '40'): ?>selected<?php endif; ?>>40</option>
+                        <option value="45" <?php if ($this->dt_min == '45'): ?>selected<?php endif; ?>>45</option>
+                        <option value="50" <?php if ($this->dt_min == '50'): ?>selected<?php endif; ?>>50</option>
+                        <option value="55" <?php if ($this->dt_min == '55'): ?>selected<?php endif; ?>>55</option>
+                    </select>&nbsp;
+                </span>
+            </li>
+            <?= $this->form->is_hot ?>
+            <?= $this->form->activated ?>
+            <?= $this->form->user_id ?>
+            <?= $this->form->category_id ?>
+            <?= $this->form->title ?>
+            <li class="panel">
+                <label for="image"><?= $this->translate('news-admin-form-image') ?></label>
+                <span class="field">
+                    <input type="text" name="image" id="image" value="<?= $this->form->image->getValue() ?>" style="width:300px;"/>&nbsp;&nbsp;
+                    <button id="browse"><?= $this->translate('button-file-manager') ?></button>
+                </span>
+            </li>
+            <?= $this->form->keywords ?>
+            <?= $this->form->description ?>
+            <?= $this->form->short_content ?>
+            <?= $this->form->content ?>
+            <li class="panel">
+                <label for="tags"><?= $this->translate('news-admin-form-tags') ?></label>
+                <span class="field">
+                    <select id="tags" class="multiselect" multiple="multiple" name="tags[]" style="height:300px;">
+                        <?php foreach ($this->tagsList as $tagItem): ?>
+                            <option value="<?= $tagItem->id ?>" <?php if (in_array($tagItem->id, $this->currentTagsList)): ?>selected="selected"<?php endif; ?>><?= $tagItem->title ?></option>
+                        <?php endforeach; ?>
+                    </select>
+                </span>
+            </li>
+        </ul>
+	</div>
+</form>

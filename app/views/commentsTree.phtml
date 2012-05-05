@@ -1,0 +1,61 @@
+<h3><?= count($this->commentsArray) ?> Comments</h3>
+<?php if (count($this->commentsArray)): ?>
+<?php $isFirst = true; ?>
+<?php $prevItem = null; ?>
+<?php foreach ($this->commentsArray as $commentItem): ?>
+<?php if ($isFirst): ?>
+    <?php $isFirst = false; ?>
+<div class="comment-item <?= $commentItem['tree_depth'] ?>">
+<?php else: ?>
+    <?php if ($lastDepth >= $commentItem['tree_depth']): ?>
+        <?php $depthCounter = $lastDepth - $commentItem['tree_depth']; ?>
+        <?php while ($depthCounter--) { ?>
+            </div>
+        <?php } ?>
+        </div>
+    <?php endif; ?>
+    <?php if ($commentItem['tree_depth'] == 0): ?>
+<div class="comment-item <?= $commentItem['id'] ?>">
+    <?php else: ?>
+<div class="comment-reply <?= $commentItem['id'] ?>">
+    <?php endif; ?>
+<?php endif; ?>
+    <?php $lastDepth = $commentItem['tree_depth']; ?>
+    <?php $commentProfile = $commentItem['profile']; ?>
+    <div class="comment-image" style="background: url(<?= $commentProfile->getAvatar(Core_Image::AVATAR_70) ?>)"></div>
+    <div class="comment-meta">
+        <span class="author"><a href="<?= $this->getUrl('profile/id/'.$commentProfile->id) ?>"><?= $commentProfile->getFullName() ?></a></span>
+        <span class="date"><?= $this->formatDate($commentItem['added']) ?></span>
+        <?php if ($this->profileData): ?>
+            <?php if ($this->profileData->id != $commentProfile->id): ?>
+                <?php if (!$this->profileData->checkFriend($commentProfile->id)): ?>
+                    <a href="<?= $this->getUrl('friend/add/'.$commentProfile->id) ?>" class="follow ajax_follow" data-type="follow" data-id="<?= $commentProfile->id ?>">Follow</a>
+                <?php else: ?>
+                    <a href="<?= $this->getUrl('friend/remove/'.$commentProfile->id) ?>" class="follow ajax_follow" data-type="unfollow" data-id="<?= $commentProfile->id ?>">Unfollow</a>
+                <?php endif; ?>
+            <?php else: ?>
+                <span class="follow" >Follow</span>
+            <?php endif; ?>
+            <a href="#" class="reply" parent-id="<?= $commentItem['id'] ?>">Reply</a>
+            <?php if ($this->profileData->id != $commentProfile->id): ?>
+                <a href="<?= $this->getUrl('content/complain/add/') ?>" class="complain do-complain" item-id="<?= $commentItem['id'] ?>" item-type="<?= Core_Db_Complains::C_COMMENTS ?>">Complain</a>
+            <?php else: ?>
+                <span class="complain" >Complain</span>
+            <?php endif; ?>
+        <?php else: ?>
+            <span class="follow" >Follow</span>
+            <span class="reply">Reply</span>
+            <span class="complain" >Complain</span>
+        <?php endif; ?>
+    </div>
+
+    <div class="comment-text">
+        <?= $commentItem['comment'] ?>
+    </div>
+<?php endforeach; ?>
+    <?php $depthCounter = $lastDepth; ?>
+    <?php while ($depthCounter--) { ?>
+        </div>
+    <?php } ?>
+</div>
+<?php endif; ?>

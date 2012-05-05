@@ -1,0 +1,39 @@
+<?= $this->flashMessages(); ?>
+<?php
+    $this->headLink()->appendStylesheet($this->baseUrl . '/css/jquery.selectBox.css', 'screen, projection');
+    $this->headLink()->appendStylesheet($this->baseUrl . '/css/profile.css', 'screen, projection');
+    $this->headScript()->appendFile($this->baseUrl . '/js/jquery.customselectbox.min.js');
+    $this->headScript()->appendFile($this->baseUrl . '/js/profile.js');
+?>
+
+
+<div id="section-profile">
+    <div class="container">
+        <div class="content">
+
+            <div class="user-favorites">
+                <div class="head"><h1>My subscribtions</h1></div>
+                    <?php $counter = 1; ?>
+                    <?php foreach ($this->newsList as $newsItem): ?>
+                        <div class="post-item type-news">
+                            <div class="post-date"><?= $this->formatDate($newsItem->public_date) ?></div>
+                            <h2 class="post-title"><a href="<?= $this->getUrl('news/show/'.$newsItem->id) ?>"><?= $newsItem->title ?></a></h2>
+                            <div class="post-content"><?= $newsItem->content ?></div>
+                            <ul class="post-meta">
+                                <li class="post-views"><?= $newsItem->getViewCounter() ?></li>
+                                <li class="post-comments"><a href="<?= $this->getUrl('news/show/'.$newsItem->id.'#comments') ?>"><?= $this->getCommentsCount($newsItem->id, Core_Db_Comments::C_NEWS) ?></a></li>
+                            </ul>
+                            <div class="facebook-like"><img src="/upload/fb-like.jpg" /></div>
+                        </div>
+                        <?php if (count($this->newsList) > $counter++): ?>
+                            <div class="hr"></div>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+            </div><!-- user-subscribers -->
+            <?= $this->paginatorCode ?>
+
+        </div><!-- .content -->
+    </div><!-- .container -->
+
+    <?= $this->partial('frontProfileSidebar.phtml', $this) ?>
+</div><!-- #section-profile -->

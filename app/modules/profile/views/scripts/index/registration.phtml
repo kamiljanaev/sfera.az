@@ -1,0 +1,180 @@
+<?php
+    $this->headLink()->appendStylesheet($this->baseUrl . '/css/profile.css', 'screen, projection');
+    $this->headScript()->appendFile($this->baseUrl . '/js/libs/jquery.passwordstr.js');
+    $this->headScript()->appendFile($this->baseUrl . '/js/libs/jquery.showpassword.js');
+    $this->headScript()->appendFile($this->baseUrl . '/js/index.js');
+    $this->headScript()->appendFile($this->baseUrl . '/js/registration.js');
+?>
+
+
+
+<?= $this->flashMessages(); ?>
+
+<?php if ($this->verifyCode): ?>
+
+
+<div id="section-auth">
+    <div class="container">
+        <div class="content">
+            <div class="head">
+                <h1>Verification code - <?= $this->verifyCode ?></h1>
+            </div>
+
+            <form action="<?= $this->getUrl('confirmation') ?>" method="POST">
+            <table>
+                <tr class="separator-bottom">
+                    <th><label for="login">Sfera login</label></th>
+                    <td>
+                        <input type="text" name="login" id="login" value="" />
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                <tr class="separator-top">
+                    <th>
+                        <label for="confirmation">Verification code</label>
+                    </th>
+                    <td>
+                        <input type="text" name="confirmation" id="confirmation" value="<?= $this->verifyCode ?>"/>
+                    </td>
+                    <td>
+                    </td>
+                    <!-- сервер должен принимать только одно поле с паролем -->
+                </tr>
+            </table>
+            <div class="submit"><input type="submit" value="<?= $this->translate('button-confirmation') ?>" /></div>
+            </form>
+        </div><!-- .content -->
+    </div><!-- .container -->
+
+</div><!-- #section-auth -->
+
+
+
+<?php else: ?>
+
+<div id="section-auth">
+    <div class="container">
+        <div class="content">
+            <div class="head">
+                <h1>Registration</h1>
+            </div>
+
+            <form action="<?= $this->getUrl('registration') ?>" method="POST" id="registerForm">
+            <table>
+                <tr class="separator-bottom">
+                    <th><label for="login">Sfera login</label></th>
+                    <td>
+                        <input type="text" name="login" id="login" value="<?php if (array_key_exists('login', $this->formData)) { echo $this->formData['login']['value']; } ?>" class="formItems"/>
+                        <?php if (array_key_exists('login', $this->formData)&&!$this->formData['login']['valid']): ?>
+                        <span class="hint error" id="loginCorrectValue">login should contain lowercase letters and numbers</span>
+                        <?php else: ?>
+                        <span class="hint error" id="loginCorrectValue" style="display: none;">login should contain lowercase letters and numbers</span>
+                        <?php endif; ?>
+                    </td>
+                    <td>
+                        <span id="loginCorrectMessage" class="message success" style="display: none;">This login is avaliable to use</span>
+                        <span id="loginInCorrectMessage" class="message error" style="display: none;">This login is not avaliable to use</span>
+                    </td>
+                </tr>
+                <tr class="separator-top">
+                    <th>
+                        <label for="password">Password</label>
+                    </th>
+                    <td>
+                        <input type="password" id="password" name="password" class="formItems" data-typetoggle='#showpassword'/>
+                        <?php if (array_key_exists('password', $this->formData)&&!$this->formData['password']['valid']): ?>
+                        <span class="hint error" id="pwdCorrectValue">password should contain at least 8 characters</span>
+                        <?php else: ?>
+                        <span class="hint error" id="pwdCorrectValue" style="display: none;">password should contain at least 8 characters</span>
+                        <?php endif; ?>
+                    </td>
+                    <td>
+                        <label><input type="checkbox" name="showpassword" id="showpassword" value="1"/> show password</label>
+                    </td>
+                    <!-- сервер должен принимать только одно поле с паролем -->
+                </tr>
+                <tr class="separator-bottom">
+                    <th>
+                        <div class="retypepwdcontainer">
+                        <label for="retypepassword">Retype Password</label>
+                        </div>
+                    </th>
+                    <td>
+                        <div class="retypepwdcontainer">
+                        <input type="password" id="retypepassword" name="retypepassword" class="formItems" data-typetoggle='#showpassword'/>
+                        <?php if (array_key_exists('retypepassword', $this->formData)&&!$this->formData['retypepassword']['valid']): ?>
+                        <span class="hint error" id="rePwdCorrectValue">passwords not match</span>
+                        <?php else: ?>
+                        <span class="hint error" id="rePwdCorrectValue" style="display: none;">passwords not match</span>
+                        <?php endif; ?>
+                        </div>
+                    </td>
+                    <td>
+                        <span id="pwdStrenghtLevel1" style="display:none;" class="password-strength bad">bad</span>
+                        <span id="pwdStrenghtLevel2" style="display:none;" class="password-strength good">good</span>
+                        <span id="pwdStrenghtLevel3" style="display:none;" class="password-strength strong">strong</span>
+                        <!-- степени силы пароля -->
+                    </td>
+                </tr>
+                <tr class="separator-top">
+                    <th>
+                        <label for="email">E-mail</label>
+                    </th>
+                    <td>
+                        <input type="text" name="email" id="email" value="<?php if (array_key_exists('email', $this->formData)) { echo $this->formData['email']['value']; } ?>" class="formItems"/>
+                        <?php if (array_key_exists('email', $this->formData)&&!$this->formData['email']['valid']): ?>
+                        <span class="hint error" id="emailCorrectValue">enter correct email address</span>
+                        <?php else: ?>
+                        <span class="hint error" id="emailCorrectValue" style="display: none;">enter correct email address</span>
+                        <?php endif; ?>
+                    </td>
+                    <td>
+                        <span id="emailCorrectMessage" class="message success" style="display: none;">This e-mail address is avaliable to use</span>
+                        <span id="emailInCorrectMessage" class="message error" style="display: none;">This e-mail address is already registered</span>
+                    </td>
+                </tr>
+                <tr class="separator-bottom">
+                    <th>
+                        <label for="phone">Phone number</label>
+                    </th>
+                    <td>
+                        <input type="text" name="phone" id="phone" value="<?php if (array_key_exists('phone', $this->formData)) { echo $this->formData['phone']['value']; } ?>" class="formItems"/>
+                        <?php if (array_key_exists('phone', $this->formData)&&!$this->formData['phone']['valid']): ?>
+                        <span class="hint error" id="phoneCorrectValue">you should type your phone number</span>
+                        <?php else: ?>
+                        <span class="hint error" id="phoneCorrectValue" style="display: none;">you should type your phone number</span>
+                        <?php endif; ?>
+                    </td>
+                    <td>
+                        We'll send you SMS with secret code, to finish your registration
+                    </td>
+                </tr>
+                <tr class="separator-top">
+                    <th>
+                        <label for="captcha">I'm not a robot!</label>
+                    </th>
+                    <td>
+                        <input type="text" name="captcha[input]" id="captcha" value="" class="formItems" />
+                        <input type="hidden" name="captcha[id]" value="<?= $this->captcha_id;?>" />
+                        <?php if (array_key_exists('captcha', $this->formData)&&!$this->formData['captcha']['valid']): ?>
+                        <span class="hint" id="captchaCorrectValue" style="display: none;">Enter symbols from the picture</span>
+                        <span class="hint error" id="captchaInCorrectValue">you should type symbols from image</span>
+                        <?php else: ?>
+                        <span class="hint" id="captchaCorrectValue">Enter symbols from the picture</span>
+                        <span class="hint error" id="captchaInCorrectValue" style="display: none;">you should type symbols from image</span>
+                        <?php endif; ?>
+                    </td>
+                    <td>
+                        <?= $this->captcha; ?>
+                    </td>
+                </tr>
+            </table>
+            <div class="submit"><input type="submit" value="<?= $this->translate('button-register') ?>" /></div>
+            </form>
+        </div><!-- .content -->
+    </div><!-- .container -->
+
+</div><!-- #section-auth -->
+
+<?php endif; ?>

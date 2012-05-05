@@ -1,0 +1,29 @@
+<?= $this->headTitle('Глобальные настройки') ?>
+<div id="main">
+	<div class="content">
+		<div id="head">
+			<h2>Глобальные настройки</h2>
+		</div>
+		<form action="<?= $this->form->getAction() ?>" method="post" class="w800px">
+			<div class="control">
+				<span class="button submit">
+					<button type="submit" name="site_settings_save">Сохранить</button>
+				</span>
+			</div>
+			<div class="properties content inputrow">
+				<ul class="form">
+				<?php foreach($this->list AS $row): ?>
+					<li class="settings">
+						<label for="<?= $row['name'] ?>" class="<?= $row['type'] ?>"><?= $row['description'] ?></label>
+						<?php if($row['type'] != 'delimiter'): ?>
+						<span class="field">
+							<?= $this->form->$row['name'] ?>
+						</span>
+						<?php endif;?>
+					</li>
+				<?php endforeach;?>
+				</ul>
+			</div>
+		</form>
+	</div>
+</div>

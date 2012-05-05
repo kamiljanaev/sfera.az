@@ -1,0 +1,24 @@
+<?php
+$baseUrl = '/admin/module/content/catalog';
+?>
+<form action="<?= $this->form->getAction() ?>" method="<?= $this->form->getMethod() ?>" id="add-form" enctype="multipart/form-data">
+	<div id="admin-add-row" class="properties content inputrow">
+		<ul class="form wide">
+			<?= $this->form->id ?>
+			<?= $this->form->parent_id ?>
+			<?= $this->form->order ?>
+            <li class="panel">
+                <?= $this->form->title ?>
+            </li>
+            <li class="panel">
+                <?= $this->form->alias ?>
+            </li>
+            <li class="panel">
+                <?= $this->form->is_active ?>
+            </li>
+            <li class="panel">
+                <?= $this->form->show_on_home ?>
+            </li>
+		</ul>
+	</div>
+</form>

@@ -1,0 +1,10 @@
+<div class="category-news azerbaijan">
+    <div class="head">
+        <h3>Azerbaijan news</h3>
+    </div>
+					
+    <div class="body">
+        <?= $this->partial('newsCategory.phtml', $this) ?>
+        <div class="more-link"><a href="<?= $this->getUrl('news/category/'.$this->newsCategory->id) ?>">All azerbaijan news</a></div>
+    </div>
+</div><!-- .category-news.baku -->

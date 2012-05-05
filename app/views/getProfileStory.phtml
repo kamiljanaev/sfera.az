@@ -1,0 +1,11 @@
+<div class="user-activity">
+    <?php $counter = 1; ?>
+    <?php foreach ($this->profileStoryList as $storyItem): ?>
+    <div class="activity-item">
+        <div class="user-avatar" style="background: url(upload/avatar-70x70.jpg)"><a href="#" title="blogger name 1"></a></div>
+        <?= $this->renderStoryItem($storyItem); ?>
+        <?php if (count($this->favoritesList) > $counter++): ?>
+            <div class="hr"></div>
+        <?php endif; ?>
+    <?php endforeach; ?>
+</div><!-- .user-activity -->

@@ -1,0 +1,26 @@
+2012-05-05T22:56:13+05:00 EMERG (0): 
+Notice: Undefined property: Zend_Loader_PluginLoader_Exception::$getMessage in /home/www/public_html/sfera/app/system/Bootstrap.php on line 64
+
+Call Stack:
+    0.0003     668528   1. {main}() /home/www/public_html/sfera/index.php:0
+    0.0024    1147472   2. Bootstrap->run() /home/www/public_html/sfera/index.php:30
+    0.0786   17849784   3. Bootstrap->_errorReport() /home/www/public_html/sfera/app/system/Bootstrap.php:30
+
+#0 /home/www/public_html/sfera/app/library/Zend/View/Abstract.php(1182): Zend_Loader_PluginLoader->load('_translate')
+#1 /home/www/public_html/sfera/app/library/Zend/View/Abstract.php(618): Zend_View_Abstract->_getPlugin('helper', '_translate')
+#2 /home/www/public_html/sfera/app/library/Zend/View/Abstract.php(344): Zend_View_Abstract->getHelper('_translate')
+#3 /home/www/public_html/sfera/app/modules/content/views/scripts/admin/category/readonly.phtml(1): Zend_View_Abstract->__call('_translate', Array)
+#4 /home/www/public_html/sfera/app/modules/content/views/scripts/admin/category/readonly.phtml(1): Zend_View->_translate('readonly-messag...')
+#5 /home/www/public_html/sfera/app/library/Zend/View.php(108): include('/home/www/publi...')
+#6 /home/www/public_html/sfera/app/library/Zend/View/Abstract.php(888): Zend_View->_run('/home/www/publi...')
+#7 /home/www/public_html/sfera/app/library/Zend/Controller/Action/Helper/ViewRenderer.php(908): Zend_View_Abstract->render('admin/category/...')
+#8 /home/www/public_html/sfera/app/library/Zend/Controller/Action/Helper/ViewRenderer.php(929): Zend_Controller_Action_Helper_ViewRenderer->renderScript('admin/category/...', NULL)
+#9 /home/www/public_html/sfera/app/library/Zend/Controller/Action.php(212): Zend_Controller_Action_Helper_ViewRenderer->render('readonly', NULL, false)
+#10 /home/www/public_html/sfera/app/modules/content/controllers/Admin/CategoryController.php(73): Zend_Controller_Action->render('readonly')
+#11 /home/www/public_html/sfera/app/library/Zend/Controller/Action.php(513): Content_Admin_CategoryController->loadAction()
+#12 /home/www/public_html/sfera/app/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('loadAction')
+#13 /home/www/public_html/sfera/app/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Core_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#14 /home/www/public_html/sfera/app/system/Bootstrap.php(26): Zend_Controller_Front->dispatch()
+#15 /home/www/public_html/sfera/index.php(30): Bootstrap->run(Array)
+#16 {main}
+

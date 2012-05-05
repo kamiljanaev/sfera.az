@@ -1,0 +1,14 @@
+#wrapper #menu {
+    float: left;
+    width: 250px;
+}
+
+#wrapper #body {
+    float: left;
+    width: 500px;
+}
+
+#wrapper #footer {
+    clear: both;
+    height: 100px;
+}

@@ -1,0 +1,970 @@
+
+.news-baku-category .head {
+    color:#807e7f;
+}
+
+.news-baku-category .search-form {
+    background: #807e7f;
+    padding: 20px;
+}
+
+.news-baku-category .search-form p {
+	background:#fff;
+}
+
+.news-baku-category .search-form label {
+	position:absolute;
+	width:597px;
+	padding:0 7px;
+
+	font-size:1.364em;
+	color:#b2b2b2;
+	line-height:1.733em;
+	cursor:text;
+}
+
+.news-baku-category .search-form input[type="text"] {
+	border:0;
+	width:595px;
+	padding:0 7px;
+	background:none;
+
+	font-size:1.364em;
+	line-height:1.733em;
+}
+
+.news-baku-category .search-form input[type="submit"] {
+	border:0;
+	background:url(../images/ico-search.png) no-repeat 0 -60px;
+	margin: 3px;
+	width:20px;
+	height:20px;
+	text-indent:-9999px;
+	cursor: pointer;
+}
+
+.news-baku-category .search-results-info {
+    background: #d7d2cf;
+    font-size: 1.182em;
+    padding: 10px;
+    color: #807e7f;
+}
+
+.news-baku-category .hot-wrap {
+    background: #807e7f;
+}
+
+.news-baku-category a {
+    color:#807e7f;
+}
+
+.news-baku-category .body {
+    background: #f4ede8;
+}
+
+.news-baku-category .hr {
+    border-top: 1px solid #d7d2cf;
+    border-bottom: 1px solid #fbfbfb;
+    clear: both;
+}
+
+.news-baku-category .more-link {
+	background: #807e7f;
+	position: absolute;
+	left:0;
+	bottom: 0;
+}
+
+.news-baku-category .more-link a {
+	padding: 0 10px;
+	font-weight: bold;
+	font-size: 1.091em;
+	color:#fff;
+	line-height: 30px;
+}
+
+.baku .category-news {
+    border-bottom: 2px solid #807e7f;	
+}
+
+.news-azerbaijan-category .head {
+    color:#718581;
+}
+
+.news-azerbaijan-category .hot-wrap {
+    background: #718581;
+}
+
+.news-azerbaijan-category .body {
+    background: #e7f3e8;
+}
+
+.news-azerbaijan-category .hr {
+    border-top: 1px solid #c6d6cf;
+    border-bottom: 1px solid #fbfbfb;
+}
+
+.news-azerbaijan-category a {
+    color:#718581;
+}
+
+.news-azerbaijan-category .more-link {
+	background: #718581;
+	position: absolute;
+	left:0;
+	bottom: 0;
+}
+
+.news-azerbaijan-category .more-link a {
+	padding: 0 10px;
+	font-weight: bold;
+	font-size: 1.091em;
+	color:#fff;
+	line-height: 30px;
+}
+
+.news-world-category .head {
+    color:#807b94;
+}
+
+.news-world-category .hot-wrap {
+    background: #807b94;
+}
+
+.news-world-category .body {
+    background: #f4eaf9;
+}
+
+.news-world-category .hr {
+    border-top: 1px solid #d4ccdf;
+    border-bottom: 1px solid #fbfbfb;
+}
+
+.news-world-category .more-link {
+	background: #807b94;
+	position: absolute;
+	left:0;
+	bottom: 0;
+}
+
+.news-world-category .more-link a {
+	padding: 0 10px;
+	font-weight: bold;
+	font-size: 1.091em;
+	color:#fff;
+	line-height: 30px;
+}
+
+.news-world-category {
+    margin-bottom: 5px;
+}
+
+.news-baku-category .category-news .pagination li a {
+    color: #807e7f;
+}
+
+.news-azerbaijan-category .category-news .pagination li a {
+    color: #718581;
+}
+
+.news-world-category .category-news .pagination li a {
+    color: #807B94;
+}
+
+
+
+.news-baku-category .category-news .pagination li.current-page a {
+    background: #807e7f;
+    color: #fff;
+}
+
+.news-azerbaijan-category .category-news .pagination li.current-page a {
+    background: #718581;
+    color:#fff;
+}
+
+.news-world-category .category-news .pagination li.current-page a {
+    background: #807B94;
+    color:#fff;
+}
+
+.news-baku-category .news-block .post-list .post-item.state-active {
+    background: #807e7f; /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzgwN2U3ZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjY4JSIgc3RvcC1jb2xvcj0iIzgwN2U3ZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM1YjVhNWEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(left,  #807e7f 0%, #807e7f 68%, #5b5a5a 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#807e7f), color-stop(68%,#807e7f), color-stop(100%,#5b5a5a)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  #807e7f 0%,#807e7f 68%,#5b5a5a 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  #807e7f 0%,#807e7f 68%,#5b5a5a 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  #807e7f 0%,#807e7f 68%,#5b5a5a 100%); /* IE10+ */
+    background: linear-gradient(left,  #807e7f 0%,#807e7f 68%,#5b5a5a 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#807e7f', endColorstr='#5b5a5a',GradientType=1 ); /* IE6-8 */
+}
+
+.news-baku-category .news-block .post-list .more-link {
+    background: #807e7f;    
+}
+
+/* azerbaijan color */
+
+.news-azerbaijan-category .news-block .head h3 {
+    color:#E7F3E8;    
+}
+
+.news-azerbaijan-category .news-block .body {
+    background: #E7F3E8;
+    border-left-color:#718581;
+}
+
+.news-azerbaijan-category .post-meta {
+    background: #C6D6CF;
+    color:#718581;
+}
+
+.news-azerbaijan-category .post-meta a {
+    color:#718581;
+}
+
+.news-azerbaijan-category .news-block .post-list .post-item.state-active {
+    background: #718581; /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzgwN2U3ZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjY4JSIgc3RvcC1jb2xvcj0iIzgwN2U3ZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM1YjVhNWEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(left,  #718581 0%, #718581 68%, #5b5a5a 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#718581), color-stop(68%,#718581), color-stop(100%,#5b5a5a)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  #718581 0%,#718581 68%,#5b5a5a 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  #718581 0%,#718581 68%,#5b5a5a 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  #718581 0%,#718581 68%,#5b5a5a 100%); /* IE10+ */
+    background: linear-gradient(left,  #718581 0%,#718581 68%,#5b5a5a 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#718581', endColorstr='#5b5a5a',GradientType=1 ); /* IE6-8 */
+}
+
+.news-azerbaijan-category .news-block .post-list .more-link {
+    background: #718581;    
+}
+
+/* world color */
+
+.news-world-category .news-block .head h3 {
+    color:#F4EAF9;    
+}
+
+.news-world-category .news-block .body {
+    background: #F4EAF9;
+    border-left-color:#807B94;
+}
+
+.news-world-category .post-meta {
+    background: #D4CCDF;
+    color:#807B94;
+}
+
+.news-world-category .post-meta a {
+    color:#807B94;
+}
+
+.news-world-category .news-block .post-list .post-item.state-active {
+    background: #807B94; /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzgwN2U3ZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjY4JSIgc3RvcC1jb2xvcj0iIzgwN2U3ZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM1YjVhNWEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(left,  #807B94 0%, #807B94 68%, #5b5a5a 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#807B94), color-stop(68%,#807B94), color-stop(100%,#5b5a5a)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  #807B94 0%,#807B94 68%,#5b5a5a 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  #807B94 0%,#807B94 68%,#5b5a5a 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  #807B94 0%,#807B94 68%,#5b5a5a 100%); /* IE10+ */
+    background: linear-gradient(left,  #807B94 0%,#807B94 68%,#5b5a5a 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#807B94', endColorstr='#5b5a5a',GradientType=1 ); /* IE6-8 */
+}
+
+.news-world-category .news-block .post-list .more-link {
+    background: #807B94;    
+}
+
+
+/* baku color */
+.news-baku-category #header .ui-tabs-panel {
+	border-color:#807e7f;
+}
+
+.news-baku-category #header .ui-tabs-nav .ui-state-default a {
+	border-color: #807e7f;
+	color:#807e7f;
+}
+
+.news-baku-category #header .ui-tabs-nav .ui-state-active {
+	background: #807e7f;
+}
+
+.news-baku-category #header .ui-tabs-nav .ui-state-active a {
+	color: #fff;
+}
+
+.news-baku-category #header .ui-tabs-panel input[type="submit"] {
+    background-position: 0 -60px;
+}
+
+.news-baku-category #header .menu{
+	border-color:#807e7f;
+}
+
+.news-baku-category #header .menu .item-inactive {
+	background: #d7d2cf;
+}
+
+.news-baku-category #header .menu .all-services a {
+	color:#807e7f;
+}
+
+.news-baku-category #header .menu .all-services:before {
+	color:#807e7f;
+}
+
+/* azerbaijan color */
+
+.news-azerbaijan-category #header .ui-tabs-panel {
+	border-color:#718581;
+}
+
+.news-azerbaijan-category #header .ui-tabs-nav .ui-state-default a {
+	border-color: #718581;
+	color:#718581;
+}
+
+.news-azerbaijan-category #header .ui-tabs-nav .ui-state-active {
+	background: #718581;
+}
+
+.news-azerbaijan-category #header .ui-tabs-nav .ui-state-active a {
+	color: #fff;
+}
+
+.news-azerbaijan-category #header .ui-tabs-panel input[type="submit"] {
+    background-position: 0 -80px;
+}
+
+.news-azerbaijan-category #header .menu{
+	border-color:#718581;
+}
+
+.news-azerbaijan-category #header .menu .item-inactive {
+	background: #C6D6CF;
+}
+
+.news-azerbaijan-category #header .menu .all-services a {
+	color:#718581;
+}
+
+.news-azerbaijan-category #header .menu .all-services:before {
+	color:#718581;
+}
+
+/* world color */
+.news-world-category #header .ui-tabs-panel {
+	border-color:#807B94;
+}
+
+.news-world-category #header .ui-tabs-nav .ui-state-default a {
+	border-color: #807B94;
+	color:#807B94;
+}
+
+.news-world-category #header .ui-tabs-nav .ui-state-active {
+	background: #807B94;
+}
+
+.news-world-category #header .ui-tabs-nav .ui-state-active a {
+	color: #fff;
+}
+
+.news-world-category #header .ui-tabs-panel input[type="submit"] {
+    background-position: 0 -10	0px;
+}
+
+.news-world-category #header .menu{
+	border-color:#807B94;
+}
+
+.news-world-category #header .menu .item-inactive {
+	background: #D4CCDF;
+}
+
+.news-world-category #header .menu .all-services a {
+	color:#807B94;
+}
+
+.news-world-category #header .menu .all-services:before {
+	color:#807B94;
+}
+
+
+/* baku color */
+.news-baku-category #header .ui-tabs-panel {
+	border-color:#807e7f;
+}
+
+.news-baku-category #header .ui-tabs-nav .ui-state-default a {
+	border-color: #807e7f;
+	color:#807e7f;
+}
+
+.news-baku-category #header .ui-tabs-nav .ui-state-active {
+	background: #807e7f;
+}
+
+.news-baku-category #header .ui-tabs-nav .ui-state-active a {
+	color: #fff;
+}
+
+.news-baku-category #header .ui-tabs-panel input[type="submit"] {
+    background-position: 0 -60px;
+}
+
+.news-baku-category #header .menu{
+	border-color:#807e7f;
+}
+
+.news-baku-category #header .menu .item-inactive {
+	background: #d7d2cf;
+}
+
+.news-baku-category #header .menu .all-services a {
+	color:#807e7f;
+}
+
+.news-baku-category #header .menu .all-services:before {
+	color:#807e7f;
+}
+
+/* azerbaijan color */
+
+.news-azerbaijan-category #header .ui-tabs-panel {
+	border-color:#718581;
+}
+
+.news-azerbaijan-category #header .ui-tabs-nav .ui-state-default a {
+	border-color: #718581;
+	color:#718581;
+}
+
+.news-azerbaijan-category #header .ui-tabs-nav .ui-state-active {
+	background: #718581;
+}
+
+.news-azerbaijan-category #header .ui-tabs-nav .ui-state-active a {
+	color: #fff;
+}
+
+.news-azerbaijan-category #header .ui-tabs-panel input[type="submit"] {
+    background-position: 0 -80px;
+}
+
+.news-azerbaijan-category #header .menu{
+	border-color:#718581;
+}
+
+.news-azerbaijan-category #header .menu .item-inactive {
+	background: #C6D6CF;
+}
+
+.news-azerbaijan-category #header .menu .all-services a {
+	color:#718581;
+}
+
+.news-azerbaijan-category #header .menu .all-services:before {
+	color:#718581;
+}
+
+/* world color */
+.news-world-category #header .ui-tabs-panel {
+	border-color:#807B94;
+}
+
+.news-world-category #header .ui-tabs-nav .ui-state-default a {
+	border-color: #807B94;
+	color:#807B94;
+}
+
+.news-world-category #header .ui-tabs-nav .ui-state-active {
+	background: #807B94;
+}
+
+.news-world-category #header .ui-tabs-nav .ui-state-active a {
+	color: #fff;
+}
+
+.news-world-category #header .ui-tabs-panel input[type="submit"] {
+    background-position: 0 -10	0px;
+}
+
+.news-world-category #header .menu{
+	border-color:#807B94;
+}
+
+.news-world-category #header .menu .item-inactive {
+	background: #D4CCDF;
+}
+
+.news-world-category #header .menu .all-services a {
+	color:#807B94;
+}
+
+.news-world-category #header .menu .all-services:before {
+	color:#807B94;
+}
+
+.news-baku-category.category-news .hot-wrap {
+    background: #807e7f;
+}
+
+.news-baku-category .category-news .pagination li a {
+    color: #807e7f;
+}
+
+.news-azerbaijan-category .category-news .pagination li a {
+    color: #718581;
+}
+
+.news-world-category .category-news .pagination li a {
+    color: #807B94;
+}
+
+.news-baku-category .category-news .pagination li.current-page a {
+    background: #807e7f;
+}
+
+.news-azerbaijan-category .category-news .pagination li.current-page a {
+    background: #718581;
+}
+
+.news-world-category .category-news .pagination li.current-page a {
+    background: #807B94;
+}
+
+/* baku color */
+.news-baku-category .news-block .head h3 {
+    color:#f4ede8;    
+}
+
+.news-baku-category .news-block .body {
+    background: #f4ede8;
+    border-left-color:#807e7f;
+}
+
+.news-baku-category .post-meta {
+    background: #d7d2cf;
+    color:#807e7f;
+}
+
+.news-baku-category .post-meta a {
+    color:#807e7f;
+}
+
+.news-baku-category .news-block .post-list .post-item.state-active {
+    background: #807e7f; /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzgwN2U3ZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjY4JSIgc3RvcC1jb2xvcj0iIzgwN2U3ZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM1YjVhNWEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(left,  #807e7f 0%, #807e7f 68%, #5b5a5a 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#807e7f), color-stop(68%,#807e7f), color-stop(100%,#5b5a5a)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  #807e7f 0%,#807e7f 68%,#5b5a5a 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  #807e7f 0%,#807e7f 68%,#5b5a5a 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  #807e7f 0%,#807e7f 68%,#5b5a5a 100%); /* IE10+ */
+    background: linear-gradient(left,  #807e7f 0%,#807e7f 68%,#5b5a5a 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#807e7f', endColorstr='#5b5a5a',GradientType=1 ); /* IE6-8 */
+}
+
+.news-baku-category .news-block .post-list .more-link {
+    background: #807e7f;    
+}
+
+/* azerbaijan color */
+
+.news-azerbaijan-category .news-block .head h3 {
+    color:#E7F3E8;    
+}
+
+.news-azerbaijan-category .news-block .body {
+    background: #E7F3E8;
+    border-left-color:#718581;
+}
+
+.news-azerbaijan-category .post-meta {
+    background: #C6D6CF;
+    color:#718581;
+}
+
+.news-azerbaijan-category .post-meta a {
+    color:#718581;
+}
+
+.news-azerbaijan-category .news-block .post-list .post-item.state-active {
+    background: #718581; /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzgwN2U3ZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjY4JSIgc3RvcC1jb2xvcj0iIzgwN2U3ZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM1YjVhNWEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(left,  #718581 0%, #718581 68%, #5b5a5a 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#718581), color-stop(68%,#718581), color-stop(100%,#5b5a5a)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  #718581 0%,#718581 68%,#5b5a5a 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  #718581 0%,#718581 68%,#5b5a5a 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  #718581 0%,#718581 68%,#5b5a5a 100%); /* IE10+ */
+    background: linear-gradient(left,  #718581 0%,#718581 68%,#5b5a5a 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#718581', endColorstr='#5b5a5a',GradientType=1 ); /* IE6-8 */
+}
+
+.news-azerbaijan-category .news-block .post-list .more-link {
+    background: #718581;    
+}
+
+/* world color */
+
+.news-world-category .news-block .head h3 {
+    color:#F4EAF9;    
+}
+
+.news-world-category .news-block .body {
+    background: #F4EAF9;
+    border-left-color:#807B94;
+}
+
+.news-world-category .post-meta {
+    background: #D4CCDF;
+    color:#807B94;
+}
+
+.news-world-category .post-meta a {
+    color:#807B94;
+}
+
+.news-world-category .news-block .post-list .post-item.state-active {
+    background: #807B94; /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzgwN2U3ZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjY4JSIgc3RvcC1jb2xvcj0iIzgwN2U3ZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM1YjVhNWEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(left,  #807B94 0%, #807B94 68%, #5b5a5a 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#807B94), color-stop(68%,#807B94), color-stop(100%,#5b5a5a)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  #807B94 0%,#807B94 68%,#5b5a5a 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  #807B94 0%,#807B94 68%,#5b5a5a 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  #807B94 0%,#807B94 68%,#5b5a5a 100%); /* IE10+ */
+    background: linear-gradient(left,  #807B94 0%,#807B94 68%,#5b5a5a 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#807B94', endColorstr='#5b5a5a',GradientType=1 ); /* IE6-8 */
+}
+
+/*.news-world-category .news-block .post-list .more-link {
+    background: #718581;    
+}*/
+
+.category-news.news-baku-category .head {
+    color:#807e7f;
+}
+
+.category-news.news-baku-category .search-form {
+    background: #807e7f;
+}
+
+.category-news.news-baku-category .search-form input[type="submit"] {
+	background:url(../images/ico-search.png) no-repeat 0 -60px;
+}
+
+.category-news.news-baku-category .search-results-info {
+    background: #d7d2cf;
+    color: #807e7f;
+}
+
+.category-news.news-baku-category .hot-wrap {
+    background: #807e7f;
+}
+
+.category-news.news-baku-category a {
+    color:#807e7f;
+}
+
+.category-news.news-baku-category .post-item .post-category a {
+    color:#807e7f;
+}
+
+.category-news.news-baku-category .body {
+    background: #f4ede8;
+}
+
+
+.category-news.news-baku-category .more-link {
+	background: #807E7F;
+}
+
+.news-baku-category .category-news {
+    border-bottom: 2px solid #807e7f;	
+}
+
+.category-news.news-azerbaijan-category .head {
+    color:#718581;
+}
+
+.category-news.news-azerbaijan-category .hot-wrap {
+    background: #718581;
+}
+
+.category-news.news-azerbaijan-category .body {
+    background: #e7f3e8;
+}
+
+.category-news.news-azerbaijan-category .hr {
+    border-top: 1px solid #c6d6cf;
+    border-bottom: 1px solid #fbfbfb;
+}
+
+.category-news.news-azerbaijan-category a {
+    color:#718581;
+}
+
+.category-news.news-azerbaijan-category .more-link {
+	background: #718581;
+}
+
+.category-news.news-world-category .head {
+    color:#807b94;
+}
+
+.category-news.news-world-category .hot-wrap {
+    background: #807b94;
+}
+
+.category-news.news-world-category .body {
+    background: #f4eaf9;
+}
+
+.category-news.news-world-category .hr {
+    border-top: 1px solid #d4ccdf;
+    border-bottom: 1px solid #fbfbfb;
+}
+
+.category-news.news-world-category .more-link {
+	background: #807b94;
+}
+
+.news-baku-category .sub-categories {
+    background: #f4ede8;
+}
+
+.news-baku-category .sub-categories a {
+    color:#434242;
+}
+
+.news-azerbaijan-category .sub-categories {
+    background: #E7F3E8;
+}
+
+.news-azerbaijan-category .sub-categories a {
+    color:#718581;
+}
+
+
+.news-baku-category .follow-block {
+    background: #807e7f;    
+}
+
+.news-baku-category .follow-block a {
+    background: #444;
+}
+
+.news-azerbaijan-category .follow-block {
+    background: #718581;    
+}
+
+.news-azerbaijan-category .follow-block a {
+    background: #444;
+}
+
+.news-baku-category .tags-trend .head {
+    color:#807e7f;
+}
+
+.news-baku-category .tags-trend .body {
+    background: #f4ede8;
+}
+
+.news-baku-category .tags-trend a {
+    color:#434242;
+}
+
+.news-baku-category .tags-trend a .followers {
+    color:#807e7f;
+}
+
+.news-baku-category .top-stories .head {
+    color:#807e7f;
+}
+
+.news-baku-category .top-stories .body {
+    background: #f9f5f3;
+}
+
+/* news-post */
+
+.news-baku-category .news-post .head {
+    color: #807e7f;    
+}
+
+.news-baku-category .news-post .tags-trend .hr {
+    border-top-color:#beb7b4;
+    border-bottom-color:#e9e7e5;
+}
+
+.news-baku-category .news-post .body {
+    background: #f4ede8;
+}
+
+.news-baku-category .news-post p.post-date {
+    color:#959393    
+}
+
+.news-baku-category .news-post .post-rating {
+    color: #807e7f;    
+}
+
+.news-baku-category .news-post .hr {
+    border-top: 1px solid #d7d2cf;
+    border-bottom: 1px solid #fbfbfb;
+    clear: both;
+}
+
+.news-baku-category .news-post .tags-trend {
+    background: #d7d2cf;
+}
+
+.news-baku-category .news-post .tags-trend .followers {
+	color: #807e7f;
+}
+
+.news-baku-category .news-post .tags-trend a.follow {
+    color:#f4ede8;
+}
+
+.news-baku-category .news-post .comments .comment-reply {
+	background: #e5dfdb;	
+}
+
+.news-baku-category .news-post .comments .add-comment {
+    color:#9c9896;
+}
+
+.news-baku-category .news-post .comments .add-comment .body {
+    background: #e5dfdb;
+}
+
+.news-baku-category .news-post .comments .add-comment .submit input {
+    color:#f4ede8;
+    background:#444; 
+}
+
+.news-azerbaijan-category .news-post .head {
+    color: #718581;    
+}
+
+.news-azerbaijan-category .news-post .tags-trend .hr {
+    border-top-color:#94a09b;
+    border-bottom-color:#d4e0db;
+}
+
+.news-azerbaijan-category .news-post .body {
+    background: #e7f3e8;
+}
+
+.news-azerbaijan-category .news-post p.post-date {
+    color:#959393    
+}
+
+.news-azerbaijan-category .news-post .post-rating {
+    color: #718581;    
+}
+
+.news-azerbaijan-category .news-post .hr {
+    border-top: 1px solid #c6d6cf;
+    border-bottom: 1px solid #fbfbfb;
+    clear: both;
+}
+
+.news-azerbaijan-category .news-post .tags-trend {
+    background: #c6d6cf;
+}
+
+.news-azerbaijan-category .news-post .tags-trend .followers {
+	color: #718581;
+}
+
+.news-azerbaijan-category .news-post .tags-trend a.follow {
+    color:#e7f3e8;
+}
+
+.news-azerbaijan-category .news-post .comments .comment-reply {
+	background: #d7e5db;	
+}
+
+.news-azerbaijan-category .news-post .comments .add-comment {
+    color:#9c9896;
+}
+
+.news-azerbaijan-category .news-post .comments .add-comment .body {
+	background: #d7e5db;	
+}
+
+.news-azerbaijan-category .news-post .comments .add-comment .submit input {
+    background:#718581; 
+}
+
+.news-world-category .news-post .head {
+    color: #807b94;    
+}
+
+.news-world-category .news-post .tags-trend .hr {
+    border-top-color:#9f99a7;
+    border-bottom-color:#ded8e6;
+}
+
+.news-world-category .news-post .body {
+    background: #f4eaf9;
+}
+
+.news-world-category .news-post p.post-date {
+    color:#959393    
+}
+
+.news-world-category .news-post .post-rating {
+    color: #807b94;    
+}
+
+.news-world-category .news-post .hr {
+    border-top: 1px solid #d4ccdf;
+    border-bottom: 1px solid #fbfbfb;
+    clear: both;
+}
+
+.news-world-category .news-post .tags-trend {
+    background: #d4ccdf;
+}
+
+.news-world-category .news-post .tags-trend .followers {
+	color: #807b94;
+}
+
+.news-world-category .news-post .tags-trend a.follow {
+    color:#f4eaf9;
+}
+
+.news-world-category .news-post .comments .comment-reply {
+	background: #e4dbec;	
+}
+
+.news-world-category .news-post .comments .add-comment {
+    color:#9c9896;
+}
+
+.news-world-category .news-post .comments .add-comment .body {
+	background: #e4dbec;	
+}
+
+.news-world-category .news-post .comments .add-comment .submit input {
+    background:#807b94; 
+}
+
+
+
+
+
+
+

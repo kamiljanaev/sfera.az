@@ -1,0 +1,224 @@
+<?= $this->flashMessages(); ?>
+<?php
+    $this->headLink()->appendStylesheet($this->baseUrl . '/css/jquery.selectBox.css', 'screen, projection');
+    $this->headLink()->appendStylesheet($this->baseUrl . '/css/profile.css', 'screen, projection');
+    $this->headScript()->appendFile($this->baseUrl . '/js/jquery.customselectbox.min.js');
+$this->headScript()->appendFile($this->baseUrl . '/js/profile.js');
+$this->headScript()->appendFile($this->baseUrl . '/js/profileedit.js');
+?>
+<script language="javascript">
+    var currentUserId = <?= $this->userData->id ?>;
+</script>
+<div id="section-profile">
+    <div class="container">
+        <div class="content">
+            <div class="user-edit-profile">
+                <div class="head">
+                    <h1>Edit profile</h1>
+                </div>
+<form action="<?= $this->getUrl('profile/edit') ?>" method="POST" id="editForm" enctype="multipart/form-data">
+                <table>
+                    <tr>
+                        <th>Sfera Login</th>
+                        <td class="login"><?= $this->userData->login ?></td>
+                    </tr>
+                    <tr class="separator-bottom">
+                        <th><label for="email">Email</label></th>
+                        <td>
+                            <input type="text" name="email" id="email" class="formItems" value="<?= $this->userData->email ?>" />
+                            <?php if (array_key_exists('email_correct', $this->formData)&&!$this->formData['email_correct']['valid']): ?>
+                            <span class="hint error" id="emailInCorrectValue">enter correct email address</span>
+                            <?php else: ?>
+                            <span class="hint error" style="display:none;" id="emailInCorrectValue">enter correct email address</span>
+                            <?php endif; ?>
+                            <?php if (array_key_exists('email_server', $this->formData)&&!$this->formData['email_server']['valid']): ?>
+                            <span class="hint error" id="emailServerInCorrectValue">This e-mail address is already registered</span>
+                            <?php else: ?>
+                            <span class="hint error" style="display:none;" id="emailServerInCorrectValue">This e-mail address is already registered</span>
+                            <?php endif; ?>
+                        </td>
+                    </tr>
+                    <tr class="separator-top">
+                        <th><label for="alias">Nickname</label></th>
+                        <td>
+                            <input type="text" name="alias" id="alias" class="formItems" value="<?= $this->profileData->alias ?>" />
+                            <?php if (array_key_exists('alias', $this->formData)&&!$this->formData['alias']['valid']): ?>
+                            <span class="hint error" id="aliasInCorrectValue">enter nickname</span>
+                            <?php else: ?>
+                            <span class="hint error" style="display:none;" id="aliasInCorrectValue">enter nickname</span>
+                            <?php endif; ?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Facebook</th>
+                        <td><?php if (strlen($this->profileData->getFacebook())): ?><?= $this->profileData->getFacebook() ?><?php else: ?><input type="text" name="facebook" id="facebook" value="" /><?php endif; ?></td>
+                    </tr>
+                    <tr>
+                        <th>Twitter</th>
+                        <td><?php if (strlen($this->profileData->getTwitter())): ?><?= $this->profileData->getTwitter() ?><?php else: ?><input type="text" name="twitter" id="twitter" value="" /><?php endif; ?></td>
+                    </tr>
+                    <tr>
+                        <th>Google+</th>
+                        <td><?php if (strlen($this->profileData->getGoogle())): ?><?= $this->profileData->getGoogle() ?><?php else: ?><input type="text" name="googleplus" id="googleplus" value="" /><?php endif; ?></td>
+                    </tr>
+                    <tr>
+                        <th>Avatar</th>
+                        <td>
+                            <div class="user-avatar-uploaded" style="background: url(<?= $this->profileData->getAvatar() ?>)"></div>
+                            <div class="upload-new-avatar">Upload new avatar<span><input type="file" name="avatar" /></span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><label for="firstname">Name</label></th>
+                        <td>
+                            <input type="text" name="firstname" id="firstname" class="formItems" value="<?= $this->profileData->firstname ?>" />
+                            <?php if (array_key_exists('firstname', $this->formData)&&!$this->formData['firstname']['valid']): ?>
+                            <span class="hint error" id="firstnameInCorrectValue">enter firstname</span>
+                            <?php else: ?>
+                            <span class="hint error" style="display:none;" id="firstnameInCorrectValue">enter firstname</span>
+                            <?php endif; ?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><label for="lastname">Surname</label></th>
+                        <td>
+                            <input type="text" name="lastname" id="lastname" class="formItems" value="<?= $this->profileData->lastname ?>" />
+                            <?php if (array_key_exists('lastname', $this->formData)&&!$this->formData['lastname']['valid']): ?>
+                            <span class="hint error" id="lastnameInCorrectValue">enter lastname</span>
+                            <?php else: ?>
+                            <span class="hint error" style="display:none;" id="lastnameInCorrectValue">enter lastname</span>
+                            <?php endif; ?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Gender</th>
+                        <td>
+                            <label><input type="radio" name="gender" value="1" <?php if ($this->profileData->gender == 1): ?>checked<?php endif; ?>/> Male</label>
+                            <label><input type="radio" name="gender" value="0" <?php if ($this->profileData->gender == 0): ?>checked<?php endif; ?>/> Female</label>
+                        </td>
+                    </tr>
+                    <tr class="space-bottom">
+                        <th>Birthday</th>
+                        <td>
+                            <select name="birthday-month">
+                                <option value="01" <?php if ($this->getMonth($this->profileData->birthdate) == 1): ?>selected<?php endif; ?>>January</option>
+                                <option value="02" <?php if ($this->getMonth($this->profileData->birthdate) == 2): ?>selected<?php endif; ?>>February</option>
+                                <option value="03" <?php if ($this->getMonth($this->profileData->birthdate) == 3): ?>selected<?php endif; ?>>March</option>
+                                <option value="04" <?php if ($this->getMonth($this->profileData->birthdate) == 4): ?>selected<?php endif; ?>>April</option>
+                                <option value="05" <?php if ($this->getMonth($this->profileData->birthdate) == 5): ?>selected<?php endif; ?>>May</option>
+                                <option value="06" <?php if ($this->getMonth($this->profileData->birthdate) == 6): ?>selected<?php endif; ?>>June</option>
+                                <option value="07" <?php if ($this->getMonth($this->profileData->birthdate) == 7): ?>selected<?php endif; ?>>July</option>
+                                <option value="08" <?php if ($this->getMonth($this->profileData->birthdate) == 8): ?>selected<?php endif; ?>>August</option>
+                                <option value="09" <?php if ($this->getMonth($this->profileData->birthdate) == 9): ?>selected<?php endif; ?>>September</option>
+                                <option value="10" <?php if ($this->getMonth($this->profileData->birthdate) == 10): ?>selected<?php endif; ?>>October</option>
+                                <option value="11" <?php if ($this->getMonth($this->profileData->birthdate) == 11): ?>selected<?php endif; ?>>November</option>
+                                <option value="12" <?php if ($this->getMonth($this->profileData->birthdate) == 12): ?>selected<?php endif; ?>>December</option>
+                            </select>
+                            <select name="birthday-day">
+                                <?php for ($i=1;$i<=31;$i++): ?>
+                                <option value="<?php if ($i<10): ?>0<?php endif; ?><?= $i ?>" <?php if ($this->getDay($this->profileData->birthdate) == $i): ?>selected<?php endif; ?>><?= $i ?></option>
+                                <?php endfor; ?>
+                            </select>
+                            <select name="birthday-year">
+                                <?php for ($i=1950;$i<=2000;$i++): ?>
+                                <option value="<?= $i ?>" <?php if ($this->getYear($this->profileData->birthdate) == $i): ?>selected<?php endif; ?>><?= $i ?></option>
+                                <?php endfor; ?>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><label for="hometown">City / town</label></th>
+                        <td><input type="text" name="hometown" id="hometown" value="<?= $this->profileData->hometown ?>" /></td>
+                    </tr>
+                    <tr>
+                        <th><label for="phone">Phone</label></th>
+                        <td><input type="text" name="phone" id="phone" value="<?= $this->profileData->phone ?>" /></td>
+                    </tr>
+                    <tr>
+                        <th><label for="icq">ICQ</label></th>
+                        <td><input type="text" name="icq" id="icq" value="<?= $this->profileData->icq ?>" /></td>
+                    </tr>
+                    <tr>
+                        <th><label for="skype">Skype</label></th>
+                        <td><input type="text" name="skype" id="skype" value="<?= $this->profileData->skype ?>" /></td>
+                    </tr>
+                    <tr class="separator-bottom">
+                        <th><label for="about">About me</label></th>
+                        <td>
+                            <textarea name="about" id="about"><?= $this->profileData->about ?></textarea>
+                        </td>
+                    </tr>
+                    <tr class="separator-top">
+                        <th>Password</th>
+                        <td class="hint"><a href="#" class="help" id="change-password">change password</a></td>
+                    </tr>
+                    <tr class="password overlay">
+                        <th><label for="currentpassword">Current password</label></th>
+                        <td>
+                            <input type="text" name="currentpassword" id="currentpassword" class="formItems" />
+                            <?php if (array_key_exists('currentpassword', $this->formData)&&!$this->formData['currentpassword']['valid']): ?>
+                            <script language="javascript">
+                                jQuery(document).ready(function($){
+                                    $(".password.overlay").show()
+                                })
+                            </script>
+                            <span class="hint error" id="currentPwdCorrectValue">current password is incorrect</span>
+                            <span class="hint error" id="currentPwdCorrectLength" style="display: none;">type current password</span>
+                            <?php else: ?>
+                            <span class="hint error" id="currentPwdCorrectValue" style="display: none;">current password is incorrect</span>
+                            <span class="hint error" id="currentPwdCorrectLength" style="display: none;">type current password</span>
+                            <?php endif; ?>
+                        </td>
+                    </tr>
+                    <tr class="password overlay">
+                        <th><label for="newpassword">New password</label></th>
+                        <td>
+                            <input type="text" name="newpassword" id="newpassword" class="formItems" />
+                            <?php if (array_key_exists('newpassword', $this->formData)&&!$this->formData['newpassword']['valid']): ?>
+                            <script language="javascript">
+                                jQuery(document).ready(function($){
+                                    $(".password.overlay").show()
+                                })
+                            </script>
+                            <span class="hint error" id="pwdCorrectValue">password should contain at least 8 characters</span>
+                            <?php else: ?>
+                            <span class="hint error" id="pwdCorrectValue" style="display: none;">password should contain at least 8 characters</span>
+                            <?php endif; ?>
+                        </td>
+                    </tr>
+                    <tr class="password overlay">
+                        <th><label for="retypepassword">Retype password</label></th>
+                        <td>
+                            <input type="text" name="retypepassword" id="retypepassword" class="formItems" />
+                            <?php if (array_key_exists('retypepassword', $this->formData)&&!$this->formData['retypepassword']['valid']): ?>
+                            <script language="javascript">
+                                jQuery(document).ready(function($){
+                                    $(".password.overlay").show()
+                                })
+                            </script>
+                            <span class="hint error" id="rePwdCorrectValue">passwords not match</span>
+                            <?php else: ?>
+                            <span class="hint error" id="rePwdCorrectValue" style="display: none;">passwords not match</span>
+                            <?php endif; ?>
+                        </td>
+                    </tr>
+                    <tr class="separator-bottom">
+                        <td colspan="2"></td>
+                    </tr>
+                    <tr class="separator-top">
+                        <td colspan="2"></td>
+                    </tr>
+                </table>
+
+                <div class="submit">
+                    <input type="submit" value="Save changes" />
+                </div>
+</form>
+            </div><!-- .user-edit-profile -->
+
+
+        </div><!-- .content -->
+    </div><!-- .container -->
+
+    <?= $this->partial('frontProfileSidebar.phtml', $this) ?>
+</div><!-- #section-profile -->

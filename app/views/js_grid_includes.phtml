@@ -1,0 +1,11 @@
+<?php
+    $systemconfig = Zend_Registry::get('systemconfig');
+	$this->headLink()->appendStylesheet($this->baseUrl . '/css/jqgrid/3.5/ui.jqgrid.css', 'screen, print');
+	$this->headLink()->appendStylesheet($this->baseUrl . '/css/jqgrid/3.5/jquery.searchFilter.css', 'screen, print');
+	$this->headScript()->appendFile($this->baseUrl . '/js/libs/jqgrid/grid.locale-ru.js');
+	$this->headScript()->appendFile($this->baseUrl . '/js/libs/jqgrid/jquery.jqGrid.min.js');
+	$this->headScript()->appendFile($this->baseUrl . '/js/libs/jqgrid/jqModal.js');
+	$this->headScript()->appendFile($this->baseUrl . '/js/libs/jquery.validate.methods.js');
+	$this->headScript()->appendFile($this->baseUrl . '/js/libs/jquery.validate.pack.js');
+	$this->headScript()->appendFile($this->baseUrl . '/js/libs/jquery.form.js');
+?>

@@ -1,0 +1,7 @@
+<div id="news" class="strip-tab scroller">
+    <ul>
+        <?php foreach ($this->newsList as $newsItem): ?>
+        <li><a href="<?= $this->getUrl('news/show/'.$newsItem->id) ?>"><?= $newsItem->title ?></a><span class="post-date"><?= $this->formatDate($newsItem->public_date) ?></span></li>
+        <?php endforeach; ?>
+    </ul>
+</div>

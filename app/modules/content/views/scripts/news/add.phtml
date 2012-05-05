@@ -1,0 +1,85 @@
+<?php 
+    $this->headLink()->appendStylesheet($this->baseUrl . '/css/jquery.selectBox.css', 'screen, projection');
+    $this->headLink()->appendStylesheet($this->baseUrl . '/css/profile.css', 'screen, projection');
+    $this->headScript()->appendFile($this->baseUrl . '/js/jquery.customselectbox.min.js');
+    $this->headScript()->appendFile($this->baseUrl . '/js/profile.js');
+    $this->headScript()->appendFile($this->baseUrl . '/js/news.js');
+    $this->partial('js_tinymce_front_includes.phtml',null,$this);
+?>
+
+<?php /* $this->flashMessages(); ?>
+<?php if ($this->added): ?>
+    Новость добавлена
+<?php else: ?>
+    <?php if ($this->newsForm): ?>
+    <?= $this->newsForm ?>
+    <?php endif; ?>
+<?php endif; */?>
+
+<div id="section-profile">
+    <div class="container">
+        <div class="content">
+
+            <div class="user-edit-profile">
+                <div class="head">
+                    <h1>Add news</h1>
+                </div>
+                    <form action="<?= $this->newsForm->getAction() ?>" method="<?= $this->newsForm->getMethod() ?>" id="addNewsForm" enctype="multipart/form-data">
+                    <table>
+                        <tr>
+                            <th><label for="title">News title</label></th>
+                            <td>
+                                <input type="text" name="title" id="title" value="<?php if (array_key_exists('title', $this->formData)) { echo $this->formData['title']['value']; } ?>" class="formItems"/>
+                                <?php if (array_key_exists('title', $this->formData)&&!$this->formData['title']['valid']): ?>
+                                <span class="hint error" id="titleCorrectValue">title should be entered</span>
+                                <?php else: ?>
+                                <span class="hint error" id="titleCorrectValue" style="display: none;">title should be entered</span>
+                                <?php endif; ?>
+                            </td>
+                        </tr>
+                        <tr class="separator-bottom">
+                            <th>Image</th>
+                            <td>
+                                <div class="upload-new-avatar">Upload image<span><input type="file" name="image" id="image"/></span></div>
+                                <?php if (array_key_exists('image', $this->formData)&&!$this->formData['image']['valid']): ?>
+                                <span class="hint error" id="imageCorrectValue">choose image</span>
+                                <?php else: ?>
+                                <span class="hint error" id="imageCorrectValue" style="display: none;">choose image</span>
+                                <?php endif; ?>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><label for="short_content">Short content</label></th>
+                            <td>
+                                <textarea name="short_content" id="short_content" class="formItems"><?php if (array_key_exists('short_content', $this->formData)) { echo $this->formData['short_content']['value']; } ?></textarea>
+                                <?php if (array_key_exists('short_content', $this->formData)&&!$this->formData['short_content']['valid']): ?>
+                                <span class="hint error" id="shortContentCorrectValue">short content should be entered</span>
+                                <?php else: ?>
+                                <span class="hint error" id="shortContentCorrectValue" style="display: none;">short content should be entered</span>
+                                <?php endif; ?>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><label for="content">Content</label></th>
+                            <td>
+                                <textarea name="content" id="content" class="tinymce" class="formItems"><?php if (array_key_exists('content', $this->formData)) { echo $this->formData['content']['value']; } ?></textarea>
+                                <?php if (array_key_exists('content', $this->formData)&&!$this->formData['content']['valid']): ?>
+                                <span class="hint error" id="contentCorrectValue">content should be entered</span>
+                                <?php else: ?>
+                                <span class="hint error" id="contentCorrectValue" style="display: none;">content should be entered</span>
+                                <?php endif; ?>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <div class="submit">
+                        <input type="submit" value="Add new" />
+                    </div>
+                    </form>
+            </div>
+
+        </div><!-- .content -->
+    </div><!-- .container -->
+
+    <?= $this->partial('frontProfileSidebar.phtml', $this) ?>
+</div><!-- #section-profile -->

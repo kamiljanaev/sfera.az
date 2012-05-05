@@ -1,0 +1,35 @@
+<?php
+	$this->headTitle($this->msgAdminTitle);
+    $this->partial('js_edit_includes.phtml',null,$this);
+    $this->partial('js_tree_includes.phtml',null,$this);
+    $this->headScript()->appendScript($this->render('admin/category/js/tree.js'));
+?>
+<div id="main">
+	<div class="content">
+		<div id="head">
+			<h2><?= $this->msgAdminTitle ?></h2>
+		</div>
+		<div id="add-button-row">
+			<div class="control">
+				<?php if($this->checkPermission('content', 'admin_category', 'add')): ?>
+					<span class="button" id="add-button">
+	                    <a href="<?php echo $this->getUrl('/admin/module/content/category/add'); ?>" class="add-action"><?= $this->msgButtonAdd ?></a>
+					</span>
+				<?php endif; ?>
+				<span class="separator">
+					&nbsp;&nbsp;&nbsp;
+				</span>
+				<span class="button submit">
+					<button type="submit" name="save" class="save-action"><?= $this->msgButtonSave ?></button>
+				</span>
+				<span class="button delete">
+					<button name="save" class="delete-action"><?= $this->msgButtonDelete ?></button>
+				</span>
+			</div>
+		</div>
+		<div>
+			<div id="category_tree"></div>
+			<div id="category_data"></div>
+		</div>
+	</div>
+</div>

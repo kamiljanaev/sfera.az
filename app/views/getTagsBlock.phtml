@@ -1,0 +1,10 @@
+<div class="tags-cloud-block">
+    <div class="head">
+        <h3>Tags cloud</h3>
+    </div>
+    <div class="body">
+        <?php foreach ($this->tagsArray as $tagItem): ?>
+        <a style="font-size: <?= $tagItem['font'] ?>;" title="<?= $tagItem['count'] ?> записи" class="tag-link" href="<?= $this->getUrl('news/tags/'.$tagItem['id']) ?>"><?= $tagItem['title'] ?></a>
+        <?php endforeach; ?>
+    </div>
+</div><!-- .tags-cloud-block -->

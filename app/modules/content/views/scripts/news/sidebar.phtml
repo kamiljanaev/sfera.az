@@ -1,0 +1,204 @@
+<div id="news-sidebar">
+    <?php if ($this->category): ?>
+        <div class="sub-categories">
+            <ul>
+                <?php foreach ($this->newsCategoriesList as $catItem): ?>
+                <li><a href="<?= $this->getUrl('news/category/'.$catItem->id) ?>"><?= $catItem->title ?></a></li>
+                <?php endforeach; ?>
+            </ul>
+        </div>
+        <div class="follow-block">
+            <?= $this->getCategoryFollowLink($this->newsCategory, $this->newsCategory->title.' news') ?>
+            <span class="subscribers"><span class="value"><?= $this->getCountCategorySubscribers($this->category) ?></span> users</span>
+        </div>
+    <?php endif; ?>
+    <?php if ($this->tag): ?>
+        <div class="follow-block">
+            <?= $this->getTagFollowLink($this->newsTag, $this->newsTag->title.' tag') ?>
+            <span class="subscribers"><span class="value"><?= $this->getCountTagSubscribers($this->tag) ?></span> users</span>
+        </div>
+    <?php endif; ?>
+    <div class="posts-strips">
+        <ul class="strips-menu">
+            <li><a href="#news">News Roll</a></li>
+            <li><a href="#popular">Popular</a></li>
+            <li><a href="#partner">Partner News</a></li>
+        </ul>
+        <?= $this->getNewsRoll() ?>
+        <?= $this->getNewsRollPopular() ?>
+        <div id="partner" class="strip-tab scroller">
+            <ul>
+                <li><a href="#">Six CSS Layout Features To Look Forward</a><span class="post-date">today, 15:32</span></li>
+                <li><a href="#">The Smashing Deals Countdown For Christmas</a><span class="post-date">today, 15:26</span></li>
+                <li><a href="#">The Messy Art Of UX Sketching</a><span class="post-date">today, 15:20</span></li>
+                <li><a href="#" class="hot">An Introduction To Object Oriented CSS (OOCSS)</a><span class="post-date">today, 15:16</span></li>
+                <li><a href="#">Clear Indications That It’s Time To Redesign</a><span class="post-date">today, 15:08</span></li>
+                <li><a href="#">Six CSS Layout Features To Look Forward</a><span class="post-date">today, 15:32</span></li>
+                <li><a href="#">The Smashing Deals Countdown For Christmas</a><span class="post-date">today, 15:26</span></li>
+                <li><a href="#">The Messy Art Of UX Sketching</a><span class="post-date">today, 15:20</span></li>
+            </ul>
+        </div>
+    </div><!-- .posts-strips-->
+
+    <div class="live-broadcast-block">
+        <div class="head"><h3>Live Broadcast</h3></div>
+        <div class="broadcast-wrap">
+            <div class="broadcast-price">just 20 cents</div>
+            <div class="broadcast-list scroller">
+                <ul>
+                    <li class="broadcast-item">
+                        <div class="broadcast-item-info">
+                            <p class="post-date">December 16th, 2011</p>
+                            <p class="post-msg">Happy Birthday, Sister! God blessing you!</p>
+                        </div>
+                        <div class="mask"></div>
+                        <div class="broadcast-item-image">
+                            <img src="/upload/avatar-01.jpg" />
+                        </div>
+                    </li><!-- .broadcast-item-->
+                    <li class="broadcast-item">
+                        <div class="broadcast-item-info">
+                            <p class="post-date">December 16th, 2011</p>
+                            <p class="post-msg">All of the competition! Trim the tree http://cards.sfera.az</p>
+                        </div>
+                        <div class="mask"></div>
+                        <div class="broadcast-item-image">
+                            <img src="/upload/avatar-02.jpg" />
+                        </div>
+                    </li><!-- .broadcast-item-->
+                    <li class="broadcast-item">
+                        <div class="broadcast-item-info">
+                            <p class="post-date">December 16th, 2011</p>
+                            <p class="post-msg">Son, happy birthday you !!!!!!!!!!</p>
+                        </div>
+                        <div class="mask"></div>
+                        <div class="broadcast-item-image">
+                            <img src="/upload/avatar-03.jpg" />
+                        </div>
+                    </li><!-- .broadcast-item-->
+                    <li class="broadcast-item">
+                        <div class="broadcast-item-info">
+                            <p class="post-date">December 16th, 2011</p>
+                            <p class="post-msg">Polinochka, Happy Birthday to you, my Docha! You Are My Sun.</p>
+                        </div>
+                        <div class="mask"></div>
+                        <div class="broadcast-item-image">
+                            <img src="/upload/avatar-04.jpg" />
+                        </div>
+                    </li><!-- .broadcast-item-->								<li class="broadcast-item">
+                        <div class="broadcast-item-info">
+                            <p class="post-date">December 16th, 2011</p>
+                            <p class="post-msg">Tom, my son, happy birthday! bless you!</p>
+                        </div>
+                        <div class="mask"></div>
+                        <div class="broadcast-item-image">
+                            <img src="/upload/avatar-05.jpg" />
+                        </div>
+                    </li><!-- .broadcast-item-->
+                    <li class="broadcast-item">
+                        <div class="broadcast-item-info">
+                            <p class="post-date">December 16th, 2011</p>
+                            <p class="post-msg">Happy Birthday, Sister! God blessing you!</p>
+                        </div>
+                        <div class="mask"></div>
+                        <div class="broadcast-item-image">
+                            <img src="/upload/avatar-01.jpg" />
+                        </div>
+                    </li><!-- .broadcast-item-->
+                    <li class="broadcast-item">
+                        <div class="broadcast-item-info">
+                            <p class="post-date">December 16th, 2011</p>
+                            <p class="post-msg">All of the competition! Trim the tree http://cards.sfera.az</p>
+                        </div>
+                        <div class="mask"></div>
+                        <div class="broadcast-item-image">
+                            <img src="/upload/avatar-02.jpg" />
+                        </div>
+                    </li><!-- .broadcast-item-->
+                    <li class="broadcast-item">
+                        <div class="broadcast-item-info">
+                            <p class="post-date">December 16th, 2011</p>
+                            <p class="post-msg">Son, happy birthday you !!!!!!!!!!</p>
+                        </div>
+                        <div class="mask"></div>
+                        <div class="broadcast-item-image">
+                            <img src="/upload/avatar-03.jpg" />
+                        </div>
+                    </li><!-- .broadcast-item-->
+                    <li class="broadcast-item">
+                        <div class="broadcast-item-info">
+                            <p class="post-date">December 16th, 2011</p>
+                            <p class="post-msg">Polinochka, Happy Birthday to you, my Docha! You Are My Sun.</p>
+                        </div>
+                        <div class="mask"></div>
+                        <div class="broadcast-item-image">
+                            <img src="/upload/avatar-04.jpg" />
+                        </div>
+                    </li><!-- .broadcast-item-->
+                    <li class="broadcast-item">
+                        <div class="broadcast-item-info">
+                            <p class="post-date">December 16th, 2011</p>
+                            <p class="post-msg">Tom, my son, happy birthday! bless you!</p>
+                        </div>
+                        <div class="mask"></div>
+                        <div class="broadcast-item-image">
+                            <img src="/upload/avatar-05.jpg" />
+                        </div>
+                    </li><!-- .broadcast-item-->
+                </ul>
+            </div><!-- .broadcast-list-->
+            <div class="broadcast-send-message">
+                <a href="#">Send message</a>
+            </div><!-- .broadcast-message-send-->
+            <div class="broadcast-all-link">
+                <a href="#">See all messages</a>
+            </div><!-- .broadcast-message-all-link-->
+        </div><!-- .lbroadcast-wrap-->
+    </div><!-- .live-broadcast-block-->
+
+    <div class="banner premium">
+        <img src="/upload/banner-240x350.jpg" width="240" height="350" alt="" />
+    </div>
+
+    <?= $this->getTagsBlock() ?>
+
+    <div class="banner adv">
+        <img src="/upload/banner-283x270.jpg" width="283" height="270" alt="" />
+    </div>
+
+    <div class="weather-exchange-wrap">
+        <div class="weather-section-top">
+            <div class="head"><h3>Weather</h3></div>
+            <div class="body">
+                <p class="weather-label">Weather in <span class="weather-location">Baku, Azerbaijan</span></p>
+                <p class="weather-info cloudly-rainy">
+                    <span class="temperature">+9&deg;C</span>
+                    <span class="description">cloudly, rainy</span>
+                </p>
+            </div>
+        </div><!-- .weather-section-top-->
+
+        <div class="exchange-section-top">
+            <div class="head"><h3>Exchange rates</h3></div>
+            <div class="body">
+            <table>
+                <tr>
+                    <th><a href="#">USD</a></th>
+                    <td>31,8957</td>
+                    <td><span class="delta-up">0,1256</span></td>
+                </tr>
+                <tr class="separator">
+                    <th><a href="#">EUR</a></th>
+                    <td>41,4389</td>
+                    <td><span class="delta-down">0,0456</span></td>
+                </tr>
+                <tr>
+                    <th><a href="#">OIL</a></th>
+                    <td>104,31</td>
+                    <td><span class="delta-up">0,87</span></td>
+                </tr>
+            </table>
+            </div>
+        </div><!-- .exchange-section-top-->
+    </div>
+</div><!-- #news-sidebar -->

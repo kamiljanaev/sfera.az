@@ -1,0 +1,26 @@
+<?php if ($this->adsitem): ?>
+<div><?= $this->adsitem->title ?></div>
+<table class="tbl_news_list">
+	<tbody>
+		<tr>
+			<td class="news_item">
+				<div class="news_header">
+					<span class="news_date"><?= $this->adsitem->public_date ?></span>
+				</div>
+				<?php if (strlen($this->adsitem->image)): ?>
+				<div class="news_img">
+					<?= Core_Image::getImageHtmlCode($this->adsitem->image,  Core_Image::PARAGRAPH_NORMAL) ?>
+				</div>
+				<?php endif; ?>
+				<div class="news_text">
+					<?= $this->adsitem->content ?>
+				</div>
+				<div class="news_item_footer">
+					<a href="<?= $this->getUrl('ads/list') ?>">Все объявления</a>
+				</div>
+			</td>
+		</tr>
+		<tr><td><br/></td></tr>
+	</tbody>
+</table>
+<?php endif; ?>

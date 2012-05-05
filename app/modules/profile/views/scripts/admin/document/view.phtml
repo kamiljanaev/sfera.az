@@ -1,0 +1,40 @@
+<?php
+	$this->headTitle($this->msgAdminViewTitle);
+    $this->headScript()->appendScript($this->render('admin/document/js/view.js'));
+?>
+<div id="main">
+	<div class="content">
+		<div id="head">
+			<h2><?= $this->msgAdminViewTitle ?></h2>
+		</div>
+        <div class="control">
+            <span class="button reset">
+                <a href="<?php echo $this->getUrl($this->baseUrl); ?>" class="cancel-action"><?= $this->msgButtonBack ?></a>
+            </span>
+        </div>
+		<div id="viewContent">
+			<table>
+                <tr>
+                    <td class="title"><?= $this->translate('document-form-status') ?></td>
+                    <td class="value"><?= $this->controller->getListItemValue($this->dataRow, 'status'); ?></td>
+                </tr>
+                <tr>
+                    <td class="title"><?= $this->translate('document-form-image') ?></td>
+                    <td class="value"><?= Core_Image::getImageHtmlCode($this->dataRow->image,  Core_Image::FULL) ?></td>
+                </tr>
+                <tr>
+                    <td class="title"><?= $this->translate('document-form-comment') ?></td>
+                    <td class="value"><?= $this->controller->getListItemValue($this->dataRow, 'comment'); ?></td>
+                </tr>
+                <tr>
+                    <td class="title"><?= $this->translate('document-form-profile') ?></td>
+                    <td class="value"><?= $this->controller->getListItemValue($this->dataRow, 'user_id'); ?> <a href="<?= $this->getUrl('/admin/module/profile/index/edit/id/'.$this->dataRow->profile_id) ?>" target="blank"><?= $this->translate('document-go-to-profile') ?></a></td>
+                </tr>
+                <tr>
+                    <td class="title"><?= $this->translate('document-form-set-decision') ?></td>
+                    <td class="value"><a class="approve" href="<?= $this->getUrl('/admin/module/profile/document/approve/id/'.$this->dataRow->id) ?>" target="blank"><?= $this->translate('document-form-set-approve') ?></a>&nbsp;<a class="approve" href="<?= $this->getUrl('/admin/module/profile/document/cancel/id/'.$this->dataRow->  id) ?>" target="blank"><?= $this->translate('document-form-set-cancel') ?></a></td>
+                </tr>
+			</table>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,31 @@
+<div id="header">
+	<?php echo $this->partial('admin_menu.phtml', null, $this) ?>
+</div>
+<div id="layouts">
+	<?php if(strlen($this->placeholder('left-layout')->toString())):?>
+		<div class="ui-layout-west">
+			<div id="treeblock"><?=	$this->placeholder('left-layout')->toString() ?></div>
+			<?php if(strlen($this->placeholder('left-layout-content')->toString())):?>
+				<div id="contentblock"><?=	$this->placeholder('left-layout-content')->toString() ?></div>
+			<?php endif; ?>
+			<span class="ui-closeTitle"></span>
+		</div>
+	<?php else: ?>
+		<?php if(strlen($this->placeholder('left-layout-content')->toString())):?>
+			<div class="ui-layout-west">
+				<div id="contentblock"><?=	$this->placeholder('left-layout-content')->toString() ?></div>
+				<span class="ui-closeTitle"></span>
+			</div>
+		<?php endif; ?>
+	<?php endif; ?>
+	<?php if(strlen($this->placeholder('right-layout')->toString())):?>
+		<div class="ui-layout-east">
+				<?=	$this->placeholder('right-layout')->toString() ?>
+			<span class="ui-closeTitle"></span>
+		</div>
+	<?php endif; ?>
+	<div class="ui-layout-center">
+		<?php echo $this->layout()->content ?>
+	</div>
+</div>
+<?php echo $this->partial('admin_footer.phtml', null, $this) ?>

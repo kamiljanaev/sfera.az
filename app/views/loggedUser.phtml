@@ -1,0 +1,17 @@
+<?php if ($this->loggedUser instanceof Core_Db_Users_Row): ?>
+<div class="auth-links" <?php if ($this->currentProfile instanceof Core_Db_Profiles_Row): ?>style="background-image:url(<?= $this->currentProfile->getAvatar() ?>)"<?php endif; ?>>
+    <p class="pm"><a href="#">6</a></p>
+    <p class="profile"><a href="<?= $this->getUrl('profile')?>">profile</a></p>
+</div><!-- .auth-links-->
+<?php else: ?>
+<div class="auth-links">
+    <p class="links">
+        <a href="<?= $this->getUrl('auth')?>" class="signin-link">Sign in</a>
+        or
+        <a href="<?= $this->getUrl('registration')?>" class="joinus-link">Join us!</a>
+    </p>
+    <p class="users">
+        <span class="users-count"><?= $this->getProfilesCount() ?></span> users
+    </p>
+</div><!-- .auth-links-->
+<?php endif; ?>

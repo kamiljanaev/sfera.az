@@ -1,0 +1,42 @@
+<?php if ($this->loggedUser instanceof Core_Db_Users_Row): ?>
+<div class="signin">
+    <?php if ($this->currentProfile instanceof Core_Db_Profiles_Row): ?><span class="hello">Hello, <?php if (strlen($this->currentProfile->firstname)): ?><?= $this->currentProfile->firstname ?><?php else: ?><?= $this->currentProfile->login ?><?php endif; ?>!</span><?php endif; ?>
+    <span class="logoff"><a href="<?= $this->getUrl('logout')?>">Log off</a></span>
+</div>
+<?php else: ?>
+<div class="signin">
+    <span class="span-welcome">Welcome to Sfera.az! You can</span>
+    <!--img src="upload/facebook-signin.jpg" alt="facebook-signin" width="150" height="22" /-->
+
+    <div id="fb-root"></div>
+    <!--<script type="text/javascript">
+      /*window.fbAsyncInit = function() {
+        FB.init({
+          appId      : 311758472198961,
+          status     : true,
+          cookie     : true,
+          xfbml      : true,
+          oauth      : true,
+        });
+      };
+      (function(d){
+         var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+         js = d.createElement('script'); js.id = id; js.async = true;
+         js.src = "//connect.facebook.net/en_US/all.js";
+         d.getElementsByTagName('head')[0].appendChild(js);
+       }(document));*/
+    </script>-->
+    <!--<script type="text/javascript">
+    /*
+      twttr.anywhere(function (T) {
+        T("#twitter-login").connectButton();
+      });*/
+
+    </script>-->
+
+    <div class="fb-login-button">Login with <a href="<?= $this->getUrl('login/facebook') ?>">Facebook</a></div>
+
+    <span class="span-or">- or -</span>
+    <span id="twitter-login"><a href="<?= $this->getUrl('login/twitter') ?>">Twitter</a></span>
+</div><!-- .signin-->
+<?php endif; ?>

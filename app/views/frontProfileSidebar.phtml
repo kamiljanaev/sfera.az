@@ -1,0 +1,112 @@
+<div id="profile-sidebar">
+    <?php if ($this->currentProfileData && ($this->currentProfileData->id != $this->profileData->id)): ?>
+    <div class="follow-link-block">
+        <?php if ($this->currentProfileData->checkFriend($this->profileData->id)): ?>
+        <a href="<?= $this->getUrl('friend/remove/'.$this->profileData->id) ?>">Unfollow this user</a>
+        <?php else: ?>
+        <a href="<?= $this->getUrl('friend/add/'.$this->profileData->id) ?>">Follow this user</a>
+        <?php endif; ?>
+    </div>
+    <?php endif; ?>
+    <?php if ($this->currentProfileData && ($this->currentProfileData->id == $this->profileData->id)): ?>
+        <?php if ($this->isEditProfile): ?>
+            <div class="edit-profile-block"><a href="<?= $this->getUrl('/profile') ?>">My profile</a></div>
+        <?php else: ?>
+            <div class="edit-profile-block"><a href="<?= $this->getUrl('/profile/edit') ?>">Edit profile</a></div>
+        <?php endif; ?>
+    <?php endif; ?>
+    <div class="user-info-block">
+        <div class="user-avatar" style="background: url(<?= $this->profileData->getAvatar() ?>)"><?php if ($this->profileData->is_vip): ?><div class="vip"></div><?php endif; ?></div>
+        <div class="user-info-content">
+            <div class="user-name"><?= $this->profileData->getFullname() ?></div>
+            <div class="user-status"><?= $this->profileData->current_status ?></div>
+            <div class="user-balance-sf val"><span class="label">Balance:</span> <a href="<?= $this->getUrl('/billing/cards/update') ?>"><?= $this->profileData->amount ?> AZN</a></div>
+            <div class="sms-balance val"><span class="label">SMS-balance:</span> <?= $this->profileData->sms_amount ?> bal</div>
+            <?php if ($this->profileData->is_real): ?><div class="real-user val">REAL USER</div><?php endif; ?>
+            <div class="user-id val"><span class="label">User ID:</span><?= $this->profileData->id ?></div>
+        </div>
+    </div>
+    <div class="user-rating-block"><span class="label">User rating:</span> <span class="value"><?= $this->profileData->getRatingValue() ?></span> <span class="voters">(<?= $this->profileData->getRatingVoters() ?>)</span></div>
+    <?php $awards = $this->profileData->getAwards(); ?>
+    <?php if (count($awards)): ?>
+    <div class="awards-block">
+        <ul>
+            <?php foreach ($awards as $awardItem): ?>
+            <li><span title="<?= $awardItem->title ?>"><img src="<?= Core_Image::getImagePath($awardItem->logo, Core_Image::AWARDS) ?>" /></span></li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+    <?php endif; ?>
+    <?php if ($this->currentProfileData && ($this->currentProfileData->id != $this->profileData->id)): ?>
+    <div class="send-private-message-block">
+        <a href="#">Send private message</a>
+    </div>
+    <?php endif; ?>
+    <div class="subscribers-list-block my-subscribers">
+        <div class="head gradient">
+            <h3>My subscribers</h3>
+            <p class="link-all"><a href="<?= $this->getUrl('profile/subscribers/'.$this->profileData->id)?>">See all</a></p>
+        </div>
+        <?php $profilesLinksList = $this->profileData->getSubscribers(5); ?>
+        <?php if (count($profilesLinksList)): ?>
+            <div class="body">
+                <ul class="user-list">
+                    <?php $i = 1; ?>
+                    <?php foreach ($profilesLinksList as $profileLink): ?>
+                        <?php $profileInfo = $profileLink->getProfile(); ?>
+                        <li style="background: url(<?= $profileInfo->getAvatar(Core_Image::AVATAR_40) ?>)" <?php if ($profileInfo->is_vip) : ?>class="user-status-vip"<?php endif; ?>><a href="<?= $this->getUrl('profile/id/'.$profileInfo->id )?>" title="blogger name <?= $i++ ?>"></a></li>
+                    <?php endforeach; ?>
+                </ul>
+            </div>
+        <?php endif; ?>
+    </div>
+    <div class="subscribers-list-block i-subscribed">
+        <div class="head gradient">
+            <h3>I subscribed</h3>
+            <p class="link-all"><a href="<?= $this->getUrl('profile/friends/'.$this->profileData->id)?>">See all</a></p>
+        </div>
+        <?php $profilesLinksList = $this->profileData->getFriends(5); ?>
+        <?php if (count($profilesLinksList)): ?>
+            <div class="body">
+                <ul class="user-list">
+                    <?php $i = 1; ?>
+                    <?php foreach ($profilesLinksList as $profileLink): ?>
+                        <?php $profileInfo = $profileLink->getFriend(); ?>
+                        <li style="background: url(<?= $profileInfo->getAvatar(Core_Image::AVATAR_40) ?>)" <?php if ($profileInfo->is_vip) : ?>class="user-status-vip"<?php endif; ?>><a href="<?= $this->getUrl('profile/id/'.$profileInfo->id )?>" title="blogger name <?= $i++ ?>"></a></li>
+                    <?php endforeach; ?>
+                </ul>
+            </div>
+        <?php endif; ?>
+    </div>
+    <?php $newsSubscribesCategories = $this->profileData->getNewsSubscribesCategories(); ?>
+    <?php if (count($newsSubscribesCategories)): ?>
+    <div class="subscribers-list-block subscriptions">
+        <div class="head gradient">
+            <h3>Subscriptions</h3>
+            <p class="link-all"><a href="<?= $this->getUrl('subscriptions/list/'.$this->profileData->id)?>">See all</a></p>
+        </div>
+        <div class="body">
+            <ul class="subscriptions-list">
+                <?php foreach ($newsSubscribesCategories as $catItem): ?>
+                    <li>
+                        <span class="name"><a href="<?= $this->getUrl('subscriptions/category/'.$catItem->id)?>"><?= $catItem->title ?></a></span>
+                        <span class="updates"></span>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+        </div>
+    </div>
+    <?php endif; ?>
+    <?php if ($this->currentProfileData && ($this->currentProfileData->id == $this->profileData->id)): ?>
+    <div class="personal-links-block">
+        <ul>
+            <li class="gradient"><a href="<?= $this->getUrl('bookmarks/list')?>">My bookmarks</a></li>
+            <li class="gradient"><a href="<?= $this->getUrl('gifts/list')?>">My gifts</a></li>
+            <li class="gradient"><a href="<?= $this->getUrl('horoscope/list')?>">My horoscope</a></li>
+            <li class="gradient"><a href="<?= $this->getUrl('ads/my')?>">My ads</a></li>
+            <li class="gradient"><a href="<?= $this->getUrl('favorites/list')?>">My favorites</a></li>
+            <li class="gradient"><a href="<?= $this->getUrl('news/add')?>">Add news</a></li>
+        </ul>
+    </div>
+    <?php endif; ?>
+</div><!-- .sidebar -->

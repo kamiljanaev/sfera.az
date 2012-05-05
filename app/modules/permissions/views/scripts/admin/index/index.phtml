@@ -1,0 +1,47 @@
+<?php
+	$this->headTitle($this->msgAdminTitle);
+	$this->partial('js_tree_includes.phtml',null,$this);
+    $this->headScript()->appendScript($this->render('admin/index/js/index.js'));
+    $this->headScript()->appendScript($this->render('admin/index/js/tree.js'));
+?>
+<div id="main">
+	<div class="content">
+		<div id="head">
+			<h2><?= $this->msgAdminTitle ?></h2>
+		</div>
+		<div class="control">
+            <span class="button reset">
+                <button class="cancel-action" type="cancel"><?= $this->msgButtonBack ?></button>
+            </span>
+			<?php if($this->checkPermission('admin', 'install', 'index')): ?>
+				<span class="button reset">
+					<button class="install-button"><?= $this->msgButtonInstall ?></button>
+				</span>
+			<?php endif; ?>
+			<?php if($this->checkPermission('permissions', 'admin_index', 'clear-cache')): ?>
+				<span class="button reset">
+					<button class="clear-cache-action"><?= $this->msgButtonClearACLCache ?></button>
+				</span>
+			<?php endif; ?>
+		</div>
+		<div id="filter-row">
+			<div class="control">
+			<?php if(isset($this->rolesSelect)): ?>
+				<?= $this->msgLabelCurrentRole ?> :
+				<select name="rolesSelect" id="rolesSelect">
+					
+					<option value="-1"<?php if($this->currentRole == -1): ?> selected<?php endif;?>><?= $this->msgLabelSelectRole ?></option>
+					<?php foreach($this->rolesSelect as $key=>$selectOption): ?>
+					<option value="<?= $key ?>"<?php if($this->currentRole == $key): ?>selected<?php endif;?>><?= $selectOption ?></option>
+					<?php endforeach; ?>
+				</select>
+			<?php endif; ?>
+			<?php if(isset($this->roleName)): ?>
+				<h2><?= $this->msgLabelCurrentRole ?> : <?= $this->roleName ?></h2>
+			<?php endif; ?>
+			</div>
+		</div>
+		<br />
+        <div id="modules_tree"></div>
+	</div>
+</div>

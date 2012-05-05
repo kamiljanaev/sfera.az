@@ -1,0 +1,11 @@
+<div class="category-news world">
+    <div class="head">
+        <h3>World news</h3>
+    </div>
+
+    <div class="body">
+        <?= $this->partial('newsCategory.phtml', $this) ?>
+        <div class="more-link"><a href="<?= $this->getUrl('news/category/'.$this->newsCategory->id) ?>">All world news</a></div>
+    </div>
+					
+</div><!-- .category-news.baku -->

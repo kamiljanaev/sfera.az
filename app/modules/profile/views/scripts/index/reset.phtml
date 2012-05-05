@@ -1,0 +1,29 @@
+<?php
+	$this->headTitle('Recover password');
+    $this->headLink()->appendStylesheet($this->baseUrl . '/css/profile.css', 'screen, print');
+?>
+
+<div id="section-auth">
+    <div class="container">
+        <div class="content">
+            <div class="head">
+                <h1>Recover password</h1>
+            </div>
+
+            <form action="<?= $this->getUrl('reset') ?>" method="POST">
+            <table>
+                <tr class="border-bottom">
+                    <th><label for="email">Email</label></th>
+                    <td>
+                        <input type="text" name="email" id="email" value="" />
+                    </td>
+                </tr>
+            </table>
+
+            <div class="submit"><input type="submit" value="Recover password" /></div>
+            </form>
+        </div><!-- .content -->
+    </div><!-- .container -->
+
+</div><!-- #section-auth -->
+

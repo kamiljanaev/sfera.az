@@ -1,0 +1,39 @@
+<?php
+    $this->headLink()->appendStylesheet($this->baseUrl . '/css/jquery.selectBox.css', 'screen, projection');
+    $this->headLink()->appendStylesheet($this->baseUrl . '/css/profile.css', 'screen, projection');
+    $this->headScript()->appendFile($this->baseUrl . '/js/jquery.customselectbox.min.js');
+    $this->headScript()->appendFile($this->baseUrl . '/js/profile.js');
+?>
+<div id="section-profile">
+    <div class="container">
+        <div class="content">
+            <div class="user-favorites">
+                <div class="head"><h1><?php if($this->myAdsFlag): ?>My<?php else: ?>All<?php endif; ?> ads</h1></div>
+
+                <?php $i = 1; ?>
+                <?php foreach($this->adsList as $key=>$adsItem): ?>
+                    <div class="post-item type-ads">
+                        <?php if (strlen($adsItem->image)): ?><div class="post-image"><?= Core_Image::getImageHtmlCode($adsItem->image,  Core_Image::ADS_HOME_PAYED) ?></div><?php endif; ?>
+                        <div class="post-date"><?= $this->formatDate($adsItem->public_date) ?></div>
+                        <h2 class="post-title"><a href="<?= $this->getUrl('ads/show/'.$adsItem->id) ?>"><?= $adsItem->title ?></a></h2>
+                        <div class="post-category">Category: <a href="#">Ads</a> <span class="separator">&rarr;</span> <a href="#"><?= $adsItem->getCategory()->title ?></a></div>
+                        <div class="post-content"><?= $adsItem->content ?></div>
+                        <ul class="post-meta">
+                            <li class="post-views">1542</li>
+                            <li class="post-comments"><a href="#comments">42</a></li>
+                            <li class="post-fav"><a href="#">Add to Favorites</a></li>
+                        </ul>
+                        <div class="facebook-like"><img src="upload/fb-like.jpg" /></div>
+                    </div>
+                <?php if (count($this->newsDataArray) != $i++): ?>
+                <div class="hr"></div>
+                <?php endif; ?>
+                <?php endforeach; ?>
+
+            </div><!-- .user-favorites -->
+
+        </div><!-- .content -->
+    </div><!-- .container -->
+
+    <?= $this->partial('frontProfileSidebar.phtml', $this) ?>
+</div><!-- #section-profile -->

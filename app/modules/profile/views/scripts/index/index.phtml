@@ -1,0 +1,190 @@
+<?= $this->flashMessages(); ?>
+<?php /* if ($this->profileData): ?>
+<ul>
+    <li>ФИО: <b><?= $this->profileData->getFullname() ?></b></li>
+    <li>Алиас: <b><?= $this->profileData->alias ?></b></li>
+    <li>E-mail: <b><?= $this->userData->email ?></b></li>
+    <li>Дата рождения: <b><?= $this->profileData->birthdate ?></b></li>
+    <li>Статус: <b><?= $this->profileData->current_status ?></b></li>
+    <li>Реальный пользователь: <b><?= $this->profileData->is_real ?></b></li>
+    <li>Вип пользователь: <b><?= $this->profileData->is_vip ?></b></li>
+    <li>Номер счета: <b><?= $this->profileData->account_number ?></b></li>
+    <li>Баланс: <b><?= $this->profileData->amount ?></b></li>
+    <li>СМС Баланс: <b><?= $this->profileData->sms_amount ?></b></li>
+    <li>Награды: <b><?= $this->profileData->awards ?></b></li>
+</ul>
+<ul>
+    <?php foreach ($this->statusesData as $statusItem): ?>
+    <li><?= $statusItem->value ?> (<?= $statusItem->added ?>)</li>
+    <?php endforeach; ?>
+</ul>
+<?php endif; ?>
+<a href="<?= $this->getUrl('profile/edit')?>">Редактировать</a>, <a href="<?= $this->getUrl('billing/cards/update')?>">Пополнить счет</a>, <a href="<?= $this->getUrl('profile/senddocument')?>">Отправить документы</a>
+
+<?php */
+    $this->headLink()->appendStylesheet($this->baseUrl . '/css/jquery.selectBox.css', 'screen, projection');
+    $this->headLink()->appendStylesheet($this->baseUrl . '/css/profile.css', 'screen, projection');
+    $this->headScript()->appendFile($this->baseUrl . '/js/jquery.customselectbox.min.js');
+    $this->headScript()->appendFile($this->baseUrl . '/js/profile.js');
+?>
+
+
+<div id="section-profile">
+    <div class="container">
+        <div class="content">
+            <div class="user-activity">
+                <ul>
+                    <?php foreach ($this->statusesData as $statusItem): ?>
+                    <li class="activity-item">
+                        <div class="user-avatar" style="background: url(/upload/avatar-70x70.jpg)"><a href="#" title="blogger name 1"></a></div>
+                        <div class="user-meta">
+                            <a href="#" class="user-name"><?= $this->profileData->getFullname() ?></a>
+                            voted in <span class="location"><!-- location need realization --></span>
+                            <span class="timestamp"><?= $statusItem->added ?></span>
+                        </div>
+                        <div class="text-block">
+                            <?= $statusItem->value ?>
+                        </div>
+                    </li>
+                    <?php endforeach; ?>
+                    <?= $this->getProfileStory($this->profileData->id) ?>
+                    <?php /*?>
+                    <li class="activity-item">
+                        <div class="user-avatar" style="background: url(/upload/avatar-70x70.jpg)"><a href="#" title="blogger name 1"></a></div>
+                        <div class="user-meta">
+                            <a href="#" class="user-name"><?= $this->profileData->getFullname() ?></a>
+                            started folowing
+                            <a href="#" class="follower-name">Louis Dorman</a>,
+                            <a href="#" class="follower-name">Adam Ostrow</a>,
+                            <a href="#" class="follower-name">Jolie O'Dell</a>,
+                            <a href="#" class="follower-name">Steve Rubel</a>,
+                            and 6 more <span class="timestamp">December 15, 2011</span>
+                        </div>
+                        <div class="users-block">
+                            <ul>
+                                <li style="background: url(/upload/avatar-01.jpg)"><a href="#" title="blogger name 1"></a></li>
+                                <li style="background: url(/upload/avatar-02.jpg)"><a href="#" title="blogger name 2"></a></li>
+                                <li style="background: url(/upload/avatar-03.jpg)"><a href="#" title="blogger name 3"></a></li>
+                                <li style="background: url(/upload/avatar-04.jpg)"><a href="#" title="blogger name 4"></a></li>
+                                <li style="background: url(/upload/avatar-05.jpg)"><a href="#" title="blogger name 5"></a></li>
+                                <li style="background: url(/upload/avatar-01.jpg)"><a href="#" title="blogger name 1"></a></li>
+                                <li style="background: url(/upload/avatar-02.jpg)"><a href="#" title="blogger name 2"></a></li>
+                                <li style="background: url(/upload/avatar-03.jpg)"><a href="#" title="blogger name 3"></a></li>
+                                <li style="background: url(/upload/avatar-04.jpg)"><a href="#" title="blogger name 4"></a></li>
+                                <li style="background: url(/upload/avatar-05.jpg)"><a href="#" title="blogger name 5"></a></li>
+                                <li style="background: url(/upload/avatar-01.jpg)"><a href="#" title="blogger name 1"></a></li>
+                                <li style="background: url(/upload/avatar-02.jpg)"><a href="#" title="blogger name 2"></a></li>
+                                <li style="background: url(/upload/avatar-03.jpg)"><a href="#" title="blogger name 3"></a></li>
+                                <li style="background: url(/upload/avatar-04.jpg)"><a href="#" title="blogger name 4"></a></li>
+                                <li style="background: url(/upload/avatar-05.jpg)"><a href="#" title="blogger name 5"></a></li>
+                                <li style="background: url(/upload/avatar-01.jpg)"><a href="#" title="blogger name 1"></a></li>
+                                <li style="background: url(/upload/avatar-02.jpg)"><a href="#" title="blogger name 2"></a></li>
+                                <li style="background: url(/upload/avatar-03.jpg)"><a href="#" title="blogger name 3"></a></li>
+                                <li style="background: url(/upload/avatar-04.jpg)"><a href="#" title="blogger name 4"></a></li>
+                                <li style="background: url(/upload/avatar-05.jpg)"><a href="#" title="blogger name 5"></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="activity-item">
+                        <div class="user-avatar" style="background: url(/upload/avatar-70x70.jpg)"><a href="#" title="blogger name 1"></a></div>
+                        <div class="user-meta">
+                            <a href="#" class="user-name"><?= $this->profileData->getFullname() ?></a>
+                            commented
+                            <a href="#" class="post-link">Facebook Could Launch Mobile Ads in March</a>
+                            <span class="timestamp">December 15, 2011</span>
+                        </div>
+                        <div class="text-block comment">
+                            Facebook may begin experimenting with mobile advertising in March, with a launch right before the company’s planned IPO, according to a report.
+                        </div>
+                    </li>
+                    <li class="activity-item">
+                        <div class="user-avatar" style="background: url(/upload/avatar-70x70.jpg)"><a href="#" title="blogger name 1"></a></div>
+                        <div class="user-meta">
+                            <a href="#" class="user-name"><?= $this->profileData->getFullname() ?></a>
+                            commented
+                            <a href="#" class="post-link">Facebook Could Launch Mobile Ads in March</a>
+                            <span class="timestamp">December 15, 2011</span>
+                        </div>
+                        <div class="text-block">
+                            <img src="/images/awards/award01.png" width="34" height="34" align="left" />Pardon the interruption, but this is your fifth comment - and it's the BEST COMMENT OF ALL TIME! Thanks for keeping coversation going.
+                        </div>
+                    </li>
+                    <?php */?>
+                </ul>
+            </div><!-- .user-activity -->
+
+            <div class="user-info">
+                <div class="head"><h1>My user information</h1></div>
+                <div class="body">
+                    <table class="profile-table info">
+                        <tr>
+                            <th>User name</th>
+                            <td class="value"><?php if (strlen($this->profileData->getFullname())): ?><?= $this->profileData->getFullname() ?><?php else: ?>not specified<?php endif; ?></td>
+                        </tr>
+                        <tr>
+                            <th>Birthday</th>
+                            <td class="value"><?php if (strlen($this->profileData->birthdate)): ?><?= $this->profileData->birthdate ?><?php else: ?>not specified<?php endif; ?></td>
+                        </tr>
+                        <tr>
+                            <th>Hometown</th>
+                            <td class="value"><?php if (strlen($this->profileData->hometown)): ?><?= $this->profileData->hometown ?><?php else: ?>not specified<?php endif; ?></td>
+                        </tr>
+                        <tr>
+                            <th>Gender</th>
+                            <td class="value"><?php if (strlen($this->profileData->getFullname())): ?><?= $this->translate($this->profileData->getGender()) ?><?php else: ?>not specified<?php endif; ?></td>
+                        </tr>
+                    </table>
+
+                    <table class="about-me">
+                        <tr>
+                            <th>About me</th>
+                            <td><?= $this->profileData->about ?></td>
+                        </tr>
+                    </table>
+
+                    <h3>Contacts:</h3>
+                    <table class="profile-table contacts">
+
+                        <tr>
+                            <th class="phone">Phone</th>
+                            <td class="value"><?php if (strlen($this->profileData->phone)): ?><?= $this->profileData->phone ?><?php else: ?>not specified<?php endif; ?></td>
+                        </tr>
+
+                        <tr>
+                            <th class="icq">ICQ</th>
+                            <td class="value"><?php if (strlen($this->profileData->icq)): ?><?= $this->profileData->icq ?><?php else: ?>not specified<?php endif; ?></td>
+                        </tr>
+
+                        <tr>
+                            <th class="skype">Skype</th>
+                            <td class="value"><?php if (strlen($this->profileData->skype)): ?><?= $this->profileData->skype ?><?php else: ?>not specified<?php endif; ?></td>
+                        </tr>
+
+                        <tr>
+                            <th class="facebook">Facebook</th>
+                            <td class="value"><?php if (strlen($this->profileData->getFacebook())): ?><?= $this->profileData->getFacebook() ?><?php else: ?>not specified<?php endif; ?></td>
+                        </tr>
+
+                        <tr>
+                            <th class="twitter">Twitter</th>
+                            <td class="value"><?php if (strlen($this->profileData->getTwitter())): ?><?= $this->profileData->getTwitter() ?><?php else: ?>not specified<?php endif; ?></td>
+                        </tr>
+
+                        <tr>
+                            <th class="google">Google+</th>
+                            <td class="value"><?php if (strlen($this->profileData->getGoogle())): ?><?= $this->profileData->getGoogle() ?><?php else: ?>not specified<?php endif; ?></td>
+                        </tr>
+
+                        <tr>
+                            <th class="www">WWW</th>
+                            <td class="value"><?php if (strlen($this->profileData->getWww())): ?><?= $this->profileData->getWww() ?><?php else: ?>not specified<?php endif; ?></td>
+                        </tr>
+                    </table>
+                </div>
+            </div><!-- .user-info -->
+
+        </div><!-- .content -->
+    </div><!-- .container -->
+
+    <?= $this->partial('frontProfileSidebar.phtml', $this) ?>
+</div><!-- #section-profile -->

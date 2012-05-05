@@ -1,0 +1,129 @@
+<?php
+$this->headLink()->appendStylesheet($this->baseUrl . '/css/site.css', 'screen, projection');
+$this->headLink()->appendStylesheet($this->baseUrl . '/css/news.css', 'screen, projection');
+$this->headScript()->appendFile($this->baseUrl . '/js/index.js');
+?>
+
+
+
+<div id="news-middle">
+    <div class="banners" id="header_banners">
+        <div class="banner-content"><img src="/upload/banner-600x90.jpg" alt="banner-600x90.jpg" width="600" height="90" /></div>
+        <div class="banner-content"><img src="/upload/banner-360x60.jpg" alt="banner-360x60.jpg" width="360" height="90" /></div>
+    </div><!-- #header_banners-->
+
+    <div class="channel-header">
+        <div class="head">
+            <h3><?= $this->newsTag->title ?></h3>
+        </div>
+
+        <?php if ($this->newsTag->is_paid): ?>
+        <div class="body">
+            <div class="channel-image" style="background: url(<?= $this->newsTag->getLogo() ?>)"></div>
+            <div class="channel-descr"><?= $this->newsTag->description ?></div>
+            <div class="follow-wrap">
+                <?= $this->getTagFollowLink($this->newsTag, 'PaidContent') ?>
+                <span class="followers"><span class="value"><?= $this->getCountTagSubscribers($this->tag) ?></span> followers</span>
+            </div>
+
+        </div>
+        <?php endif; ?>
+    </div>
+
+    <div id="news-container">
+        <div id="news-content">
+
+            <div class="banner">
+                <img src="/upload/banner-680x90.jpg" width="680" height="90" alt="banner-680x90" />
+            </div>
+
+            <div class="category-news tag">
+                <div class="body">
+                    <div class="tag-switch">
+                        <ul>
+                            <li class="state-active"><a href="#" relation="tags-list-sorted-popular">Popular <?= $this->newsTag->title ?> news</a></li>
+                            <!--li><a href="#" relation="tags-list-sorted-shared">Most shared</a></li-->
+                            <li><a href="#" relation="tags-list-sorted-last">Last news</a></li>
+                            <li><a href="#" relation="tags-list-sorted-rating">Rating</a></li>
+                        </ul>
+                    </div>
+                    <div class="tags-list-sorted-content" id="tags-list-sorted-popular">
+                        <?php $i = 1; ?>
+                        <?php foreach ($this->newsDataArrayView as $newsItem): ?>
+                            <div class="post-item">
+                                <?php if (strlen($newsItem->image)): ?>
+                                <div class="post-image"><img src="<?= Core_Image::getImagePath($newsItem->image, Core_Image::NEWS_LIST) ?>" alt="<?= $newsItem->title ?>" /></div>
+                                <?php endif; ?>
+                                <p class="post-date"><?= $this->formatDate($newsItem->public_date) ?></p>
+                                <h3 class="post-title"><a href="<?= $this->getUrl('news/show/'.$newsItem->id) ?>"><?= $newsItem->title ?></a></h3>
+                                <p class="post-excerpt"><?= $newsItem->short_content ?></p>
+                                <ul class="post-meta">
+                                    <li class="post-views"><?= $newsItem->getViewCounter() ?></li>
+                                    <li class="post-comments"><a href="<?= $this->getUrl('news/show/'.$newsItem->id.'#comments') ?>"><?= $this->getCommentsCount($newsItem->id, Core_Db_Comments::C_NEWS) ?></a></li>
+                                    <li class="post-fav"><?= $this->getFavLink(1, $newsItem->id) ?></li>
+                                </ul>
+                                <div class="facebook-like"><img src="/upload/fb-like.jpg" /></div>
+                            </div>
+                            <?php if (count($this->newsDataArray) != $i++): ?>
+                            <div class="hr"></div>
+                            <?php endif; ?>
+                        <?php endforeach; ?>
+                    </div>
+                    <div class="tags-list-sorted-content" id="tags-list-sorted-shared" style="display:none;">
+                    </div>
+                    <div class="tags-list-sorted-content" id="tags-list-sorted-last" style="display:none;">
+                        <?php $i = 1; ?>
+                        <?php foreach ($this->newsDataArrayLast as $newsItem): ?>
+                            <div class="post-item">
+                                <?php if (strlen($newsItem->image)): ?>
+                                <div class="post-image"><img src="<?= Core_Image::getImagePath($newsItem->image, Core_Image::NEWS_LIST) ?>" alt="<?= $newsItem->title ?>" /></div>
+                                <?php endif; ?>
+                                <p class="post-date"><?= $this->formatDate($newsItem->public_date) ?></p>
+                                <h3 class="post-title"><a href="<?= $this->getUrl('news/show/'.$newsItem->id) ?>"><?= $newsItem->title ?></a></h3>
+                                <p class="post-excerpt"><?= $newsItem->short_content ?></p>
+                                <ul class="post-meta">
+                                    <li class="post-views"><?= $newsItem->getViewCounter() ?></li>
+                                    <li class="post-comments"><a href="<?= $this->getUrl('news/show/'.$newsItem->id.'#comments') ?>"><?= $this->getCommentsCount($newsItem->id, Core_Db_Comments::C_NEWS) ?></a></li>
+                                    <li class="post-fav"><?= $this->getFavLink(1, $newsItem->id) ?></li>
+                                </ul>
+                                <div class="facebook-like"><img src="/upload/fb-like.jpg" /></div>
+                            </div>
+                            <?php if (count($this->newsDataArray) != $i++): ?>
+                            <div class="hr"></div>
+                            <?php endif; ?>
+                        <?php endforeach; ?>
+                    </div>
+                    <div class="tags-list-sorted-content" id="tags-list-sorted-rating" style="display:none;">
+                        <?php $i = 1; ?>
+                        <?php foreach ($this->newsDataArrayRating as $newsItem): ?>
+                            <div class="post-item">
+                                <?php if (strlen($newsItem->image)): ?>
+                                <div class="post-image"><img src="<?= Core_Image::getImagePath($newsItem->image, Core_Image::NEWS_LIST) ?>" alt="<?= $newsItem->title ?>" /></div>
+                                <?php endif; ?>
+                                <p class="post-date"><?= $this->formatDate($newsItem->public_date) ?></p>
+                                <h3 class="post-title"><a href="<?= $this->getUrl('news/show/'.$newsItem->id) ?>"><?= $newsItem->title ?></a></h3>
+                                <p class="post-excerpt"><?= $newsItem->short_content ?></p>
+                                <ul class="post-meta">
+                                    <li class="post-views"><?= $newsItem->getViewCounter() ?></li>
+                                    <li class="post-comments"><a href="<?= $this->getUrl('news/show/'.$newsItem->id.'#comments') ?>"><?= $this->getCommentsCount($newsItem->id, Core_Db_Comments::C_NEWS) ?></a></li>
+                                    <li class="post-fav"><?= $this->getFavLink(1, $newsItem->id) ?></li>
+                                </ul>
+                                <div class="facebook-like"><img src="/upload/fb-like.jpg" /></div>
+                            </div>
+                            <?php if (count($this->newsDataArray) != $i++): ?>
+                            <div class="hr"></div>
+                            <?php endif; ?>
+                        <?php endforeach; ?>
+                    </div>
+                    <?= $this->paginatorCode ?>
+                </div>
+            </div><!-- .category-news.baku -->
+
+        </div><!-- #news-content -->
+    </div><!-- #news-container -->
+
+    <?= $this->partial('news/sidebar.phtml', $this) ?>
+
+
+</div><!-- #news-middle -->
+

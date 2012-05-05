@@ -1,0 +1,907 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Sfera.AZ - news category</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+
+	<link rel="stylesheet" href="css/reset.css"  type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="css/header.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="css/footer.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="css/site.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="css/scrollbar.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="css/post-meta.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="css/jquery.selectBox.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="css/news.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="css/news-colors.css" type="text/css" media="screen, projection" />
+
+	<script src="jscripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+	<script src="jscripts/jquery-ui-1.8.18.custom.min.js" type="text/javascript"></script>
+	<script src="jscripts/jquery.tinyscrollbar.min.js" type="text/javascript"></script>
+	<script src="jscripts/jquery.customselectbox.min.js" type="text/javascript"></script>
+	<script src="jscripts/site.js" type="text/javascript"></script>
+	<script src="jscripts/shared.js" type="text/javascript"></script>
+	<!--script src="http://platform.twitter.com/anywhere.js?id=7ttxjSdhTYxUrZ1to1GrAg&v=1" type="text/javascript"></script-->
+</head>
+
+<body class="single world">
+	
+<div id="complain" title="Complain">
+	<p>Пожалуйста, выберите причину, по которой Вы хотите сообщить администрации сайта об этой записи.</p>
+	<p>
+		<select name="reason" class="selectBox">
+			<option value="0">Выберите причину...</option>
+			<option value="1">Взрослый контент</option>
+			<option value="2">Детская порнография</option>
+			<option value="3">Экстремизм</option>
+			<option value="4">Насилие</option>
+			<option value="5">Пропаганда наркотиков</option>
+		</select>
+	</p>
+</div>
+
+<div id="complain-response" title="Complain has ben send">
+	<p>Your message has been send to administration.</p>	
+</div>
+
+<div id="header-banner">
+	<img src="upload/banner-header.jpg" alt="banner-header" width="960" height="116" />
+</div><!-- #header-banner-->
+
+<div id="wrapper">
+
+	<div id="header">
+		<div class="logo"><span class="title">SFERA.AZ</span></div><!-- .logo -->
+
+		<div class="signin">
+			<span class="span-welcome">Welcome to Sfera.az! You can</span>
+			<!--img src="upload/facebook-signin.jpg" alt="facebook-signin" width="150" height="22" /-->
+
+			<div id="fb-root"></div>
+			<!--<script type="text/javascript">
+			  /*window.fbAsyncInit = function() {
+			    FB.init({
+			      appId      : 311758472198961,
+			      status     : true, 
+			      cookie     : true,
+			      xfbml      : true,
+			      oauth      : true,
+			    });
+			  };
+			  (function(d){
+			     var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+			     js = d.createElement('script'); js.id = id; js.async = true;
+			     js.src = "//connect.facebook.net/en_US/all.js";
+			     d.getElementsByTagName('head')[0].appendChild(js);
+			   }(document));*/
+			</script>-->
+			<!--<script type="text/javascript">
+			/* 
+			  twttr.anywhere(function (T) {
+			    T("#twitter-login").connectButton();
+			  });*/
+			 
+			</script>-->
+
+			<div class="fb-login-button">Login with Facebook</div>
+
+			<span class="span-or">- or -</span>
+			<span id="twitter-login"></span>
+		</div><!-- .signin-->
+
+		<div class="search">
+			<ul>
+				<li><a href="#search-site">Sfera search</a></li>
+				<li><a href="#search-web">Web search</a></li>
+			</ul>
+			<div id="search-site">
+				<form action="">
+					<p>
+						<label for="site-search-input">Search the site Sfera.az</label>
+						<input type="text" id="site-search-input" name="site-search-input" class="hidelabel" name="" />
+						<input type="submit" value="Search" />
+					</p>
+				</form>
+			</div>
+			<div id="search-web">
+				<form action="">
+					<p>
+						<label for="web-search-input">Search the web</label>
+						<input type="text" id="web-search-input" name="web-search-input" class="hidelabel" name="" />
+						<input type="submit" value="Search" />
+					</p>
+				</form>
+			</div>
+		</div><!-- .search-->
+		
+		<div class="auth-links">
+			<p class="links">
+				<a href="#" class="signin-link">Sign in</a>
+				or
+				<a href="#" class="joinus-link">Join us!</a>
+			</p>
+			<p class="users">
+				<span class="users-count">12752</span> users
+			</p>	
+		</div><!-- .auth-links-->
+		
+		<div class="menu" id="header-menu">
+			<ul>
+				<li class="menu-item news item-inactive"><a href="#">News</a></li>
+				<li class="menu-item blogs item-inactive"><a href="#">Blogs</a></li>
+				<li class="menu-item job item-inactive"><a href="#">Job</a></li>
+				<li class="menu-item realty item-inactive"><a href="#">Realty</a></li>
+				<li class="menu-item weather item-inactive"><a href="#">Weather</a></li>
+				<li class="menu-item horoscope item-inactive"><a href="#">Horoscope</a></li>
+				<li class="menu-item ads item-inactive"><a href="#">Ads</a></li>
+				<li class="all-services"><a href="#">All services</a></li>
+			</ul>
+		</div><!-- .menu -->
+	</div><!-- #header-->
+	
+	
+	<div id="news-middle">	
+		<div class="banners" id="header_banners">
+			<div class="banner-content"><img src="upload/banner-600x90.jpg" alt="banner-600x90.jpg" width="600" height="90" /></div>	
+			<div class="banner-content"><img src="upload/banner-360x60.jpg" alt="banner-360x60.jpg" width="360" height="90" /></div>	
+		</div><!-- #header_banners-->
+
+		<div id="news-container">
+			<div id="news-content">
+				<div class="news-post">
+					<div class="head">
+						<h1>The top brands on pinterest</h1>
+					</div>
+					
+					<div class="body">
+						<ul class="post-meta">
+							<li class="post-views">1542</li>
+							<li class="post-comments"><a href="#comments">42</a></li>
+							<li class="post-fav"><a href="#">Add to Favorites</a></li>
+							<li class="post-social">
+								<img src="upload/post-social-dump.jpg" style="vertical-align: middle" />
+							</li>
+						</ul>
+						
+						<div class="post-content">
+							<p class="post-date">December 16th, 2011 / 15:28</p>
+							
+							<p><em>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</em> <strong>Aenean ut ante quis augue bibendum sollicitudin</strong>. <sup>Sed</sup> <sub>scelerisque</sub> <s>bibendum nibh,</s> eu suscipit orci consectetur vitae. Aliquam tellus leo, vehicula nec tristique quis, imperdiet id nibh. Praesent vel tincidunt felis. Nunc semper ultrices justo, a dictum ipsum dapibus ut. Nunc aliquam, neque et scelerisque varius, nunc sapien lacinia mi, eget hendrerit nibh ligula a orci. Aliquam massa metus, scelerisque nec fermentum at, consectetur non sapien. Praesent ut adipiscing odio. Nulla vestibulum convallis vestibulum. Ut vulputate dictum aliquet. Proin blandit tincidunt dui at fringilla. Nam ultrices, lorem in egestas venenatis, diam felis luctus leo, vel sollicitudin felis ante a lacus.</p>
+	
+							<p>Proin condimentum elit ut odio dignissim at tristique dui rhoncus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam ac dolor nec urna semper dictum. Donec dolor velit, vulputate ut fringilla in, tincidunt a odio. Suspendisse potenti. Etiam nec elit ipsum, eu ornare elit. Fusce rhoncus pharetra tellus, a placerat justo mollis ac. Etiam nec tellus ipsum. Nulla facilisi. Curabitur purus augue, dapibus fermentum ornare eget, tincidunt eu odio. Mauris leo ligula, tempor sit amet placerat id, porta vel sem. Cras mattis porttitor feugiat. Etiam semper viverra lectus. Aenean neque ligula, ornare a varius sed, ultrices non massa. Vestibulum leo velit, faucibus eu vestibulum eu, euismod eu dui. Nam nec massa nec lacus ullamcorper posuere.</p>
+							
+							<p>Cras varius tristique auctor. Curabitur hendrerit quam vitae felis pulvinar posuere. Integer volutpat molestie dolor vel facilisis. Morbi gravida nisl eu nisl rutrum ac ultrices eros laoreet. Ut congue tincidunt convallis. Nunc eu erat justo. Proin pretium nulla sed nibh sagittis non ornare lorem lacinia. Nullam arcu neque, ullamcorper sed suscipit id, mattis in odio. Vestibulum pellentesque porttitor hendrerit. Pellentesque ornare dolor et sapien congue placerat. Duis gravida pellentesque nulla, a adipiscing felis volutpat in. Cras sit amet lacinia augue.</p>
+							
+							<ul>
+								<li>Proin condimentum elit ut
+									<ul>
+										<li>Curabitur hendrerit quam vitae felis pulvinar posuere.</li>
+										<li>per inceptos himenaeos</li>
+										<li>Morbi gravida nisl eu nisl</li>
+									</ul>
+								</li>
+								<li>Class aptent taciti sociosqu ad litora</li>
+								<li>Curabitur hendrerit quam vitae felis </li>
+								<li>Proin condimentum elit ut</li>
+							</ul>
+						</div>
+						
+						<div class="post-rating">
+							<div class="do-rating">
+								<span class="label">News-rating:</span>
+								<span class="do down"></span>
+								<span class="value">459</span>
+								<span class="do up"></span>
+							</div>
+							
+							<div class="complain"><a href="#" class="do-complain">Complain</a></div>
+						</div>
+
+						<div class="hr"></div>
+						
+						<div class="tags-trend">
+							<h4>Subscribe Tags</h4>
+							<ul>
+								<li>
+									<a href="#">
+										<span class="image" style="background: url(upload/tag01.jpg)"></span>
+										<span class="name">Gadgets</span>
+										<span class="followers">6,796 followers</span>
+									</a>
+									<a class="follow" href="#">Follow</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="image" style="background: url(upload/tag01.jpg)"></span>
+										<span class="name">Gadgets</span>
+										<span class="followers">6,796 followers</span>
+									</a>
+									<a class="follow" href="#">Follow</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="image" style="background: url(upload/tag01.jpg)"></span>
+										<span class="name">Gadgets</span>
+										<span class="followers">6,796 followers</span>
+									</a>
+									<a class="follow" href="#">Follow</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="image" style="background: url(upload/tag01.jpg)"></span>
+										<span class="name">Gadgets</span>
+										<span class="followers">6,796 followers</span>
+									</a>
+									<a class="follow" href="#">Follow</a>
+								</li>
+							</ul>
+							<ul class="ul-more">
+								<li>
+									<a href="#">
+										<span class="image" style="background: url(upload/tag01.jpg)"></span>
+										<span class="name">Gadgets</span>
+										<span class="followers">6,796 followers</span>
+									</a>
+									<a class="follow" href="#">Follow</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="image" style="background: url(upload/tag01.jpg)"></span>
+										<span class="name">Gadgets</span>
+										<span class="followers">6,796 followers</span>
+									</a>
+									<a class="follow" href="#">Follow</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="image" style="background: url(upload/tag01.jpg)"></span>
+										<span class="name">Gadgets</span>
+										<span class="followers">6,796 followers</span>
+									</a>
+									<a class="follow" href="#">Follow</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="image" style="background: url(upload/tag01.jpg)"></span>
+										<span class="name">Gadgets</span>
+										<span class="followers">6,796 followers</span>
+									</a>
+									<a class="follow" href="#">Follow</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="image" style="background: url(upload/tag01.jpg)"></span>
+										<span class="name">Gadgets</span>
+										<span class="followers">6,796 followers</span>
+									</a>
+									<a class="follow" href="#">Follow</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="image" style="background: url(upload/tag01.jpg)"></span>
+										<span class="name">Gadgets</span>
+										<span class="followers">6,796 followers</span>
+									</a>
+									<a class="follow" href="#">Follow</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="image" style="background: url(upload/tag01.jpg)"></span>
+										<span class="name">Gadgets</span>
+										<span class="followers">6,796 followers</span>
+									</a>
+									<a class="follow" href="#">Follow</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="image" style="background: url(upload/tag01.jpg)"></span>
+										<span class="name">Gadgets</span>
+										<span class="followers">6,796 followers</span>
+									</a>
+									<a class="follow" href="#">Follow</a>
+								</li>
+								
+							</ul>
+							<div class="hr"></div>
+							<div class="all-link">
+								<a href="#" id="toggle-tags-block">See all tags</a>
+							</div>
+						</div>
+						
+						<div class="hr"></div>
+
+						<div class="news-block">
+							<h3>Other news</h3>
+							<div class="post-list">
+							<ul>
+								<li id="post-1" class="post-item">
+									<div class="post-image">
+										<span class="post-image-container"><img src="upload/post-news-thumb-01.jpg" alt="Auto-Save User’s Input In Your Forms With HTML5 and Sisyphus.js" /></span>
+									</div>
+									<div class="post-info">
+										<h4 class="post-title"><a href="#">Auto-Save User’s Input In Your Forms With HTML5 and Sisyphus.js</a></h4>
+										<p class="post-excerpt">2012 is around the corner and the year is (already!) coming to an end.</p>
+									</div>
+								</li><!-- .post-item -->
+								<li id="post-2" class="post-item">
+									<div class="post-image">
+										<span class="post-image-container"><img src="upload/post-news-thumb-02.jpg" alt="Computing is full of buzzwords, “cloud computing” being the latest one" /></span>
+									</div>
+									<div class="post-info">
+										<h4 class="post-title"><a href="#">Computing is full of buzzwords, “cloud computing” being the latest one</a></h4>
+										<p class="post-excerpt">2012 is around the corner and the year is (already!) coming to an end.</p>
+									</div>
+								</li><!-- .post-item -->
+								<li id="post-3" class="post-item">
+									<div class="post-image">
+										<span class="post-image-container"><img src="upload/post-news-thumb-03.jpg" alt="The Smashing Guide To Moving The Web Forward" /></span>
+									</div>
+									<div class="post-info">
+										<h4 class="post-title"><a href="#">The Smashing Guide To Moving The Web Forward</a></h4>
+										<p class="post-excerpt">2012 is around the corner and the year is (already!) coming to an end.</p>
+									</div>
+								</li><!-- .post-item -->
+								<li id="post-3" class="post-item">
+									<div class="post-image">
+										<span class="post-image-container"><img src="upload/post-news-thumb-04.jpg" alt="PHP is widely available with inexpensive hosting plans." /></span>
+									</div>
+									<div class="post-info">
+										<h4 class="post-title"><a href="#">PHP is widely available with inexpensive hosting plans.</a></h4>
+										<p class="post-excerpt">2012 is around the corner and the year is (already!) coming to an end.</p>
+									</div>
+								</li><!-- .post-item -->
+							</ul>
+							</div>
+						</div>
+						
+						<div class="hr"></div>
+						
+						<div class="comments">
+							<h3>5 Comments</h3>
+							<div class="comment-item">
+								<div class="comment-image" style="background: url(upload/avatar-70x70.jpg)"></div>
+								<div class="comment-meta">
+									<span class="author">katheoreilly</span>
+									<span class="date">December 15, 2011</span>
+									<a href="#" class="follow">Follow</a>
+									<a href="#" class="reply">Reply</a>
+									<a href="#" class="do-complain">Complain</a>
+								</div>
+								
+								<div class="comment-text">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut ante quis augue bibendum sollicitudin. Sed scelerisque bibendum nibh, eu suscipit orci consectetur vitae. Aliquam tellus leo, vehicula nec tristique quis, imperdiet id nibh. Praesent vel tincidunt felis. Nunc semper ultrices justo, a dictum ipsum dapibus ut. Nunc aliquam, neque et scelerisque varius, nunc sapien lacinia mi, eget hendrerit nibh ligula a orci. Aliquam massa metus, scelerisque nec fermentum at, consectetur non sapien. Praesent ut adipiscing odio. Nulla vestibulum convallis vestibulum. Ut vulputate dictum aliquet. Proin blandit tincidunt dui at fringilla. Nam ultrices, lorem in egestas venenatis, diam felis luctus leo, vel sollicitudin felis ante a lacus.
+								</div>
+								
+								<div class="comment-reply">
+									<div class="comment-image" style="background: url(upload/avatar-70x70.jpg)"></div>
+									<div class="comment-meta">
+										<span class="author">katheoreilly</span>
+										<span class="date">December 15, 2011</span>
+										<a href="#" class="follow">Follow</a>
+										<a href="#" class="reply">Reply</a>
+										<a href="#" class="do-complain">Complain</a>
+									</div>
+									
+									<div class="comment-text">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut ante quis augue bibendum sollicitudin. Sed scelerisque bibendum nibh, eu suscipit orci consectetur vitae. Aliquam tellus leo, vehicula nec tristique quis, imperdiet id nibh. Praesent vel tincidunt felis. Nunc semper ultrices justo, a dictum ipsum dapibus ut. Nunc aliquam, neque et scelerisque varius, nunc sapien lacinia mi, eget hendrerit nibh ligula a orci. Aliquam massa metus, scelerisque nec fermentum at, consectetur non sapien. Praesent ut adipiscing odio. Nulla vestibulum convallis vestibulum. Ut vulputate dictum aliquet. Proin blandit tincidunt dui at fringilla. Nam ultrices, lorem in egestas venenatis, diam felis luctus leo, vel sollicitudin felis ante a lacus.
+									</div>
+								</div>
+
+								<div class="comment-reply">
+									<div class="comment-image" style="background: url(upload/avatar-70x70.jpg)"></div>
+									<div class="comment-meta">
+										<span class="author">katheoreilly</span>
+										<span class="date">December 15, 2011</span>
+										<a href="#" class="follow">Follow</a>
+										<a href="#" class="reply">Reply</a>
+										<a href="#" class="do-complain">Complain</a>
+									</div>
+									
+									<div class="comment-text">
+										Lorem ipsum dolor sit amet
+									</div>
+								</div>
+								<div class="comment-reply">
+									<div class="comment-image" style="background: url(upload/avatar-70x70.jpg)"></div>
+									<div class="comment-meta">
+										<span class="author">katheoreilly</span>
+										<span class="date">December 15, 2011</span>
+										<a href="#" class="follow">Follow</a>
+										<a href="#" class="reply">Reply</a>
+										<a href="#" class="do-complain">Complain</a>
+									</div>
+									
+									<div class="comment-text">
+										Lorem ipsum dolor sit amet
+									</div>
+
+									<div class="comment-reply">
+										<div class="comment-image" style="background: url(upload/avatar-70x70.jpg)"></div>
+										<div class="comment-meta">
+											<span class="author">katheoreilly</span>
+											<span class="date">December 15, 2011</span>
+											<a href="#" class="follow">Follow</a>
+											<a href="#" class="reply">Reply</a>
+											<a href="#" class="do-complain">Complain</a>
+										</div>
+										
+										<div class="comment-text">
+											Lorem ipsum dolor sit amet
+										</div>
+									</div>
+
+									<div class="comment-reply">
+										<div class="comment-image" style="background: url(upload/avatar-70x70.jpg)"></div>
+										<div class="comment-meta">
+											<span class="author">katheoreilly</span>
+											<span class="date">December 15, 2011</span>
+											<a href="#" class="follow">Follow</a>
+											<a href="#" class="reply">Reply</a>
+											<a href="#" class="do-complain">Complain</a>
+										</div>
+										
+										<div class="comment-text">
+											Lorem ipsum dolor sit amet
+										</div>
+									</div>
+									<div class="comment-reply">
+										<div class="comment-image" style="background: url(upload/avatar-70x70.jpg)"></div>
+										<div class="comment-meta">
+											<span class="author">katheoreilly</span>
+											<span class="date">December 15, 2011</span>
+											<a href="#" class="follow">Follow</a>
+											<a href="#" class="reply">Reply</a>
+											<a href="#" class="do-complain">Complain</a>
+										</div>
+										
+										<div class="comment-text">
+											Lorem ipsum dolor sit amet
+										</div>
+									</div>
+									<div class="comment-reply">
+										<div class="comment-image" style="background: url(upload/avatar-70x70.jpg)"></div>
+										<div class="comment-meta">
+											<span class="author">katheoreilly</span>
+											<span class="date">December 15, 2011</span>
+											<a href="#" class="follow">Follow</a>
+											<a href="#" class="reply">Reply</a>
+											<a href="#" class="do-complain">Complain</a>
+										</div>
+										
+										<div class="comment-text">
+											Lorem ipsum dolor sit amet
+										</div>
+
+										<div class="comment-reply">
+											<div class="comment-image" style="background: url(upload/avatar-70x70.jpg)"></div>
+											<div class="comment-meta">
+												<span class="author">katheoreilly</span>
+												<span class="date">December 15, 2011</span>
+												<a href="#" class="follow">Follow</a>
+												<a href="#" class="reply">Reply</a>
+												<a href="#" class="do-complain">Complain</a>
+											</div>
+											
+											<div class="comment-text">
+												Lorem ipsum dolor sit amet
+											</div>
+
+											<div class="comment-reply">
+												<div class="comment-image" style="background: url(upload/avatar-70x70.jpg)"></div>
+												<div class="comment-meta">
+													<span class="author">katheoreilly</span>
+													<span class="date">December 15, 2011</span>
+													<a href="#" class="follow">Follow</a>
+													<a href="#" class="reply">Reply</a>
+													<a href="#" class="do-complain">Complain</a>
+												</div>
+												
+												<div class="comment-text">
+													Lorem ipsum dolor sit amet
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="comment-reply">
+									<div class="comment-image" style="background: url(upload/avatar-70x70.jpg)"></div>
+									<div class="comment-meta">
+										<span class="author">katheoreilly</span>
+										<span class="date">December 15, 2011</span>
+										<a href="#" class="follow">Follow</a>
+										<a href="#" class="reply">Reply</a>
+										<a href="#" class="do-complain">Complain</a>
+									</div>
+									
+									<div class="comment-text">
+										Lorem ipsum dolor sit amet
+									</div>
+								</div>
+							</div>
+							
+							<div class="comment-item has-complaints">
+								<div class="comment-image" style="background: url(upload/avatar-70x70.jpg)"></div>
+								<div class="comment-meta">
+									<span class="author">katheoreilly</span>
+									<span class="date">December 15, 2011</span>
+									<a href="#" class="follow">Follow</a>
+									<a href="#" class="reply">Reply</a>
+									<a href="#" class="do-complain">Complain</a>
+									
+									<span class="complaints-count">3 complaints</span>
+								</div>
+								
+								<div class="comment-text">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut ante quis augue bibendum sollicitudin. Sed scelerisque bibendum nibh, eu suscipit orci consectetur vitae. Aliquam tellus leo, vehicula nec tristique quis, imperdiet id nibh. Praesent vel tincidunt felis. Nunc semper ultrices justo, a dictum ipsum dapibus ut. Nunc aliquam, neque et scelerisque varius, nunc sapien lacinia mi, eget hendrerit nibh ligula a orci. Aliquam massa metus, scelerisque nec fermentum at, consectetur non sapien. Praesent ut adipiscing odio. Nulla vestibulum convallis vestibulum. Ut vulputate dictum aliquet. Proin blandit tincidunt dui at fringilla. Nam ultrices, lorem in egestas venenatis, diam felis luctus leo, vel sollicitudin felis ante a lacus.
+								</div>
+							</div>
+							
+							<div class="comment-item">
+								<div class="comment-image" style="background: url(upload/avatar-70x70.jpg)"></div>
+								<div class="comment-meta">
+									<span class="author">katheoreilly</span>
+									<span class="date">December 15, 2011</span>
+									<a href="#" class="follow">Follow</a>
+									<a href="#" class="reply">Reply</a>
+									<a href="#" class="do-complain">Complain</a>
+								</div>
+								
+								<div class="comment-text">
+									Lorem ipsum dolor sit amet
+								</div>
+							</div>							
+
+							<div class="comment-item">
+								<div class="comment-image" style="background: url(upload/avatar-70x70.jpg)"></div>
+								<div class="comment-meta">
+									<span class="author">katheoreilly</span>
+									<span class="date">December 15, 2011</span>
+									<a href="#" class="follow">Follow</a>
+									<a href="#" class="reply">Reply</a>
+									<a href="#" class="do-complain">Complain</a>
+								</div>
+								
+								<div class="comment-text">
+									Lorem ipsum dolor sit amet
+								</div>
+							</div>							
+
+							<div class="comment-item">
+								<div class="comment-image" style="background: url(upload/avatar-70x70.jpg)"></div>
+								<div class="comment-meta">
+									<span class="author">katheoreilly</span>
+									<span class="date">December 15, 2011</span>
+									<a href="#" class="follow">Follow</a>
+									<a href="#" class="reply">Reply</a>
+									<a href="#" class="do-complain">Complain</a>
+								</div>
+								
+								<div class="comment-text">
+									Lorem ipsum dolor sit amet
+								</div>
+							</div>							
+							
+							<div class="add-comment">
+								<div class="head">
+									<h4>Add comment</h4>
+								</div>
+								
+								<div class="body">
+									<div class="comment-image" style="background: url(upload/avatar-70x70.jpg)"></div>
+									<div class="label"><span class="name">Alex Morph</span> commenting</div>
+									<div class="textarea">
+										<label for="You text comment" for="comment-text-textarea"></label>
+										<textarea name="text" id="comment-text-textarea"></textarea>
+									</div>
+									<div class="submit">
+										<input type="submit" value="Add comment" />
+									</div>
+								</div>
+							</div>
+							
+							
+						</div>
+					</div>
+				</div>
+			</div><!-- #news-content -->	
+		</div><!-- #news-container -->
+		
+		<div id="news-sidebar">
+			<div class="posts-strips">
+				<ul class="strips-menu">
+					<li><a href="#news">News Roll</a></li>
+					<li><a href="#popular">Popular</a></li>
+					<li><a href="#partner">Most shared</a></li>
+				</ul>	
+				<div id="news" class="strip-tab scroller">
+					<ul>
+						<li><a href="#">Six CSS Layout Features To Look Forward</a><span class="post-date">today, 15:32</span></li>
+						<li><a href="#">The Smashing Deals Countdown For Christmas</a><span class="post-date">today, 15:26</span></li>
+						<li><a href="#">The Messy Art Of UX Sketching</a><span class="post-date">today, 15:20</span></li>
+						<li><a href="#" class="hot">An Introduction To Object Oriented CSS (OOCSS)</a><span class="post-date">today, 15:16</span></li>
+						<li><a href="#">Clear Indications That It’s Time To Redesign</a><span class="post-date">today, 15:08</span></li>
+						<li><a href="#">Six CSS Layout Features To Look Forward</a><span class="post-date">today, 15:32</span></li>
+						<li><a href="#">The Smashing Deals Countdown For Christmas</a><span class="post-date">today, 15:26</span></li>
+						<li><a href="#">The Messy Art Of UX Sketching</a><span class="post-date">today, 15:20</span></li>
+						<li><a href="#">Six CSS Layout Features To Look Forward</a><span class="post-date">today, 15:32</span></li>
+						<li><a href="#">The Smashing Deals Countdown For Christmas</a><span class="post-date">today, 15:26</span></li>
+						<li><a href="#">The Messy Art Of UX Sketching</a><span class="post-date">today, 15:20</span></li>
+						<li><a href="#" class="hot">An Introduction To Object Oriented CSS (OOCSS)</a><span class="post-date">today, 15:16</span></li>
+						<li><a href="#">Clear Indications That It’s Time To Redesign</a><span class="post-date">today, 15:08</span></li>
+						<li><a href="#">Six CSS Layout Features To Look Forward</a><span class="post-date">today, 15:32</span></li>
+						<li><a href="#">The Smashing Deals Countdown For Christmas</a><span class="post-date">today, 15:26</span></li>
+						<li><a href="#">The Messy Art Of UX Sketching</a><span class="post-date">today, 15:20</span></li>
+						<li><a href="#">Six CSS Layout Features To Look Forward</a><span class="post-date">today, 15:32</span></li>
+						<li><a href="#">The Smashing Deals Countdown For Christmas</a><span class="post-date">today, 15:26</span></li>
+						<li><a href="#">The Messy Art Of UX Sketching</a><span class="post-date">today, 15:20</span></li>
+						<li><a href="#" class="hot">An Introduction To Object Oriented CSS (OOCSS)</a><span class="post-date">today, 15:16</span></li>
+						<li><a href="#">Clear Indications That It’s Time To Redesign</a><span class="post-date">today, 15:08</span></li>
+						<li><a href="#">Six CSS Layout Features To Look Forward</a><span class="post-date">today, 15:32</span></li>
+						<li><a href="#">The Smashing Deals Countdown For Christmas</a><span class="post-date">today, 15:26</span></li>
+						<li><a href="#">The Messy Art Of UX Sketching</a><span class="post-date">today, 15:20</span></li>
+					</ul>	
+				</div>
+				<div id="popular" class="strip-tab scroller">
+					<ul>
+						<li><a href="#">Six CSS Layout Features To Look Forward</a><span class="post-date">today, 15:32</span></li>
+						<li><a href="#">The Smashing Deals Countdown For Christmas</a><span class="post-date">today, 15:26</span></li>
+						<li><a href="#">The Messy Art Of UX Sketching</a><span class="post-date">today, 15:20</span></li>
+						<li><a href="#" class="hot">An Introduction To Object Oriented CSS (OOCSS)</a><span class="post-date">today, 15:16</span></li>
+						<li><a href="#">Clear Indications That It’s Time To Redesign</a><span class="post-date">today, 15:08</span></li>
+						<li><a href="#">Six CSS Layout Features To Look Forward</a><span class="post-date">today, 15:32</span></li>
+						<li><a href="#">The Smashing Deals Countdown For Christmas</a><span class="post-date">today, 15:26</span></li>
+						<li><a href="#">The Messy Art Of UX Sketching</a><span class="post-date">today, 15:20</span></li>
+						<li><a href="#" class="hot">An Introduction To Object Oriented CSS (OOCSS)</a><span class="post-date">today, 15:16</span></li>
+						<li><a href="#">Clear Indications That It’s Time To Redesign</a><span class="post-date">today, 15:08</span></li>
+						<li><a href="#">Six CSS Layout Features To Look Forward</a><span class="post-date">today, 15:32</span></li>
+						<li><a href="#">The Smashing Deals Countdown For Christmas</a><span class="post-date">today, 15:26</span></li>
+						<li><a href="#">The Messy Art Of UX Sketching</a><span class="post-date">today, 15:20</span></li>
+						<li><a href="#">Six CSS Layout Features To Look Forward</a><span class="post-date">today, 15:32</span></li>
+						<li><a href="#">The Smashing Deals Countdown For Christmas</a><span class="post-date">today, 15:26</span></li>
+						<li><a href="#">The Messy Art Of UX Sketching</a><span class="post-date">today, 15:20</span></li>
+						<li><a href="#" class="hot">An Introduction To Object Oriented CSS (OOCSS)</a><span class="post-date">today, 15:16</span></li>
+						<li><a href="#">Clear Indications That It’s Time To Redesign</a><span class="post-date">today, 15:08</span></li>
+						<li><a href="#">Six CSS Layout Features To Look Forward</a><span class="post-date">today, 15:32</span></li>
+						<li><a href="#">The Smashing Deals Countdown For Christmas</a><span class="post-date">today, 15:26</span></li>
+						<li><a href="#">The Messy Art Of UX Sketching</a><span class="post-date">today, 15:20</span></li>
+					</ul>
+				</div>
+				<div id="partner" class="strip-tab scroller">
+					<ul>
+						<li><a href="#">Six CSS Layout Features To Look Forward</a><span class="post-date">today, 15:32</span></li>
+						<li><a href="#">The Smashing Deals Countdown For Christmas</a><span class="post-date">today, 15:26</span></li>
+						<li><a href="#">The Messy Art Of UX Sketching</a><span class="post-date">today, 15:20</span></li>
+						<li><a href="#" class="hot">An Introduction To Object Oriented CSS (OOCSS)</a><span class="post-date">today, 15:16</span></li>
+						<li><a href="#">Clear Indications That It’s Time To Redesign</a><span class="post-date">today, 15:08</span></li>
+						<li><a href="#">Six CSS Layout Features To Look Forward</a><span class="post-date">today, 15:32</span></li>
+						<li><a href="#">The Smashing Deals Countdown For Christmas</a><span class="post-date">today, 15:26</span></li>
+						<li><a href="#">The Messy Art Of UX Sketching</a><span class="post-date">today, 15:20</span></li>
+					</ul>
+				</div>
+			</div><!-- .posts-strips-->
+			
+			<div class="top-stories">
+				<div class="head">
+					<h3>Top stories today</h3>
+				</div>
+				
+				<div class="body">
+					<ul>
+						<li>
+							<div class="post-image" style="background: url(upload/top-story01.jpg)"></div>
+							<h4 class="post-title"><a href="#">Circle Up: How Brands Are Using Google+</a></h4>
+							<div class="post-views">158</div>
+						</li>
+						<li>
+							<div class="post-image" style="background: url(upload/top-story01.jpg)"></div>
+							<h4 class="post-title"><a href="#">Circle Up: How Brands Are Using Google+</a></h4>
+							<div class="post-views">158</div>
+						</li>
+						<li>
+							<div class="post-image" style="background: url(upload/top-story01.jpg)"></div>
+							<h4 class="post-title"><a href="#">Circle Up: How Brands Are Using Google+</a></h4>
+							<div class="post-views">158</div>
+						</li>
+						<li>
+							<div class="post-image" style="background: url(upload/top-story01.jpg)"></div>
+							<h4 class="post-title"><a href="#">Circle Up: How Brands Are Using Google+</a></h4>
+							<div class="post-views">158</div>
+						</li>
+						<li>
+							<div class="post-image" style="background: url(upload/top-story01.jpg)"></div>
+							<h4 class="post-title"><a href="#">Circle Up: How Brands Are Using Google+</a></h4>
+							<div class="post-views">158</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+	
+			<div class="banner premium">
+				<img src="upload/banner-240x350.jpg" width="240" height="350" alt="" />
+			</div>
+			
+			<div class="tags-trend">
+				<div class="head">
+					<h3>Trend tags</h3>
+				</div>
+				<div class="body">
+					<ul>
+						<li>
+							<a href="#">
+								<span class="image" style="background: url(upload/tag01.jpg)"></span>
+								<span class="name">Gadgets</span>
+								<span class="followers">6,796 followers</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="image" style="background: url(upload/tag01.jpg)"></span>
+								<span class="name">Gadgets</span>
+								<span class="followers">6,796 followers</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="image" style="background: url(upload/tag01.jpg)"></span>
+								<span class="name">Gadgets</span>
+								<span class="followers">6,796 followers</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="image" style="background: url(upload/tag01.jpg)"></span>
+								<span class="name">Gadgets</span>
+								<span class="followers">6,796 followers</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div><!-- .tags-cloud-block -->
+	
+			<div class="banner adv">
+				<img src="upload/banner-283x270.jpg" width="280" height="270" alt="" />
+			</div>
+
+			<div class="vacancies-block">
+				<div class="head"><h3>Vacancies</h3></div>
+				<div class="body">
+					<div class="vacancies-list scroller">
+						<table>
+							<tr>
+								<td class="vacancy-name"><a href="#">Psyhologist</a></td>
+								<td class="vacancy-salary"><span>8000</span> azn</td>
+							</tr>
+							<tr>
+								<td class="vacancy-name"><a href="#">Flash-designer</a></td>
+								<td class="vacancy-salary"><span>8000</span> azn</td>
+							</tr>
+							<tr>
+								<td class="vacancy-name"><a href="#">Supervisor</a></td>
+								<td class="vacancy-salary"><span>8000</span> azn</td>
+							</tr>
+							<tr>
+								<td class="vacancy-name"><a href="#">Manager</a></td>
+								<td class="vacancy-salary"><span>8000</span> azn</td>
+							</tr>
+							<tr>
+								<td class="vacancy-name"><a href="#">Selling-manager</a></td>
+								<td class="vacancy-salary"><span>8000</span> azn</td>
+							</tr>
+							<tr>
+								<td class="vacancy-name"><a href="#">Psyhologist</a></td>
+								<td class="vacancy-salary"><span>8000</span> azn</td>
+							</tr>
+							<tr>
+								<td class="vacancy-name"><a href="#">Flash-designer</a></td>
+								<td class="vacancy-salary"><span>8000</span> azn</td>
+							</tr>
+							<tr>
+								<td class="vacancy-name"><a href="#">Supervisor</a></td>
+								<td class="vacancy-salary"><span>8000</span> azn</td>
+							</tr>
+							<tr>
+								<td class="vacancy-name"><a href="#">Manager</a></td>
+								<td class="vacancy-salary"><span>8000</span> azn</td>
+							</tr>
+							<tr>
+								<td class="vacancy-name"><a href="#">Selling-manager</a></td>
+								<td class="vacancy-salary"><span>8000</span> azn</td>
+							</tr>
+							<tr>
+								<td class="vacancy-name"><a href="#">Psyhologist</a></td>
+								<td class="vacancy-salary"><span>8000</span> azn</td>
+							</tr>
+							<tr>
+								<td class="vacancy-name"><a href="#">Flash-designer</a></td>
+								<td class="vacancy-salary"><span>8000</span> azn</td>
+							</tr>
+							<tr>
+								<td class="vacancy-name"><a href="#">Supervisor</a></td>
+								<td class="vacancy-salary"><span>8000</span> azn</td>
+							</tr>
+							<tr>
+								<td class="vacancy-name"><a href="#">Manager</a></td>
+								<td class="vacancy-salary"><span>8000</span> azn</td>
+							</tr>
+							<tr>
+								<td class="vacancy-name"><a href="#">Selling-manager</a></td>
+								<td class="vacancy-salary"><span>8000</span> azn</td>
+							</tr>
+							<tr>
+								<td class="vacancy-name"><a href="#">Psyhologist</a></td>
+								<td class="vacancy-salary"><span>8000</span> azn</td>
+							</tr>
+							<tr>
+								<td class="vacancy-name"><a href="#">Flash-designer</a></td>
+								<td class="vacancy-salary"><span>8000</span> azn</td>
+							</tr>
+							<tr>
+								<td class="vacancy-name"><a href="#">Supervisor</a></td>
+								<td class="vacancy-salary"><span>8000</span> azn</td>
+							</tr>
+							<tr>
+								<td class="vacancy-name"><a href="#">Manager</a></td>
+								<td class="vacancy-salary"><span>8000</span> azn</td>
+							</tr>
+							<tr>
+								<td class="vacancy-name"><a href="#">Selling-manager</a></td>
+								<td class="vacancy-salary"><span>8000</span> azn</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div><!-- .vacancies-block-->		
+		</div><!-- #news-sidebar -->
+	
+		
+	</div><!-- #news-middle -->
+	<div id="footer">
+		<div class="logo">Sfera</div>
+		<div class="footer-menu">
+			<ul>
+				<li><a href="#">Sfera ADs</a></li>
+				<li><a href="#">About us</a></li>
+				<li><a href="#">Sfera News</a></li>
+				<li><a href="#">Features</a></li>
+				<li><a href="#">Sfera Blogs</a></li>
+				<li><a href="#">FAQ</a></li>
+				<li><a href="#">Weather</a></li>
+				<li><a href="#">User info</a></li>
+			</ul>
+		</div><!-- .footer-menu-->
+		<div class="connect-with-us block">
+			<div class="head"><h4>Connect with us</h4></div>
+			<div class="list">
+				<ul>
+					<li><a href="#" class="fb">Facebook</a></li>
+					<li><a href="#" class="tw">Twitter</a></li>
+					<li><a href="#" class="gp">Google+</a></li>
+				</ul>
+			</div>	
+		</div>
+		<div class="support-center block">
+			<div class="head"><h4>Support Center</h4></div>
+			<div class="list">
+				<ul>
+					<li>Tel: (844) 221-28-20</li>
+					<li>Fax: (844) 221-28-20</li>
+					<li>Email: <a href="mailto:contact@sfera.az">contact@sfera.az</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="copyright">
+			<p>&copy; 2012 Sfera.az. All rights reserved</p>
+		</div>
+		
+		<div class="artgen">
+			<a href="http://www.artgen.com.ua/">Site development</a> Art generation studio
+		</div>
+	</div><!-- #footer -->
+
+</div><!-- #wrapper -->
+
+</body>
+</html>

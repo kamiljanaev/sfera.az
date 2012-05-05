@@ -1,0 +1,33 @@
+<?= $this->flashMessages(); ?>
+<?php
+    $this->headLink()->appendStylesheet($this->baseUrl . '/css/jquery.selectBox.css', 'screen, projection');
+    $this->headLink()->appendStylesheet($this->baseUrl . '/css/profile.css', 'screen, projection');
+    $this->headScript()->appendFile($this->baseUrl . '/js/jquery.customselectbox.min.js');
+    $this->headScript()->appendFile($this->baseUrl . '/js/profile.js');
+?>
+
+
+<div id="section-profile">
+    <div class="container">
+        <div class="content">
+            <div class="user-subscribers">
+                <div class="head"><h1>My subscribers</h1></div>
+                <div class="categories">
+                    <ul>
+                        <li class="state-active"><a href="#" id="showAllProfiles">All friends</a></li>
+                        <li><a href="#" id="showOnlineProfiles">Online ()</a></li>
+                    </ul>
+                </div>
+                <div class="body">
+                    <?php foreach ($this->profilesList as $profileLinkItem): ?>
+                    <?php $this->friendsList = false; ?>
+                    <?php $this->profileItem = $profileLinkItem->getProfile() ?>
+                        <?= $this->partial('relations/list.phtml', $this) ?>
+                    <?php endforeach; ?>
+                </div>
+            </div><!-- user-subscribers -->
+        </div><!-- .content -->
+    </div><!-- .container -->
+
+    <?= $this->partial('frontProfileSidebar.phtml', $this) ?>
+</div><!-- #section-profile -->

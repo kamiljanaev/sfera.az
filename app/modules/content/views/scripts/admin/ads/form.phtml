@@ -1,0 +1,27 @@
+<?php
+$baseUrl = '/admin/module/content/ads';
+?>
+<form action="<?= $this->form->getAction() ?>" method="<?= $this->form->getMethod() ?>" class="w800px" id="add-form" enctype="multipart/form-data">
+	<div id="admin-add-row" class="properties content inputrow">
+        <ul class="form wide">
+            <?= $this->form->id ?>
+            <?= $this->form->public_date ?>
+            <?= $this->form->to_date ?>
+            <?= $this->form->is_payed ?>
+            <?= $this->form->activated ?>
+            <?= $this->form->user_id ?>
+            <?= $this->form->category_id ?>
+            <?= $this->form->title ?>
+            <?= $this->form->value ?>
+            <li class="panel">
+                <label for="image"><?= $this->translate('ads-admin-form-image') ?></label>
+                <span class="field">
+                    <input type="text" name="image" id="image" value="<?= $this->form->image->getValue() ?>" style="width:300px;"/>&nbsp;&nbsp;
+                    <button id="browse"><?= $this->translate('button-file-manager') ?></button>
+                </span>
+            </li>
+            <?= $this->form->short_content ?>
+            <?= $this->form->content ?>
+        </ul>
+	</div>
+</form>

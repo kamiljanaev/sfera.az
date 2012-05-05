@@ -1,0 +1,12 @@
+<div id="payed-advertisements" class="wrap">
+    <ul>
+        <?php foreach ($this->adsDataArray as $adsDataItem): ?>
+        <li class="advertisement-item">
+            <p class="advertisement-image"><img src="<?= Core_Image::getImagePath($adsDataItem->image, Core_Image::ADS_HOME_PAYED) ?>" alt="<?= $adsDataItem->title ?>" /></p>
+            <h4 class="advertisement-title"><a href="#"><?= $adsDataItem->title ?></a></h4>
+            <p class="advertisement-excerpt"><?= $adsDataItem->short_content ?></p>
+        </li>
+        <?php endforeach; ?>
+    </ul>
+    <div class="buy-ads-link"><a href="#">buy-ads</a></div>
+</div><!-- #payed-adds-->

@@ -1,0 +1,133 @@
+#footer {
+	border-top:9px solid #1a1a1a;
+	height: 300px;
+	background: url(../images/footer-bg.png);
+	position: relative;
+}
+
+#footer a {
+	color: #fff;
+}
+
+#footer .logo {
+	background: url(../images/logo-footer.png) no-repeat;
+	position: absolute;
+	width:112px;
+	height:111px;
+	overflow: hidden;
+	text-indent: -1000px;
+	left: 66px;
+	top: 43px;
+}
+
+#footer .footer-menu {
+	position: absolute;
+	top:48px;
+	left: 250px;
+	width:337px;
+}
+
+#footer .footer-menu li {
+	float: left;
+	width:44.9%;
+	padding: 0 5% 0 0;
+	margin: 0 0 13px 0;
+}
+
+#footer .footer-menu a {
+	text-transform: uppercase;
+	font-size: 1.182em;
+}
+
+#footer .block {
+	
+}
+
+#footer .head {
+	text-transform: uppercase;
+	color: #fff;
+	font-size: 1.182em;
+	border-bottom: 0;
+}
+
+#footer .connect-with-us .list {
+	margin: 9px 2px;
+}
+
+#footer .connect-with-us .list li {
+	line-height: 29px;
+}
+
+#footer .connect-with-us .list a {
+	background: url(../images/footer-social.png) no-repeat;
+	color:#b2b2b2;
+	font-size: 1.091em;
+	padding: 5px 0 6px 33px
+}
+
+#footer .connect-with-us a.fb {
+	background-position: 0 0;	
+}
+
+#footer .connect-with-us a.tw {
+	background-position: 0 -29px;	
+}
+
+#footer .connect-with-us a.gp {
+	background-position: 0 -59px;	
+}
+
+#footer .connect-with-us {
+	position: absolute;
+	top:48px;
+	left: 590px;
+}
+
+#footer .support-center {
+	position: absolute;
+	top:48px;
+	left: 750px;
+}
+
+#footer .support-center .list {
+	margin: 16px 0;	
+}
+
+#footer .support-center .list li {
+	font-size: 1.091em;
+	color: #b2b2b2;	
+}
+
+#footer .copyright {
+	color: #e9e9e9;
+	position: relative;
+	font-size: 1.091em;
+	margin: 221px 40px 0;
+	border-top: 1px solid #2b3035;
+}
+
+#footer .copyright p {
+	border-top: 1px solid #4a5157;
+	padding: 27px 0 0;
+}
+
+#footer .artgen {
+	font-size: 1.091em;
+	position: absolute;
+	color: #e9e9e9;
+	top:240px;
+	right: 40px;
+	padding: 10px 0;
+}
+
+#footer .artgen a {
+	background: url(../images/ag.png) right center no-repeat;
+	text-decoration: underline;
+	padding: 9px 47px 9px 0;
+	margin: 0 5px 0 0;
+}
+
+#footer .artgen a:hover {
+	text-decoration: none;
+}
+

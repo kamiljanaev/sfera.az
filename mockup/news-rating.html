@@ -1,0 +1,368 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Sfera.AZ - news category</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link rel="stylesheet" href="css/reset.css"  type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="css/header.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="css/footer.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="css/site.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="css/scrollbar.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="css/post-meta.css" type="text/css" media="screen, projection" />
+
+	<link rel="stylesheet" href="css/news.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="css/news-colors.css" type="text/css" media="screen, projection" />
+
+	<script src="jscripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+	<script src="jscripts/jquery-ui-1.8.18.custom.min.js" type="text/javascript"></script>
+	<script src="jscripts/jquery.tinyscrollbar.min.js" type="text/javascript"></script>
+	<script src="jscripts/site.js" type="text/javascript"></script>
+	<!--script src="http://platform.twitter.com/anywhere.js?id=7ttxjSdhTYxUrZ1to1GrAg&v=1" type="text/javascript"></script-->
+</head>
+
+<body class="baku">
+
+<div id="header-banner">
+	<img src="upload/banner-header.jpg" alt="banner-header" width="960" height="116" />
+</div><!-- #header-banner-->
+
+<div id="wrapper">
+
+	<div id="header">
+		<div class="logo"><span class="title">SFERA.AZ</span></div><!-- .logo -->
+
+		<div class="signin">
+			<span class="span-welcome">Welcome to Sfera.az! You can</span>
+			<!--img src="upload/facebook-signin.jpg" alt="facebook-signin" width="150" height="22" /-->
+
+			<div id="fb-root"></div>
+			<!--<script type="text/javascript">
+			  /*window.fbAsyncInit = function() {
+			    FB.init({
+			      appId      : 311758472198961,
+			      status     : true, 
+			      cookie     : true,
+			      xfbml      : true,
+			      oauth      : true,
+			    });
+			  };
+			  (function(d){
+			     var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+			     js = d.createElement('script'); js.id = id; js.async = true;
+			     js.src = "//connect.facebook.net/en_US/all.js";
+			     d.getElementsByTagName('head')[0].appendChild(js);
+			   }(document));*/
+			</script>-->
+			<!--<script type="text/javascript">
+			/* 
+			  twttr.anywhere(function (T) {
+			    T("#twitter-login").connectButton();
+			  });*/
+			 
+			</script>-->
+
+			<div class="fb-login-button">Login with Facebook</div>
+
+			<span class="span-or">- or -</span>
+			<span id="twitter-login"></span>
+		</div><!-- .signin-->
+
+		<div class="search">
+			<ul>
+				<li><a href="#search-site">Sfera search</a></li>
+				<li><a href="#search-web">Web search</a></li>
+			</ul>
+			<div id="search-site">
+				<form action="">
+					<p>
+						<label for="site-search-input">Search the site Sfera.az</label>
+						<input type="text" id="site-search-input" name="site-search-input" class="hidelabel" name="" />
+						<input type="submit" value="Search" />
+					</p>
+				</form>
+			</div>
+			<div id="search-web">
+				<form action="">
+					<p>
+						<label for="web-search-input">Search the web</label>
+						<input type="text" id="web-search-input" name="web-search-input" class="hidelabel" name="" />
+						<input type="submit" value="Search" />
+					</p>
+				</form>
+			</div>
+		</div><!-- .search-->
+		
+		<div class="auth-links">
+			<p class="links">
+				<a href="#" class="signin-link">Sign in</a>
+				or
+				<a href="#" class="joinus-link">Join us!</a>
+			</p>
+			<p class="users">
+				<span class="users-count">12752</span> users
+			</p>	
+		</div><!-- .auth-links-->
+		
+		<div class="menu" id="header-menu">
+			<ul>
+				<li class="menu-item news item-inactive"><a href="#">News</a></li>
+				<li class="menu-item blogs item-inactive"><a href="#">Blogs</a></li>
+				<li class="menu-item job item-inactive"><a href="#">Job</a></li>
+				<li class="menu-item realty item-inactive"><a href="#">Realty</a></li>
+				<li class="menu-item weather item-inactive"><a href="#">Weather</a></li>
+				<li class="menu-item horoscope item-inactive"><a href="#">Horoscope</a></li>
+				<li class="menu-item ads item-inactive"><a href="#">Ads</a></li>
+				<li class="all-services"><a href="#">All services</a></li>
+			</ul>
+		</div><!-- .menu -->
+	</div><!-- #header-->
+	
+	
+	<div id="news-middle">	
+		<div class="banners" id="header_banners">
+			<div class="banner-content"><img src="upload/banner-600x90.jpg" alt="banner-600x90.jpg" width="600" height="90" /></div>	
+			<div class="banner-content"><img src="upload/banner-360x60.jpg" alt="banner-360x60.jpg" width="360" height="90" /></div>	
+		</div><!-- #header_banners-->
+	
+		<div id="news-container">
+			<div class="category-news baku">
+				<div class="body">
+				<div class="rating-categories">
+					<ul>
+						<li class="state-active"><a href="#">News rating</a></li>
+						<li><a href="#">Blog post rating</a></li>
+						<li><a href="#">Best comments</a></li>
+						<li><a href="#">Best users</a></li>
+						<li><a href="#">Best stars</a></li>
+					</ul>
+				</div>
+				
+				<div class="type-switch">
+					<ul>
+						<li class="state-active"><a href="#">View</a></li>
+						<li><a href="#">Comments</a></li>
+					</ul>
+				</div>
+				
+				<div class="period-switch">
+					<ul>
+						<li class="state-active"><a href="#">One day</a></li>
+						<li><a href="#">One week</a></li>
+						<li><a href="#">One month</a></li>
+						<li><a href="#">One year</a></li>
+						<li><a href="#">All time</a></li>
+					</ul>
+				</div>
+				
+
+				<div class="post-item first">
+					<p class="post-position">1</p>
+					<p class="post-image"><img src="upload/rating01.jpg" width="100" height="100" /></p>
+					<p class="post-date">December 16th, 2011 / 15:28</p>
+					<h3 class="post-title"><a href="#">Holidays Around The World: Smashing Photo Contest</a></h3>
+					<p class="post-category">Category: <a href="#">Show biz</a></p>
+					<p class="post-excerpt">2012 is around the corner and the year is (already!) coming to an end. We'd like to know how upcoming holidays are celebrated in your city. Just send us a photo of your kind of Christmas or New Year's Eve.</p>
+					<ul class="post-meta">
+						<li class="post-views">1542</li>
+						<li class="post-comments"><a href="#comments">42</a></li>
+						<li class="post-fav"><a href="#">Add to Favorites</a></li>
+					</ul>
+					<div class="facebook-like"><img src="upload/fb-like.jpg" /></div>
+				</div>
+				
+				<div class="hr"></div>
+
+				<div class="post-item second">
+					<p class="post-position">2</p>
+					<p class="post-image"><img src="upload/post-news-thumb-02.jpg" width="60" height="60" /></p>
+					<p class="post-date">December 16th, 2011 / 15:28</p>
+					<h3 class="post-title"><a href="#">Holidays Around The World: Smashing Photo Contest</a></h3>
+					<p class="post-category">Category: <a href="#">Show biz</a></p>
+					<p class="post-excerpt">2012 is around the corner and the year is (already!) coming to an end. We'd like to know how upcoming holidays are celebrated in your city. Just send us a photo of your kind of Christmas or New Year's Eve.</p>
+					<ul class="post-meta">
+						<li class="post-views">1542</li>
+						<li class="post-comments"><a href="#comments">42</a></li>
+						<li class="post-fav"><a href="#">Add to Favorites</a></li>
+					</ul>
+					<div class="facebook-like"><img src="upload/fb-like.jpg" /></div>
+				</div>
+
+				<div class="post-item third">
+					<p class="post-position">3</p>
+					<p class="post-image"><img src="upload/post-news-thumb-03.jpg" width="60" height="60" /></p>
+					<p class="post-date">December 16th, 2011 / 15:28</p>
+					<h3 class="post-title"><a href="#">Holidays Around The World: Smashing Photo Contest</a></h3>
+					<p class="post-category">Category: <a href="#">Show biz</a></p>
+					<p class="post-excerpt">2012 is around the corner and the year is (already!) coming to an end. We'd like to know how upcoming holidays are celebrated in your city. Just send us a photo of your kind of Christmas or New Year's Eve.</p>
+					<ul class="post-meta">
+						<li class="post-views">1542</li>
+						<li class="post-comments"><a href="#comments">42</a></li>
+						<li class="post-fav"><a href="#">Add to Favorites</a></li>
+					</ul>
+					<div class="facebook-like"><img src="upload/fb-like.jpg" /></div>
+				</div>
+
+				<div class="hr"></div>
+
+				<div class="post-item">
+					<p class="post-position">4</p>
+					<p class="post-date">December 16th, 2011 / 15:28</p>
+					<h3 class="post-title"><a href="#">Holidays Around The World: Smashing Photo Contest</a></h3>
+					<p class="post-category">Category: <a href="#">Show biz</a></p>
+					<p class="post-excerpt">2012 is around the corner and the year is (already!) coming to an end. We'd like to know how upcoming holidays are celebrated in your city. Just send us a photo of your kind of Christmas or New Year's Eve.</p>
+					<ul class="post-meta">
+						<li class="post-views">1542</li>
+						<li class="post-comments"><a href="#comments">42</a></li>
+						<li class="post-fav"><a href="#">Add to Favorites</a></li>
+					</ul>
+					<div class="facebook-like"><img src="upload/fb-like.jpg" /></div>
+				</div>
+				
+				<div class="hr"></div>
+
+				<div class="post-item">
+					<p class="post-position">5</p>
+					<p class="post-date">December 16th, 2011 / 15:28</p>
+					<h3 class="post-title"><a href="#">Holidays Around The World: Smashing Photo Contest</a></h3>
+					<p class="post-category">Category: <a href="#">Show biz</a></p>
+					<p class="post-excerpt">2012 is around the corner and the year is (already!) coming to an end. We'd like to know how upcoming holidays are celebrated in your city. Just send us a photo of your kind of Christmas or New Year's Eve.</p>
+					<ul class="post-meta">
+						<li class="post-views">1542</li>
+						<li class="post-comments"><a href="#comments">42</a></li>
+						<li class="post-fav"><a href="#">Add to Favorites</a></li>
+					</ul>
+					<div class="facebook-like"><img src="upload/fb-like.jpg" /></div>
+				</div>
+
+				<div class="hr"></div>
+
+				<div class="post-item">
+					<p class="post-position">6</p>
+					<p class="post-date">December 16th, 2011 / 15:28</p>
+					<h3 class="post-title"><a href="#">Holidays Around The World: Smashing Photo Contest</a></h3>
+					<p class="post-category">Category: <a href="#">Show biz</a></p>
+					<p class="post-excerpt">2012 is around the corner and the year is (already!) coming to an end. We'd like to know how upcoming holidays are celebrated in your city. Just send us a photo of your kind of Christmas or New Year's Eve.</p>
+					<ul class="post-meta">
+						<li class="post-views">1542</li>
+						<li class="post-comments"><a href="#comments">42</a></li>
+						<li class="post-fav"><a href="#">Add to Favorites</a></li>
+					</ul>
+					<div class="facebook-like"><img src="upload/fb-like.jpg" /></div>
+				</div>
+
+				<div class="hr"></div>
+
+				<div class="post-item">
+					<p class="post-position">7</p>
+					<p class="post-date">December 16th, 2011 / 15:28</p>
+					<h3 class="post-title"><a href="#">Holidays Around The World: Smashing Photo Contest</a></h3>
+					<p class="post-category">Category: <a href="#">Show biz</a></p>
+					<p class="post-excerpt">2012 is around the corner and the year is (already!) coming to an end. We'd like to know how upcoming holidays are celebrated in your city. Just send us a photo of your kind of Christmas or New Year's Eve.</p>
+					<ul class="post-meta">
+						<li class="post-views">1542</li>
+						<li class="post-comments"><a href="#comments">42</a></li>
+						<li class="post-fav"><a href="#">Add to Favorites</a></li>
+					</ul>
+					<div class="facebook-like"><img src="upload/fb-like.jpg" /></div>
+				</div>
+				
+				<div class="hr"></div>
+
+				<div class="post-item">
+					<p class="post-position">8</p>
+					<p class="post-date">December 16th, 2011 / 15:28</p>
+					<h3 class="post-title"><a href="#">Holidays Around The World: Smashing Photo Contest</a></h3>
+					<p class="post-category">Category: <a href="#">Show biz</a></p>
+					<p class="post-excerpt">2012 is around the corner and the year is (already!) coming to an end. We'd like to know how upcoming holidays are celebrated in your city. Just send us a photo of your kind of Christmas or New Year's Eve.</p>
+					<ul class="post-meta">
+						<li class="post-views">1542</li>
+						<li class="post-comments"><a href="#comments">42</a></li>
+						<li class="post-fav"><a href="#">Add to Favorites</a></li>
+					</ul>
+					<div class="facebook-like"><img src="upload/fb-like.jpg" /></div>
+				</div>
+
+				<div class="hr"></div>
+
+				<div class="post-item">
+					<p class="post-position">9</p>
+					<p class="post-date">December 16th, 2011 / 15:28</p>
+					<h3 class="post-title"><a href="#">Holidays Around The World: Smashing Photo Contest</a></h3>
+					<p class="post-category">Category: <a href="#">Show biz</a></p>
+					<p class="post-excerpt">2012 is around the corner and the year is (already!) coming to an end. We'd like to know how upcoming holidays are celebrated in your city. Just send us a photo of your kind of Christmas or New Year's Eve.</p>
+					<ul class="post-meta">
+						<li class="post-views">1542</li>
+						<li class="post-comments"><a href="#comments">42</a></li>
+						<li class="post-fav"><a href="#">Add to Favorites</a></li>
+					</ul>
+					<div class="facebook-like"><img src="upload/fb-like.jpg" /></div>
+				</div>
+
+				<div class="pagination">
+					<ul>
+						<li class="current-page"><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">5</a></li>
+						<li><a href="#">6</a></li>
+						<li class="hellip">&hellip;</li>
+						<li><a href="#">27</a></li>
+					</ul>
+				</div>
+
+				</div>
+			</div><!-- .category-news.baku -->
+		</div><!-- #news-container -->
+		
+	</div><!-- #news-middle -->
+	<div id="footer">
+		<div class="logo">Sfera</div>
+		<div class="footer-menu">
+			<ul>
+				<li><a href="#">Sfera ADs</a></li>
+				<li><a href="#">About us</a></li>
+				<li><a href="#">Sfera News</a></li>
+				<li><a href="#">Features</a></li>
+				<li><a href="#">Sfera Blogs</a></li>
+				<li><a href="#">FAQ</a></li>
+				<li><a href="#">Weather</a></li>
+				<li><a href="#">User info</a></li>
+			</ul>
+		</div><!-- .footer-menu-->
+		<div class="connect-with-us block">
+			<div class="head"><h4>Connect with us</h4></div>
+			<div class="list">
+				<ul>
+					<li><a href="#" class="fb">Facebook</a></li>
+					<li><a href="#" class="tw">Twitter</a></li>
+					<li><a href="#" class="gp">Google+</a></li>
+				</ul>
+			</div>	
+		</div>
+		<div class="support-center block">
+			<div class="head"><h4>Support Center</h4></div>
+			<div class="list">
+				<ul>
+					<li>Tel: (844) 221-28-20</li>
+					<li>Fax: (844) 221-28-20</li>
+					<li>Email: <a href="mailto:contact@sfera.az">contact@sfera.az</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="copyright">
+			<p>&copy; 2012 Sfera.az. All rights reserved</p>
+		</div>
+		
+		<div class="artgen">
+			<a href="http://www.artgen.com.ua/">Site development</a> Art generation studio
+		</div>
+	</div><!-- #footer -->
+
+</div><!-- #wrapper -->
+
+</body>
+</html>

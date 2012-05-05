@@ -1,0 +1,50 @@
+<?= $this->flashMessages(); ?>
+<?php
+    $this->headLink()->appendStylesheet($this->baseUrl . '/css/jquery.selectBox.css', 'screen, projection');
+    $this->headLink()->appendStylesheet($this->baseUrl . '/css/profile.css', 'screen, projection');
+    $this->headScript()->appendFile($this->baseUrl . '/js/jquery.customselectbox.min.js');
+    $this->headScript()->appendFile($this->baseUrl . '/js/profile.js');
+?>
+
+
+<div id="section-profile">
+    <div class="container">
+        <div class="content">
+
+            <div class="user-subscribers">
+                <div class="head"><h1>My subscribtions</h1></div>
+                <div class="body">
+                    <?php $counter = 1; ?>
+                    <?php foreach ($this->subsList as $subsItem): ?>
+                        <div class="subscriber-item">
+                            <div class="subscriber-avatar" style="background:url(<?= $this->profileData->getAvatar() ?>)"></div>
+                            <div class="subscriber-container">
+                                <div class="subscriber-content">
+                                    <div class="subscriber-meta">
+                                        <a href="<?= $this->getUrl('news/category/'.$subsItem->category_id )?>" class="subscriber-link"><?= $subsItem->getCategory()->title ?></a>
+                                    </div>
+                                    <!--div class="subscriber-status">
+                                        Lunch on the chairs, swings. The concept of the studio Swing table Duffy London
+                                    </div-->
+                                </div>
+                            </div>
+                            <?php if ($this->currentProfileData->id == $this->profileData->id): ?>
+                            <div class="subscriber-options">
+                                <ul>
+                                    <li><a href="<?= $this->getUrl('subscriptions/remove/'.$subsItem->id )?>">Unsubscribe</a></li>
+                                </ul>
+                            </div>
+                            <?php endif; ?>
+                        </div>
+                        <?php if (count($this->subsList) > $counter++): ?>
+                            <div class="hr"></div>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+                </div>
+            </div><!-- user-subscribers -->
+
+        </div><!-- .content -->
+    </div><!-- .container -->
+
+    <?= $this->partial('frontProfileSidebar.phtml', $this) ?>
+</div><!-- #section-profile -->

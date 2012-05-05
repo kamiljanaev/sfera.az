@@ -1,0 +1,84 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+	margin: 0;
+	padding: 0;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+fieldset, img {
+	border: 0;
+}
+address, caption, cite, code, dfn, th, var {
+	font-style: normal;
+	font-weight: normal;
+}
+ol, ul {
+	list-style: none;
+}
+caption, th {
+	text-align: left;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-size: 100%;
+	font-weight: normal;
+}
+q:before, q:after {
+	content: '';
+}
+abbr, acronym {
+	border: 0;
+}
+body {
+	font: 0.688em/1.455em Arial, Tahoma, Verdana, sans-serif;
+	width: 100%;
+	background:url(../images/bg.png);
+}
+a {
+	outline: none;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+p {
+	margin:0;
+}
+img {
+	border: none;
+}
+input {
+	font-family:Arial, Tahoma, Verdana, sans-serif;
+	vertical-align: middle;
+}
+.hidelable {
+	display:none;
+}
+
+#wrapper {
+	width: 965px;
+	margin: 0 auto;
+}
+
+.ui-tabs-hide {
+	display:none;
+}
+
+.banners {
+	margin:5px 0;
+	overflow:hidden;
+	position: relative;
+}
+
+.banners img {
+	display: block
+}
+
+.banners .banner-content {
+	float:left;
+	margin:0 0 0 5px;
+}
+
+.banners .banner-content:first-child {
+	margin:0;
+}

@@ -1,0 +1,47 @@
+<form action="<?= $this->form->getAction() ?>" method="<?= $this->form->getMethod() ?>" class="w800px" id="add-form" enctype="multipart/form-data">
+	<div id="admin-add-row" class="properties content inputrow">
+        <ul class="form wide">
+            <?= $this->form->id ?>
+            <?= $this->form->user_id ?>
+            <?= $this->form->password ?>
+            <?= $this->form->password_conf ?>
+
+            <?= $this->form->lastname ?>
+            <?= $this->form->firstname ?>
+            <?= $this->form->middlename ?>
+            <li class="panel">
+                <label for="image"><?= $this->translate('profile-admin-form-avatar') ?></label>
+                <span class="field">
+                    <input type="text" name="avatar" id="avatar" value="<?= $this->form->avatar->getValue() ?>" style="width:300px;"/>&nbsp;&nbsp;
+                    <button id="browse"><?= $this->translate('button-file-manager') ?></button>
+                </span>
+            </li>
+            <?= $this->form->alias ?>
+            <?= $this->form->birthdate ?>
+            <?= $this->form->hometown ?>
+            <?= $this->form->gender ?>
+            <?= $this->form->is_real ?>
+            <?= $this->form->is_vip ?>
+            <?= $this->form->current_status ?>
+            <?= $this->form->about ?>
+
+            <?= $this->form->phone ?>
+            <?= $this->form->icq ?>
+            <?= $this->form->skype ?>
+            <?= $this->form->facebook ?>
+            <?= $this->form->twitter ?>
+            <?= $this->form->googleplus ?>
+            <?= $this->form->www ?>
+
+            <?= $this->form->current_rating ?>
+
+            <?= $this->form->account_number ?>
+            <?= $this->form->amount ?>
+            <?= $this->form->sms_amount ?>
+            <?= $this->form->awards ?>
+
+            <?= $this->form->awards_id ?>
+            <?= $this->form->news_categories_id ?>
+        </ul>
+	</div>
+</form>

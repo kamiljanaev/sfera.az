@@ -1,0 +1,8 @@
+<?= $this->flashMessages(); ?>
+<?php if ($this->added): ?>
+    ОБъявление добавлено
+<?php else: ?>
+    <?php if ($this->adsForm): ?>
+    <?= $this->adsForm ?>
+    <?php endif; ?>
+<?php endif; ?>

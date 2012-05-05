@@ -1,0 +1,28 @@
+<?= $this->flashMessages(); ?>
+<?php
+    $this->headLink()->appendStylesheet($this->baseUrl . '/css/jquery.selectBox.css', 'screen, projection');
+    $this->headLink()->appendStylesheet($this->baseUrl . '/css/profile.css', 'screen, projection');
+    $this->headScript()->appendFile($this->baseUrl . '/js/jquery.customselectbox.min.js');
+    $this->headScript()->appendFile($this->baseUrl . '/js/profile.js');
+?>
+
+
+<div id="section-profile">
+    <div class="container">
+        <div class="content">
+            <div class="user-favorites">
+                <div class="head"><h1>My favorites</h1></div>
+                <?php $counter = 1; ?>
+                <?php foreach ($this->favoritesList as $favItem): ?>
+                    <?= $this->renderFavoriteItem($favItem); ?>
+                    <?php if (count($this->favoritesList) > $counter++): ?>
+                        <div class="hr"></div>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+            </div><!-- .user-favorites -->
+
+        </div><!-- .content -->
+    </div><!-- .container -->
+
+    <?= $this->partial('frontProfileSidebar.phtml', $this) ?>
+</div><!-- #section-profile -->

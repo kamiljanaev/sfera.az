@@ -1,0 +1,33 @@
+<?php
+	if ($this->itemRow->id) {
+		$headTitle = $this->msgAdminEditTitle;
+	} else {
+		$headTitle = $this->msgAdminAddTitle;
+	}
+	$this->headTitle($headTitle);
+    $this->partial('js_elfinder_includes.phtml',null,$this);
+    $this->partial('js_edit_includes.phtml',null,$this);
+    $this->headScript()->appendScript($this->render('admin/ads/js/edit.js'));
+?>
+<div id="main">
+	<div class="content">
+		<div id="head">
+			<h2><?= $headTitle ?></h2>
+		</div>
+        <div class="control">
+            <span class="button reset">
+                <a href="<?php echo $this->getUrl($this->baseUrl); ?>" class="cancel-action"><?= $this->msgButtonBack ?></a>
+            </span>
+            <span class="separator">
+                &nbsp;&nbsp;&nbsp;
+            </span>
+            <span class="button submit">
+                <button type="submit" name="save" class="add-action"><?= $this->msgButtonSave ?></button>
+            </span>
+            <span class="separator">
+                &nbsp;&nbsp;&nbsp;
+            </span>
+        </div>
+		<?= $this->partial('admin/ads/form.phtml',null,$this) ?>
+	</div>
+</div>

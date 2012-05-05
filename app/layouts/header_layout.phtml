@@ -1,0 +1,46 @@
+<div id="header">
+    <div class="logo"><a href="/" class="title">SFERA.AZ</a></div><!-- .logo-->
+
+    <?= $this->signinUser() ?>
+
+    <div class="search">
+        <ul>
+            <li><a href="#search-site">Sfera search</a></li>
+            <li><a href="#search-web">Web search</a></li>
+        </ul>
+        <div id="search-site">
+            <form action="">
+                <p>
+                    <label for="site-search-input">Search the site Sfera.az</label>
+                    <input type="text" id="site-search-input" name="site-search-input" class="hidelabel" name="" />
+                    <input type="submit" value="Search" />
+                </p>
+            </form>
+        </div>
+        <div id="search-web">
+            <form action="">
+                <p>
+                    <label for="web-search-input">Search the web</label>
+                    <input type="text" id="web-search-input" name="web-search-input" class="hidelabel" name="" />
+                    <input type="submit" value="Search" />
+                </p>
+            </form>
+        </div>
+    </div><!-- .search-->
+
+
+    <?= $this->loggedUser() ?>
+
+    <div class="menu" id="header-menu">
+        <ul>
+            <li class="menu-item news item-inactive"><a href="<?= $this->getUrl('news/list') ?>">News</a></li>
+            <li class="menu-item blogs item-inactive"><a href="#">Blogs</a></li>
+            <li class="menu-item job item-inactive"><a href="#">Job</a></li>
+            <li class="menu-item realty item-inactive"><a href="#">Realty</a></li>
+            <li class="menu-item weather item-inactive"><a href="#">Weather</a></li>
+            <li class="menu-item horoscope item-inactive"><a href="#">Horoscope</a></li>
+            <li class="menu-item ads item-inactive"><a href="#">Ads</a></li>
+            <li class="all-services"><a href="#">All services</a></li>
+        </ul>
+    </div><!-- .menu -->
+</div><!-- #header-->

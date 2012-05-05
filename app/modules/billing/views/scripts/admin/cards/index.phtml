@@ -1,0 +1,39 @@
+<?php
+	$this->headTitle($this->msgCardsAdminTitle);
+	$this->partial('js_grid_includes.phtml',null,$this);
+    $this->headScript()->appendScript($this->render('admin/cards/js/grid.js'));
+    $this->headScript()->appendScript($this->render('admin/cards/js/add.js'));
+?>
+<div id="main">
+	<div class="content">
+		<div id="head">
+			<h2><?= $this->msgCardsAdminTitle ?></h2>
+		</div>
+		<div id="add-button-row">
+			<div class="control">
+				<?php if($this->checkPermission('roles', 'admin_index', 'add')): ?>
+					<span class="button" id="add-button">
+						<button class="add-button"><?= $this->msgButtonAdd ?></button>
+					</span>
+				<?php endif; ?>
+                <span class="button reset" id="cancel-button">
+                    <a href="<?php echo $this->getUrl(''); ?>" class="cancel-action"><?= $this->msgButtonBack ?></a>
+                </span>
+                <span class="separator">
+                    &nbsp;&nbsp;&nbsp;
+                </span>
+                <span class="button submit" id="submit-button">
+                    <button id="submit-add-form" class="add-action"><?= $this->msgButtonSave ?></button>
+                </span>
+			</div>
+		</div>
+		<div id="add-row">
+		<?= $this->partial('admin/cards/form.phtml',null,$this) ?>
+		</div>
+		<br />
+		<div id="grid-row">
+			<table id="jqgridtable" class="scroll" cellpadding="0" cellspacing="0"></table>
+			<div id="jqgridpager" class="scroll" style="text-align:center;"></div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,40 @@
+<?php
+$this->headLink()->appendStylesheet($this->baseUrl . '/css/site.css', 'screen, projection');
+$this->headLink()->appendStylesheet($this->baseUrl . '/css/news.css', 'screen, projection');
+$this->headLink()->appendStylesheet($this->baseUrl . '/css/news-colors.css', 'screen, projection');
+$this->headScript()->appendFile($this->baseUrl . '/js/index.js');
+?>
+
+
+
+<div id="news-middle">
+    <div class="banners" id="header_banners">
+        <div class="banner-content"><img src="/upload/banner-600x90.jpg" alt="banner-600x90.jpg" width="600" height="90" /></div>
+        <div class="banner-content"><img src="/upload/banner-360x60.jpg" alt="banner-360x60.jpg" width="360" height="90" /></div>
+    </div><!-- #header_banners-->
+
+    <div id="news-container">
+        <div id="news-content">
+            <?= $this->getNewsHomeBlock() ?>
+
+            <div class="banner">
+                <img src="/upload/banner-680x90.jpg" width="680" height="90" alt="banner-680x90" />
+            </div>
+
+            <?= $this->getNewsHomeBlocksList() ?>
+
+            <?php /* $this->getNewsCategoryBaku() ?>
+
+
+            <?= $this->getNewsCategoryAjerbaijan() ?>
+
+            <?= $this->getNewsCategoryWorld() */?>
+
+        </div><!-- #news-content -->
+    </div><!-- #news-container -->
+
+    <?= $this->partial('news/sidebar.phtml', $this) ?>
+
+
+</div><!-- #news-middle -->
+

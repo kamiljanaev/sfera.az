@@ -1,0 +1,4 @@
+Options +FollowSymLinks
+RewriteEngine on
+RewriteBase /
+RewriteRule !\.(htm|7z|ai|bmp|class|css|doc|docx|eps|flv|gif|htc|ico|jpeg|jpg|js|m4v|mp3|mp4|mvr|pdf|png|ppt|pptx|psd|rar|swf|txt|xls|xlsx|xml|zip|otf)$ index.php [L]

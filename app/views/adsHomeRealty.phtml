@@ -1,0 +1,13 @@
+<div class="realty-slides">
+    <ul>
+        <?php foreach ($this->adsDataArray as $adsDataItem): ?>
+        <li class="realty-slide">
+            <p class="post-image"><img src="<?= Core_Image::getImagePath($adsDataItem->image, Core_Image::ADS_HOME_REALTY) ?>" alt="<?= $adsDataItem->title ?>" /></p>
+            <p class="post-price"><?= $adsDataItem->value ?></p>
+            <p class="post-excerpt"><?= $adsDataItem->title ?></p>
+        </li>
+        <?php endforeach; ?>
+    </ul>
+    <div class="scroll prev disabled"><span></span></div>
+    <div class="scroll next"><span></span></div>
+</div><!-- .realty-slides-->

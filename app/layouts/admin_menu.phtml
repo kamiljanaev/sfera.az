@@ -1,0 +1,55 @@
+<div id="mainmenu">
+	<ul>
+		<?php if($this->checkPermission('config', 'admin_index', 'index') ||
+				$this->checkPermission('config', 'admin_backup', 'index') ||
+				$this->checkPermission('config', 'admin_import', 'index') ||
+				$this->checkPermission('roles', 'admin_index', 'index')): ?>
+			<li>
+				<a href="#">Настройки</a>
+				<ul>
+						<?php if($this->checkPermission('config', 'admin_index', 'index')): ?><li><a href="<?= $this->getUrl('admin/module/config/') ?>">Настройки сайта</a></li><?php endif; ?>
+						<?php if($this->checkPermission('roles', 'admin_index', 'index')): ?><li><a href="<?= $this->getUrl('admin/module/roles/') ?>">Управление ролями</a></li><?php endif; ?>
+						<?php if($this->checkPermission('config', 'admin_backup', 'index')): ?><li><a href="<?= $this->getUrl('admin/module/config/backup') ?>">Импорт/Экспорт</a></li><?php endif; ?>
+						<?php if($this->checkPermission('config', 'admin_import', 'index')): ?><li><a href="<?= $this->getUrl('admin/module/config/import') ?>">Импорт</a></li><?php endif; ?>
+				</ul>
+			</li>
+		<?php endif; ?>
+		<?php if($this->checkPermission('billing', 'admin_cards', 'index') ||
+                 $this->checkPermission('content', 'admin_category', 'index') ||
+				$this->checkPermission('content', 'admin_news', 'index') ): ?>
+			<li>
+				<a href="#">Содержимое</a>
+				<ul>
+                        <?php if($this->checkPermission('users', 'admin_index', 'index')): ?><li><a href="<?= $this->getUrl('admin/module/users/') ?>">Пользователи</a></li><?php endif; ?>
+                        <?php if($this->checkPermission('profile', 'admin_index', 'index')): ?><li><a href="<?= $this->getUrl('admin/module/profile/') ?>">Профили</a></li><?php endif; ?>
+                        <?php if($this->checkPermission('profile', 'admin_document', 'index')): ?><li><a href="<?= $this->getUrl('admin/module/profile/document') ?>">Присланные документы</a></li><?php endif; ?>
+						<?php if($this->checkPermission('billing', 'admin_cards', 'index')): ?><li><a href="<?= $this->getUrl('admin/module/billing/cards') ?>">Карты пополнения</a></li><?php endif; ?>
+                    <?php if($this->checkPermission('content', 'admin_tags', 'index')): ?><li><a href="<?= $this->getUrl('admin/module/content/tags') ?>">Теги</a></li><?php endif; ?>
+                    <?php if($this->checkPermission('content', 'admin_category', 'index')): ?><li><a href="<?= $this->getUrl('admin/module/content/category') ?>">Категории</a></li><?php endif; ?>
+                    <?php if($this->checkPermission('profile', 'admin_awards', 'index')): ?><li><a href="<?= $this->getUrl('admin/module/profile/awards') ?>">Справочник наград</a></li><?php endif; ?>
+                    <?php if($this->checkPermission('content', 'admin_news', 'index')): ?><li><a href="<?= $this->getUrl('admin/module/content/news') ?>">Новости</a></li><?php endif; ?>
+                    <?php if($this->checkPermission('content', 'admin_ads', 'index')): ?><li><a href="<?= $this->getUrl('admin/module/content/ads') ?>">Объявления</a></li><?php endif; ?>
+                    <?php if($this->checkPermission('content', 'admin_complains', 'index')): ?><li><a href="<?= $this->getUrl('admin/module/content/complains') ?>">Жалобы</a></li><?php endif; ?>
+				</ul>
+			</li>
+		<?php endif; ?>
+		<?php if($this->checkPermission('mailer', 'admin_subscribers', 'index') ): ?>
+			<li>
+				<a href="#">Рассылка</a>
+				<ul>
+						<?php if($this->checkPermission('mailer', 'admin_subscribers', 'index')): ?><li><a href="<?= $this->getUrl('admin/module/mailer/subscribers') ?>">Список подписчиков</a></li><?php endif; ?>
+				</ul>
+			</li>
+		<?php endif; ?>
+		<?php if($this->checkPermission('contact', 'admin_index', 'index') ): ?>
+			<li>
+				<a href="#">Контакты</a>
+				<ul>
+						<?php if($this->checkPermission('contact', 'admin_index', 'index')): ?><li><a href="<?= $this->getUrl('admin/module/contact') ?>">Обратная связь</a></li><?php endif; ?>
+				</ul>
+			</li>
+		<?php endif; ?>
+		<li class="view-site"><a href="<?= $this->getUrl() ?>" target="_blank">Перейти на сайт</a></li>
+		<li class="logout"><a id="logout_link" href="<?= $this->getUrl('users/auth/logout/') ?>">Выход из системы</a></li>
+	</ul>
+</div>

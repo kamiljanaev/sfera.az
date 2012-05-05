@@ -1,0 +1,46 @@
+<?= $this->flashMessages(); ?>
+<?php
+    $this->headLink()->appendStylesheet($this->baseUrl . '/css/jquery.selectBox.css', 'screen, projection');
+    $this->headLink()->appendStylesheet($this->baseUrl . '/css/profile.css', 'screen, projection');
+    $this->headScript()->appendFile($this->baseUrl . '/js/jquery.customselectbox.min.js');
+    $this->headScript()->appendFile($this->baseUrl . '/js/profile.js');
+    $this->headScript()->appendFile($this->baseUrl . '/js/bookmarks_category.js');
+?>
+
+
+<div id="section-profile">
+    <div class="container">
+        <div class="content">
+            <div class="user-bookmarks short-form">
+                <div class="head"><h1>Manage bookmarks</h1></div>
+                <div class="body">
+                    <h3><?php if ($this->isEdit): ?>Edit<?php else: ?>Add<?php endif; ?> bookmark category</h3>
+                    <form action="<?= $this->getUrl($this->formUrl) ?>" method="post" id="addBookmarksCategoryForm">
+                        <div class="inputs">
+                            <table>
+                                <tr>
+                                    <th><label for="title">Title:</label></th>
+                                    <td>
+                                        <input type="text" name="title" id="title" value="<?php if (array_key_exists('title', $this->formData)): ?><?= $this->formData['title']['value'] ?><?php endif; ?>" />
+                                        <?php if (array_key_exists('title', $this->formData)&&!$this->formData['title']['valid']): ?>
+                                        <span class="hint error" id="titleCorrectValue">title is empty</span>
+                                        <?php else: ?>
+                                        <span class="hint error" id="titleCorrectValue" style="display: none;">title is empty</span>
+                                        <?php endif; ?>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="submit">
+                            <input type="submit" value="<?php if ($this->isEdit): ?>Save<?php else: ?>Add<?php endif; ?> category" />
+                        </div>
+                    </form>
+                </div>
+            </div><!-- .user-balance -->
+
+
+        </div><!-- .content -->
+    </div><!-- .container -->
+
+    <?= $this->partial('frontProfileSidebar.phtml', $this) ?>
+</div><!-- #section-profile -->

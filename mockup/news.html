@@ -1,0 +1,799 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Sfera.AZ - news</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link rel="stylesheet" href="css/reset.css"  type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="css/header.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="css/footer.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="css/site.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="css/scrollbar.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="css/post-meta.css" type="text/css" media="screen, projection" />
+
+	<link rel="stylesheet" href="css/news.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="css/news-colors.css" type="text/css" media="screen, projection" />
+
+	<script src="jscripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+	<script src="jscripts/jquery-ui-1.8.18.custom.min.js" type="text/javascript"></script>
+	<script src="jscripts/jquery.tinyscrollbar.min.js" type="text/javascript"></script>
+	<script src="jscripts/site.js" type="text/javascript"></script>
+	<!--script src="http://platform.twitter.com/anywhere.js?id=7ttxjSdhTYxUrZ1to1GrAg&v=1" type="text/javascript"></script-->
+
+	<!--[if lt IE 8]>
+	<script src="jscripts/IE8.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+
+<div id="header-banner">
+	<img src="upload/banner-header.jpg" alt="banner-header" width="960" height="116" />
+</div><!-- #header-banner-->
+
+<div id="wrapper">
+
+	<div id="header">
+		<div class="logo"><span class="title">SFERA.AZ</span></div><!-- .logo-->
+
+		<div class="signin">
+			<span class="span-welcome">Welcome to Sfera.az! You can</span>
+			<!--img src="upload/facebook-signin.jpg" alt="facebook-signin" width="150" height="22" /-->
+
+			<div id="fb-root"></div>
+			<!--<script type="text/javascript">
+			  /*window.fbAsyncInit = function() {
+			    FB.init({
+			      appId      : 311758472198961,
+			      status     : true, 
+			      cookie     : true,
+			      xfbml      : true,
+			      oauth      : true,
+			    });
+			  };
+			  (function(d){
+			     var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+			     js = d.createElement('script'); js.id = id; js.async = true;
+			     js.src = "//connect.facebook.net/en_US/all.js";
+			     d.getElementsByTagName('head')[0].appendChild(js);
+			   }(document));*/
+			</script>-->
+			<!--<script type="text/javascript">
+			/* 
+			  twttr.anywhere(function (T) {
+			    T("#twitter-login").connectButton();
+			  });*/
+			 
+			</script>-->
+
+			<div class="fb-login-button">Login with Facebook</div>
+
+			<span class="span-or">- or -</span>
+			<span id="twitter-login"></span>
+		</div><!-- .signin-->
+
+		<div class="search">
+			<ul>
+				<li><a href="#search-site">Sfera search</a></li>
+				<li><a href="#search-web">Web search</a></li>
+			</ul>
+			<div id="search-site">
+				<form action="">
+					<p>
+						<label for="site-search-input">Search the site Sfera.az</label>
+						<input type="text" id="site-search-input" name="site-search-input" class="hidelabel" name="" />
+						<input type="submit" value="Search" />
+					</p>
+				</form>
+			</div>
+			<div id="search-web">
+				<form action="">
+					<p>
+						<label for="web-search-input">Search the web</label>
+						<input type="text" id="web-search-input" name="web-search-input" class="hidelabel" name="" />
+						<input type="submit" value="Search" />
+					</p>
+				</form>
+			</div>
+		</div><!-- .search-->
+		
+		<div class="auth-links">
+			<p class="links">
+				<a href="#" class="signin-link">Sign in</a>
+				or
+				<a href="#" class="joinus-link">Join us!</a>
+			</p>
+			<p class="users">
+				<span class="users-count">12752</span> users
+			</p>	
+		</div><!-- .auth-links-->
+		
+		<div class="menu" id="header-menu">
+			<ul>
+				<li class="menu-item news item-inactive"><a href="#">News</a></li>
+				<li class="menu-item blogs item-inactive"><a href="#">Blogs</a></li>
+				<li class="menu-item job item-inactive"><a href="#">Job</a></li>
+				<li class="menu-item realty item-inactive"><a href="#">Realty</a></li>
+				<li class="menu-item weather item-inactive"><a href="#">Weather</a></li>
+				<li class="menu-item horoscope item-inactive"><a href="#">Horoscope</a></li>
+				<li class="menu-item ads item-inactive"><a href="#">Ads</a></li>
+				<li class="all-services"><a href="#">All services</a></li>
+			</ul>
+		</div><!-- .menu -->
+	</div><!-- #header-->
+	
+	
+	<div id="news-middle">	
+		<div class="banners" id="header_banners">
+			<div class="banner-content"><img src="upload/banner-600x90.jpg" alt="banner-600x90.jpg" width="600" height="90" /></div>	
+			<div class="banner-content"><img src="upload/banner-360x60.jpg" alt="banner-360x60.jpg" width="360" height="90" /></div>	
+		</div><!-- #header_banners-->
+	
+		<div id="news-container">
+			<div id="news-content">
+				<div class="news-block">
+					<div class="head"><h3>News</h3></div>
+					<div class="body">
+						<div id="news-tabs">
+							<div class="news-categories">
+								<ul>
+									<li><a href="#category-1">World</a></li>
+									<li><a href="#category-2">Baku</a></li>
+									<li><a href="#category-1">Real estate</a></li>
+									<li><a href="#category-2">Finance</a></li>
+									<li><a href="#category-1">Show Biz</a></li>
+									<li><a href="#category-2">Economics</a></li>
+									<li><a href="#category-1">World</a></li>
+									<li><a href="#category-2">Baku</a></li>
+									<li><a href="#category-1">Real estate</a></li>
+									<li><a href="#category-2">Finance</a></li>
+									<li><a href="#category-1">Show Biz</a></li>
+									<li><a href="#category-2">Economics</a></li>
+								</ul>
+								<div class="scroll prev disabled"><span>previous</span></div>
+								<div class="scroll next disabled"><span>next</span></div>
+							</div>
+							<div id="category-1" class="news-content wrap">
+								<div class="post-last">
+									<p class="post-image">
+										<img src="upload/news-post-image.jpg" alt="Holidays Around The World: Smashing Photo Contest" />
+									</p>
+									<p class="post-date">December 15th, 2011 / 15:28</p>
+									<h3 class="post-title"><a href="#">Holidays Around The World: Smashing Photo Contest</a></h3>
+									<p class="post-excerpt">2012 is around the corner and the year is (already!) coming to an end. We'd like to know how upcoming holidays are celebrated in your city. Just send us a photo of your kind of Christmas or New Year's Eve.</p>
+									<ul class="post-meta">
+										<li class="post-views">1542</li>
+										<li class="post-comments"><a href="#comments">42</a></li>
+										<li class="post-fav"><a href="#">Add to Favorites</a></li>
+									</ul>
+									<div class="facebook-like"><img src="upload/fb-like.jpg" /></div>
+								</div>
+								<div class="post-list">
+									<ul>
+										<li id="post-1" class="post-item">
+											<div class="post-image">
+												<span class="post-image-container"><img src="upload/post-news-thumb-01.jpg" alt="Auto-Save User’s Input In Your Forms With HTML5 and Sisyphus.js" /></span>
+											</div>
+											<div class="post-info">
+												<h4 class="post-title"><a href="#">Auto-Save User’s Input In Your Forms With HTML5 and Sisyphus.js</a></h4>
+												<p class="post-excerpt">2012 is around the corner and the year is (already!) coming to an end.</p>
+											</div>
+										</li><!-- .post-item -->
+										<li id="post-2" class="post-item">
+											<div class="post-image">
+												<span class="post-image-container"><img src="upload/post-news-thumb-02.jpg" alt="Computing is full of buzzwords, “cloud computing” being the latest one" /></span>
+											</div>
+											<div class="post-info">
+												<h4 class="post-title"><a href="#">Computing is full of buzzwords, “cloud computing” being the latest one</a></h4>
+												<p class="post-excerpt">2012 is around the corner and the year is (already!) coming to an end.</p>
+											</div>
+										</li><!-- .post-item -->
+										<li id="post-3" class="post-item">
+											<div class="post-image">
+												<span class="post-image-container"><img src="upload/post-news-thumb-03.jpg" alt="The Smashing Guide To Moving The Web Forward" /></span>
+											</div>
+											<div class="post-info">
+												<h4 class="post-title"><a href="#">The Smashing Guide To Moving The Web Forward</a></h4>
+												<p class="post-excerpt">2012 is around the corner and the year is (already!) coming to an end.</p>
+											</div>
+										</li><!-- .post-item -->
+										<li id="post-3" class="post-item">
+											<div class="post-image">
+												<span class="post-image-container"><img src="upload/post-news-thumb-04.jpg" alt="PHP is widely available with inexpensive hosting plans." /></span>
+											</div>
+											<div class="post-info">
+												<h4 class="post-title"><a href="#">PHP is widely available with inexpensive hosting plans.</a></h4>
+												<p class="post-excerpt">2012 is around the corner and the year is (already!) coming to an end.</p>
+											</div>
+										</li><!-- .post-item -->
+									</ul>
+									<div class="more-link"><a href="#">All world news</a></div>
+								</div><!-- .post-list-->
+							</div><!-- .news-content-wrap-->
+							<div id="category-2" class="news-content wrap">
+								<div class="post-last">
+									<p class="post-image">
+										<img src="upload/news-post-image.jpg" alt="Holidays Around The World: Smashing Photo Contest" />
+									</p>
+									<p class="post-date">December 16th, 2011 / 15:28</p>
+									<h3 class="post-title"><a href="#">Holidays Around The World: Smashing Photo Contest</a></h3>
+									<p class="post-excerpt">2012 is around the corner and the year is (already!) coming to an end. We'd like to know how upcoming holidays are celebrated in your city. Just send us a photo of your kind of Christmas or New Year's Eve.</p>
+									<ul class="post-meta">
+										<li class="post-views">1542</li>
+										<li class="post-comments"><a href="#comments">42</a></li>
+										<li class="post-fav"><a href="#">Add to Favorites</a></li>
+									</ul>
+									<div class="facebook-like"><img src="upload/fb-like.jpg" /></div>
+								</div>
+								<div class="post-list">
+									<ul>
+										<li id="post-1" class="post-item">
+											<div class="post-image">
+												<span class="post-image-container"><img src="upload/post-news-thumb-01.jpg" alt="Auto-Save User’s Input In Your Forms With HTML5 and Sisyphus.js" /></span>
+											</div>
+											<div class="post-info">
+												<h4 class="post-title"><a href="#">Auto-Save User’s Input In Your Forms With HTML5 and Sisyphus.js</a></h4>
+												<p class="post-excerpt">2012 is around the corner and the year is (already!) coming to an end.</p>
+											</div>
+										</li><!-- .post-item -->
+										<li id="post-2" class="post-item state-active">
+											<div class="post-image">
+												<span class="post-image-container"><img src="upload/post-news-thumb-02.jpg" alt="Computing is full of buzzwords, “cloud computing” being the latest one" /></span>
+											</div>
+											<div class="post-info">
+												<h4 class="post-title"><a href="#">Computing is full of buzzwords, “cloud computing” being the latest one</a></h4>
+												<p class="post-excerpt">2012 is around the corner and the year is (already!) coming to an end.</p>
+											</div>
+										</li><!-- .post-item -->
+										<li id="post-3" class="post-item">
+											<div class="post-image">
+												<span class="post-image-container"><img src="upload/post-news-thumb-03.jpg" alt="The Smashing Guide To Moving The Web Forward" /></span>
+											</div>
+											<div class="post-info">
+												<h4 class="post-title"><a href="#">The Smashing Guide To Moving The Web Forward</a></h4>
+												<p class="post-excerpt">2012 is around the corner and the year is (already!) coming to an end.</p>
+											</div>
+										</li><!-- .post-item -->
+										<li id="post-3" class="post-item">
+											<div class="post-image">
+												<span class="post-image-container"><img src="upload/post-news-thumb-04.jpg" alt="PHP is widely available with inexpensive hosting plans." /></span>
+											</div>
+											<div class="post-info">
+												<h4 class="post-title"><a href="#">PHP is widely available with inexpensive hosting plans.</a></h4>
+												<p class="post-excerpt">2012 is around the corner and the year is (already!) coming to an end.</p>
+											</div>
+										</li><!-- .post-item -->
+									</ul>
+									<div class="more-link"><a href="#">All world news</a></div>
+								</div><!-- .post-list-->
+							</div><!-- .news-content-wrap-->
+						</div>
+					</div>
+				</div><!-- .news-block-->
+				
+				<div class="category-news baku">
+					<div class="head">
+						<h3>Baku news</h3>
+					</div>
+					
+					<div class="body">
+					<div class="hot-wrap">
+						<div class="post-item hot">
+							<div class="post-image">
+								<span class="post-image-container"><img src="upload/post-news-thumb-04.jpg" alt="PHP is widely available with inexpensive hosting plans." /></span>
+							</div>
+							<div class="post-info">
+								<h4 class="post-title"><a href="#">PHP is widely available with inexpensive hosting plans.</a></h4>
+								<p class="post-excerpt">2012 is around the corner and the year is (already!) coming to an end.</p>
+							</div>
+						</div>
+		
+						<div class="post-item hot">
+							<div class="post-image">
+								<span class="post-image-container"><img src="upload/post-news-thumb-04.jpg" alt="PHP is widely available with inexpensive hosting plans." /></span>
+							</div>
+							<div class="post-info">
+								<h4 class="post-title"><a href="#">PHP is widely available with inexpensive hosting plans.</a></h4>
+								<p class="post-excerpt">2012 is around the corner and the year is (already!) coming to an end.</p>
+							</div>
+						</div>
+					</div>
+					
+					<div class="post-item">
+						<p class="post-date">December 16th, 2011 / 15:28</p>
+						<h3 class="post-title"><a href="#">Holidays Around The World: Smashing Photo Contest</a></h3>
+						<p class="post-excerpt">2012 is around the corner and the year is (already!) coming to an end. We'd like to know how upcoming holidays are celebrated in your city. Just send us a photo of your kind of Christmas or New Year's Eve.</p>
+						<ul class="post-meta">
+							<li class="post-views">1542</li>
+							<li class="post-comments"><a href="#comments">42</a></li>
+							<li class="post-fav"><a href="#">Add to Favorites</a></li>
+						</ul>
+						<div class="facebook-like"><img src="upload/fb-like.jpg" /></div>
+					</div>
+					
+					<div class="hr"></div>
+	
+					<div class="post-item">
+						<p class="post-date">December 16th, 2011 / 15:28</p>
+						<h3 class="post-title"><a href="#">Holidays Around The World: Smashing Photo Contest</a></h3>
+						<p class="post-excerpt">2012 is around the corner and the year is (already!) coming to an end. We'd like to know how upcoming holidays are celebrated in your city. Just send us a photo of your kind of Christmas or New Year's Eve.</p>
+						<ul class="post-meta">
+							<li class="post-views">1542</li>
+							<li class="post-comments"><a href="#comments">42</a></li>
+							<li class="post-fav"><a href="#">Add to Favorites</a></li>
+						</ul>
+						<div class="facebook-like"><img src="upload/fb-like.jpg" /></div>
+					</div>
+	
+					<div class="hr"></div>
+
+					<div class="post-item">
+						<p class="post-date">December 16th, 2011 / 15:28</p>
+						<h3 class="post-title"><a href="#">Holidays Around The World: Smashing Photo Contest</a></h3>
+						<p class="post-excerpt">2012 is around the corner and the year is (already!) coming to an end. We'd like to know how upcoming holidays are celebrated in your city. Just send us a photo of your kind of Christmas or New Year's Eve.</p>
+						<ul class="post-meta">
+							<li class="post-views">1542</li>
+							<li class="post-comments"><a href="#comments">42</a></li>
+							<li class="post-fav"><a href="#">Add to Favorites</a></li>
+						</ul>
+						<div class="facebook-like"><img src="upload/fb-like.jpg" /></div>
+					</div>
+	
+					<div class="more-link"><a href="#">All baku news</a></div>
+					</div>
+				</div><!-- .category-news.baku -->
+	
+				<div class="banner">
+					<img src="upload/banner-680x90.jpg" width="680" height="90" alt="banner-680x90" />
+				</div>
+				
+				<div class="category-news azerbaijan">
+					<div class="head">
+						<h3>Azerbaijan news</h3>
+					</div>
+					
+					<div class="body">
+					<div class="hot-wrap">
+						<div class="post-item hot">
+							<div class="post-image">
+								<span class="post-image-container"><img src="upload/post-news-thumb-04.jpg" alt="PHP is widely available with inexpensive hosting plans." /></span>
+							</div>
+							<div class="post-info">
+								<h4 class="post-title"><a href="#">PHP is widely available with inexpensive hosting plans.</a></h4>
+								<p class="post-excerpt">2012 is around the corner and the year is (already!) coming to an end.</p>
+							</div>
+						</div>
+		
+						<div class="post-item hot">
+							<div class="post-image">
+								<span class="post-image-container"><img src="upload/post-news-thumb-04.jpg" alt="PHP is widely available with inexpensive hosting plans." /></span>
+							</div>
+							<div class="post-info">
+								<h4 class="post-title"><a href="#">PHP is widely available with inexpensive hosting plans.</a></h4>
+								<p class="post-excerpt">2012 is around the corner and the year is (already!) coming to an end.</p>
+							</div>
+						</div>
+					</div>
+					
+					<div class="post-item">
+						<p class="post-date">December 16th, 2011 / 15:28</p>
+						<h3 class="post-title"><a href="#">Holidays Around The World: Smashing Photo Contest</a></h3>
+						<p class="post-excerpt">2012 is around the corner and the year is (already!) coming to an end. We'd like to know how upcoming holidays are celebrated in your city. Just send us a photo of your kind of Christmas or New Year's Eve.</p>
+						<ul class="post-meta">
+							<li class="post-views">1542</li>
+							<li class="post-comments"><a href="#comments">42</a></li>
+							<li class="post-fav"><a href="#">Add to Favorites</a></li>
+						</ul>
+						<div class="facebook-like"><img src="upload/fb-like.jpg" /></div>
+					</div>
+					<div class="hr"></div>
+	
+					<div class="post-item">
+						<p class="post-date">December 16th, 2011 / 15:28</p>
+						<h3 class="post-title"><a href="#">Holidays Around The World: Smashing Photo Contest</a></h3>
+						<p class="post-excerpt">2012 is around the corner and the year is (already!) coming to an end. We'd like to know how upcoming holidays are celebrated in your city. Just send us a photo of your kind of Christmas or New Year's Eve.</p>
+						<ul class="post-meta">
+							<li class="post-views">1542</li>
+							<li class="post-comments"><a href="#comments">42</a></li>
+							<li class="post-fav"><a href="#">Add to Favorites</a></li>
+						</ul>
+						<div class="facebook-like"><img src="upload/fb-like.jpg" /></div>
+					</div>
+					<div class="hr"></div>
+	
+					<div class="post-item">
+						<p class="post-date">December 16th, 2011 / 15:28</p>
+						<h3 class="post-title"><a href="#">Holidays Around The World: Smashing Photo Contest</a></h3>
+						<p class="post-excerpt">2012 is around the corner and the year is (already!) coming to an end. We'd like to know how upcoming holidays are celebrated in your city. Just send us a photo of your kind of Christmas or New Year's Eve.</p>
+						<ul class="post-meta">
+							<li class="post-views">1542</li>
+							<li class="post-comments"><a href="#comments">42</a></li>
+							<li class="post-fav"><a href="#">Add to Favorites</a></li>
+						</ul>
+						<div class="facebook-like"><img src="upload/fb-like.jpg" /></div>
+					</div>
+	
+					<div class="more-link"><a href="#">All azerbaijan news</a></div>
+					</div>
+				</div><!-- .category-news.azerbaijan -->			
+	
+	
+				<div class="category-news world">
+					<div class="head">
+						<h3>World news</h3>
+					</div>
+					
+					<div class="body">
+					<div class="hot-wrap">
+						<div class="post-item hot">
+							<div class="post-image">
+								<span class="post-image-container"><img src="upload/post-news-thumb-04.jpg" alt="PHP is widely available with inexpensive hosting plans." /></span>
+							</div>
+							<div class="post-info">
+								<h4 class="post-title"><a href="#">PHP is widely available with inexpensive hosting plans.</a></h4>
+								<p class="post-excerpt">2012 is around the corner and the year is (already!) coming to an end.</p>
+							</div>
+						</div>
+		
+						<div class="post-item hot">
+							<div class="post-image">
+								<span class="post-image-container"><img src="upload/post-news-thumb-04.jpg" alt="PHP is widely available with inexpensive hosting plans." /></span>
+							</div>
+							<div class="post-info">
+								<h4 class="post-title"><a href="#">PHP is widely available with inexpensive hosting plans.</a></h4>
+								<p class="post-excerpt">2012 is around the corner and the year is (already!) coming to an end.</p>
+							</div>
+						</div>
+					</div>
+					
+					<div class="post-item">
+						<p class="post-date">December 16th, 2011 / 15:28</p>
+						<h3 class="post-title"><a href="#">Holidays Around The World: Smashing Photo Contest</a></h3>
+						<p class="post-excerpt">2012 is around the corner and the year is (already!) coming to an end. We'd like to know how upcoming holidays are celebrated in your city. Just send us a photo of your kind of Christmas or New Year's Eve.</p>
+						<ul class="post-meta">
+							<li class="post-views">1542</li>
+							<li class="post-comments"><a href="#comments">42</a></li>
+							<li class="post-fav"><a href="#">Add to Favorites</a></li>
+						</ul>
+						<div class="facebook-like"><img src="upload/fb-like.jpg" /></div>
+					</div>
+					<div class="hr"></div>
+	
+					<div class="post-item">
+						<p class="post-date">December 16th, 2011 / 15:28</p>
+						<h3 class="post-title"><a href="#">Holidays Around The World: Smashing Photo Contest</a></h3>
+						<p class="post-excerpt">2012 is around the corner and the year is (already!) coming to an end. We'd like to know how upcoming holidays are celebrated in your city. Just send us a photo of your kind of Christmas or New Year's Eve.</p>
+						<ul class="post-meta">
+							<li class="post-views">1542</li>
+							<li class="post-comments"><a href="#comments">42</a></li>
+							<li class="post-fav"><a href="#">Add to Favorites</a></li>
+						</ul>
+						<div class="facebook-like"><img src="upload/fb-like.jpg" /></div>
+					</div>
+					<div class="hr"></div>
+	
+					<div class="post-item">
+						<p class="post-date">December 16th, 2011 / 15:28</p>
+						<h3 class="post-title"><a href="#">Holidays Around The World: Smashing Photo Contest</a></h3>
+						<p class="post-excerpt">2012 is around the corner and the year is (already!) coming to an end. We'd like to know how upcoming holidays are celebrated in your city. Just send us a photo of your kind of Christmas or New Year's Eve.</p>
+						<ul class="post-meta">
+							<li class="post-views">1542</li>
+							<li class="post-comments"><a href="#comments">42</a></li>
+							<li class="post-fav"><a href="#">Add to Favorites</a></li>
+						</ul>
+						<div class="facebook-like"><img src="upload/fb-like.jpg" /></div>
+					</div>
+	
+					<div class="more-link"><a href="#">All world news</a></div>
+					</div>
+				</div><!-- .category-news.world -->			
+			</div><!-- #news-content -->	
+		</div><!-- #news-container -->
+		
+		<div id="news-sidebar">
+			<div class="posts-strips">
+				<ul class="strips-menu">
+					<li><a href="#news">News Roll</a></li>
+					<li><a href="#popular">Popular</a></li>
+					<li><a href="#partner">Partner News</a></li>
+				</ul>	
+				<div id="news" class="strip-tab scroller">
+					<ul>
+						<li><a href="#">Six CSS Layout Features To Look Forward</a><span class="post-date">today, 15:32</span></li>
+						<li><a href="#">The Smashing Deals Countdown For Christmas</a><span class="post-date">today, 15:26</span></li>
+						<li><a href="#">The Messy Art Of UX Sketching</a><span class="post-date">today, 15:20</span></li>
+						<li><a href="#" class="hot">An Introduction To Object Oriented CSS (OOCSS)</a><span class="post-date">today, 15:16</span></li>
+						<li><a href="#">Clear Indications That It’s Time To Redesign</a><span class="post-date">today, 15:08</span></li>
+						<li><a href="#">Six CSS Layout Features To Look Forward</a><span class="post-date">today, 15:32</span></li>
+						<li><a href="#">The Smashing Deals Countdown For Christmas</a><span class="post-date">today, 15:26</span></li>
+						<li><a href="#">The Messy Art Of UX Sketching</a><span class="post-date">today, 15:20</span></li>
+						<li><a href="#">Six CSS Layout Features To Look Forward</a><span class="post-date">today, 15:32</span></li>
+						<li><a href="#">The Smashing Deals Countdown For Christmas</a><span class="post-date">today, 15:26</span></li>
+						<li><a href="#">The Messy Art Of UX Sketching</a><span class="post-date">today, 15:20</span></li>
+						<li><a href="#" class="hot">An Introduction To Object Oriented CSS (OOCSS)</a><span class="post-date">today, 15:16</span></li>
+						<li><a href="#">Clear Indications That It’s Time To Redesign</a><span class="post-date">today, 15:08</span></li>
+						<li><a href="#">Six CSS Layout Features To Look Forward</a><span class="post-date">today, 15:32</span></li>
+						<li><a href="#">The Smashing Deals Countdown For Christmas</a><span class="post-date">today, 15:26</span></li>
+						<li><a href="#">The Messy Art Of UX Sketching</a><span class="post-date">today, 15:20</span></li>
+						<li><a href="#">Six CSS Layout Features To Look Forward</a><span class="post-date">today, 15:32</span></li>
+						<li><a href="#">The Smashing Deals Countdown For Christmas</a><span class="post-date">today, 15:26</span></li>
+						<li><a href="#">The Messy Art Of UX Sketching</a><span class="post-date">today, 15:20</span></li>
+						<li><a href="#" class="hot">An Introduction To Object Oriented CSS (OOCSS)</a><span class="post-date">today, 15:16</span></li>
+						<li><a href="#">Clear Indications That It’s Time To Redesign</a><span class="post-date">today, 15:08</span></li>
+						<li><a href="#">Six CSS Layout Features To Look Forward</a><span class="post-date">today, 15:32</span></li>
+						<li><a href="#">The Smashing Deals Countdown For Christmas</a><span class="post-date">today, 15:26</span></li>
+						<li><a href="#">The Messy Art Of UX Sketching</a><span class="post-date">today, 15:20</span></li>
+					</ul>	
+				</div>
+				<div id="popular" class="strip-tab scroller">
+					<ul>
+						<li><a href="#">Six CSS Layout Features To Look Forward</a><span class="post-date">today, 15:32</span></li>
+						<li><a href="#">The Smashing Deals Countdown For Christmas</a><span class="post-date">today, 15:26</span></li>
+						<li><a href="#">The Messy Art Of UX Sketching</a><span class="post-date">today, 15:20</span></li>
+						<li><a href="#" class="hot">An Introduction To Object Oriented CSS (OOCSS)</a><span class="post-date">today, 15:16</span></li>
+						<li><a href="#">Clear Indications That It’s Time To Redesign</a><span class="post-date">today, 15:08</span></li>
+						<li><a href="#">Six CSS Layout Features To Look Forward</a><span class="post-date">today, 15:32</span></li>
+						<li><a href="#">The Smashing Deals Countdown For Christmas</a><span class="post-date">today, 15:26</span></li>
+						<li><a href="#">The Messy Art Of UX Sketching</a><span class="post-date">today, 15:20</span></li>
+						<li><a href="#" class="hot">An Introduction To Object Oriented CSS (OOCSS)</a><span class="post-date">today, 15:16</span></li>
+						<li><a href="#">Clear Indications That It’s Time To Redesign</a><span class="post-date">today, 15:08</span></li>
+						<li><a href="#">Six CSS Layout Features To Look Forward</a><span class="post-date">today, 15:32</span></li>
+						<li><a href="#">The Smashing Deals Countdown For Christmas</a><span class="post-date">today, 15:26</span></li>
+						<li><a href="#">The Messy Art Of UX Sketching</a><span class="post-date">today, 15:20</span></li>
+						<li><a href="#">Six CSS Layout Features To Look Forward</a><span class="post-date">today, 15:32</span></li>
+						<li><a href="#">The Smashing Deals Countdown For Christmas</a><span class="post-date">today, 15:26</span></li>
+						<li><a href="#">The Messy Art Of UX Sketching</a><span class="post-date">today, 15:20</span></li>
+						<li><a href="#" class="hot">An Introduction To Object Oriented CSS (OOCSS)</a><span class="post-date">today, 15:16</span></li>
+						<li><a href="#">Clear Indications That It’s Time To Redesign</a><span class="post-date">today, 15:08</span></li>
+						<li><a href="#">Six CSS Layout Features To Look Forward</a><span class="post-date">today, 15:32</span></li>
+						<li><a href="#">The Smashing Deals Countdown For Christmas</a><span class="post-date">today, 15:26</span></li>
+						<li><a href="#">The Messy Art Of UX Sketching</a><span class="post-date">today, 15:20</span></li>
+					</ul>
+				</div>
+				<div id="partner" class="strip-tab scroller">
+					<ul>
+						<li><a href="#">Six CSS Layout Features To Look Forward</a><span class="post-date">today, 15:32</span></li>
+						<li><a href="#">The Smashing Deals Countdown For Christmas</a><span class="post-date">today, 15:26</span></li>
+						<li><a href="#">The Messy Art Of UX Sketching</a><span class="post-date">today, 15:20</span></li>
+						<li><a href="#" class="hot">An Introduction To Object Oriented CSS (OOCSS)</a><span class="post-date">today, 15:16</span></li>
+						<li><a href="#">Clear Indications That It’s Time To Redesign</a><span class="post-date">today, 15:08</span></li>
+						<li><a href="#">Six CSS Layout Features To Look Forward</a><span class="post-date">today, 15:32</span></li>
+						<li><a href="#">The Smashing Deals Countdown For Christmas</a><span class="post-date">today, 15:26</span></li>
+						<li><a href="#">The Messy Art Of UX Sketching</a><span class="post-date">today, 15:20</span></li>
+					</ul>
+				</div>
+			</div><!-- .posts-strips-->
+	
+			<div class="live-broadcast-block">
+				<div class="head"><h3>Live Broadcast</h3></div>
+				<div class="broadcast-wrap">
+					<div class="broadcast-price">just 20 cents</div>
+					<div class="broadcast-list scroller">
+						<ul>
+							<li class="broadcast-item">
+								<div class="broadcast-item-info">
+									<p class="post-date">December 16th, 2011</p>
+									<p class="post-msg">Happy Birthday, Sister! God blessing you!</p>
+								</div>
+								<div class="mask"></div>
+								<div class="broadcast-item-image">
+									<img src="upload/avatar-01.jpg" />
+								</div>
+							</li><!-- .broadcast-item-->
+							<li class="broadcast-item">
+								<div class="broadcast-item-info">
+									<p class="post-date">December 16th, 2011</p>
+									<p class="post-msg">All of the competition! Trim the tree http://cards.sfera.az</p>
+								</div>
+								<div class="mask"></div>
+								<div class="broadcast-item-image">
+									<img src="upload/avatar-02.jpg" />
+								</div>
+							</li><!-- .broadcast-item-->
+							<li class="broadcast-item">
+								<div class="broadcast-item-info">
+									<p class="post-date">December 16th, 2011</p>
+									<p class="post-msg">Son, happy birthday you !!!!!!!!!!</p>
+								</div>
+								<div class="mask"></div>
+								<div class="broadcast-item-image">
+									<img src="upload/avatar-03.jpg" />
+								</div>
+							</li><!-- .broadcast-item-->
+							<li class="broadcast-item">
+								<div class="broadcast-item-info">
+									<p class="post-date">December 16th, 2011</p>
+									<p class="post-msg">Polinochka, Happy Birthday to you, my Docha! You Are My Sun.</p>
+								</div>
+								<div class="mask"></div>
+								<div class="broadcast-item-image">
+									<img src="upload/avatar-04.jpg" />
+								</div>
+							</li><!-- .broadcast-item-->								<li class="broadcast-item">
+								<div class="broadcast-item-info">
+									<p class="post-date">December 16th, 2011</p>
+									<p class="post-msg">Tom, my son, happy birthday! bless you!</p>
+								</div>
+								<div class="mask"></div>
+								<div class="broadcast-item-image">
+									<img src="upload/avatar-05.jpg" />
+								</div>
+							</li><!-- .broadcast-item-->
+							<li class="broadcast-item">
+								<div class="broadcast-item-info">
+									<p class="post-date">December 16th, 2011</p>
+									<p class="post-msg">Happy Birthday, Sister! God blessing you!</p>
+								</div>
+								<div class="mask"></div>
+								<div class="broadcast-item-image">
+									<img src="upload/avatar-01.jpg" />
+								</div>
+							</li><!-- .broadcast-item-->
+							<li class="broadcast-item">
+								<div class="broadcast-item-info">
+									<p class="post-date">December 16th, 2011</p>
+									<p class="post-msg">All of the competition! Trim the tree http://cards.sfera.az</p>
+								</div>
+								<div class="mask"></div>
+								<div class="broadcast-item-image">
+									<img src="upload/avatar-02.jpg" />
+								</div>
+							</li><!-- .broadcast-item-->
+							<li class="broadcast-item">
+								<div class="broadcast-item-info">
+									<p class="post-date">December 16th, 2011</p>
+									<p class="post-msg">Son, happy birthday you !!!!!!!!!!</p>
+								</div>
+								<div class="mask"></div>
+								<div class="broadcast-item-image">
+									<img src="upload/avatar-03.jpg" />
+								</div>
+							</li><!-- .broadcast-item-->
+							<li class="broadcast-item">
+								<div class="broadcast-item-info">
+									<p class="post-date">December 16th, 2011</p>
+									<p class="post-msg">Polinochka, Happy Birthday to you, my Docha! You Are My Sun.</p>
+								</div>
+								<div class="mask"></div>
+								<div class="broadcast-item-image">
+									<img src="upload/avatar-04.jpg" />
+								</div>
+							</li><!-- .broadcast-item-->
+							<li class="broadcast-item">
+								<div class="broadcast-item-info">
+									<p class="post-date">December 16th, 2011</p>
+									<p class="post-msg">Tom, my son, happy birthday! bless you!</p>
+								</div>
+								<div class="mask"></div>
+								<div class="broadcast-item-image">
+									<img src="upload/avatar-05.jpg" />
+								</div>
+							</li><!-- .broadcast-item-->
+						</ul>
+					</div><!-- .broadcast-list-->
+					<div class="broadcast-send-message">
+						<a href="#">Send message</a>
+					</div><!-- .broadcast-message-send-->
+					<div class="broadcast-all-link">
+						<a href="#">See all messages</a>
+					</div><!-- .broadcast-message-all-link-->
+				</div><!-- .lbroadcast-wrap-->
+			</div><!-- .live-broadcast-block-->
+			
+			<div class="banner premium">
+				<img src="upload/banner-240x350.jpg" width="240" height="350" alt="" />
+			</div>
+			
+			<div class="tags-cloud-block">
+				<div class="head">
+					<h3>Tags cloud</h3>
+				</div>
+				<div class="body">
+					<a style="font-size: 8pt;" title="2 записи" class="tag-link-108" href="http://telegraf.dn.ua/wp-admin/edit-tags.php?action=edit&amp;taxonomy=post_tag&amp;tag_ID=108">Азаров</a>
+					<a style="font-size: 10.1pt;" title="3 записи" class="tag-link-44" href="http://telegraf.dn.ua/wp-admin/edit-tags.php?action=edit&amp;taxonomy=post_tag&amp;tag_ID=44">Ахметов</a>
+					<a style="font-size: 10.1pt;" title="3 записи" class="tag-link-36" href="http://telegraf.dn.ua/wp-admin/edit-tags.php?action=edit&amp;taxonomy=post_tag&amp;tag_ID=36">МВД</a>
+					<a style="font-size: 10.1pt;" title="3 записи" class="tag-link-117" href="http://telegraf.dn.ua/wp-admin/edit-tags.php?action=edit&amp;taxonomy=post_tag&amp;tag_ID=117">МЧС</a>
+					<a style="font-size: 8pt;" title="2 записи" class="tag-link-54" href="http://telegraf.dn.ua/wp-admin/edit-tags.php?action=edit&amp;taxonomy=post_tag&amp;tag_ID=54">Макеевка</a>
+					<a style="font-size: 10.1pt;" title="3 записи" class="tag-link-407" href="http://telegraf.dn.ua/wp-admin/edit-tags.php?action=edit&amp;taxonomy=post_tag&amp;tag_ID=407">Порошенко</a>
+					<a style="font-size: 18.5pt;" title="11 записей" class="tag-link-19" href="http://telegraf.dn.ua/wp-admin/edit-tags.php?action=edit&amp;taxonomy=post_tag&amp;tag_ID=19">В.Янукович</a>
+					<a style="font-size: 8pt;" title="2 записи" class="tag-link-139" href="http://telegraf.dn.ua/wp-admin/edit-tags.php?action=edit&amp;taxonomy=post_tag&amp;tag_ID=139">ВХЛ</a>
+					<a style="font-size: 10.1pt;" title="3 записи" class="tag-link-80" href="http://telegraf.dn.ua/wp-admin/edit-tags.php?action=edit&amp;taxonomy=post_tag&amp;tag_ID=80">День влюбленных</a>
+					<a style="font-size: 10.1pt;" title="3 записи" class="tag-link-61" href="http://telegraf.dn.ua/wp-admin/edit-tags.php?action=edit&amp;taxonomy=post_tag&amp;tag_ID=61">Дзержинскуголь</a>
+					<a style="font-size: 8pt;" title="2 записи" class="tag-link-295" href="http://telegraf.dn.ua/wp-admin/edit-tags.php?action=edit&amp;taxonomy=post_tag&amp;tag_ID=295">Донбасс</a>
+					<a style="font-size: 17.1pt;" title="9 записей" class="tag-link-232" href="http://telegraf.dn.ua/wp-admin/edit-tags.php?action=edit&amp;taxonomy=post_tag&amp;tag_ID=232">Донецк</a>
+					<a style="font-size: 10.1pt;" title="3 записи" class="tag-link-333" href="http://telegraf.dn.ua/wp-admin/edit-tags.php?action=edit&amp;taxonomy=post_tag&amp;tag_ID=333">ЕС</a>
+				</div>
+			</div><!-- .tags-cloud-block -->
+	
+			<div class="banner adv">
+				<img src="upload/banner-283x270.jpg" width="280" height="270" alt="" />
+			</div>
+	
+			<div class="weather-exchange-wrap">
+				<div class="weather-section-top">
+					<div class="head"><h3>Weather</h3></div>
+					<div class="body">
+						<p class="weather-label">Weather in <span class="weather-location">Baku, Azerbaijan</span></p>
+						<p class="weather-info cloudly-rainy">
+							<span class="temperature">+9&deg;C</span>
+							<span class="description">cloudly, rainy</span>
+						</p>
+					</div>
+				</div><!-- .weather-section-top-->
+				
+				<div class="exchange-section-top">
+					<div class="head"><h3>Exchange rates</h3></div>
+					<div class="body">
+					<table>
+						<tr>
+							<th><a href="#">USD</a></th>
+							<td>31,8957</td>
+							<td><span class="delta-up">0,1256</span></td>
+						</tr>
+						<tr class="separator">
+							<th><a href="#">EUR</a></th>
+							<td>41,4389</td>
+							<td><span class="delta-down">0,0456</span></td>
+						</tr>
+						<tr>
+							<th><a href="#">OIL</a></th>
+							<td>104,31</td>
+							<td><span class="delta-up">0,87</span></td>
+						</tr>
+					</table>
+					</div>
+				</div><!-- .exchange-section-top-->
+			</div>			
+		</div><!-- #news-sidebar -->
+	
+		
+	</div><!-- #news-middle -->
+	<div id="footer">
+		<div class="logo">Sfera</div>
+		<div class="footer-menu">
+			<ul>
+				<li><a href="#">Sfera ADs</a></li>
+				<li><a href="#">About us</a></li>
+				<li><a href="#">Sfera News</a></li>
+				<li><a href="#">Features</a></li>
+				<li><a href="#">Sfera Blogs</a></li>
+				<li><a href="#">FAQ</a></li>
+				<li><a href="#">Weather</a></li>
+				<li><a href="#">User info</a></li>
+			</ul>
+		</div><!-- .footer-menu-->
+		<div class="connect-with-us block">
+			<div class="head"><h4>Connect with us</h4></div>
+			<div class="list">
+				<ul>
+					<li><a href="#" class="fb">Facebook</a></li>
+					<li><a href="#" class="tw">Twitter</a></li>
+					<li><a href="#" class="gp">Google+</a></li>
+				</ul>
+			</div>	
+		</div>
+		<div class="support-center block">
+			<div class="head"><h4>Support Center</h4></div>
+			<div class="list">
+				<ul>
+					<li>Tel: (844) 221-28-20</li>
+					<li>Fax: (844) 221-28-20</li>
+					<li>Email: <a href="mailto:contact@sfera.az">contact@sfera.az</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="copyright">
+			<p>&copy; 2012 Sfera.az. All rights reserved</p>
+		</div>
+		
+		<div class="artgen">
+			<a href="http://www.artgen.com.ua/">Site development</a> Art generation studio
+		</div>
+	</div><!-- #footer -->
+
+</div><!-- #wrapper -->
+
+</body>
+</html>

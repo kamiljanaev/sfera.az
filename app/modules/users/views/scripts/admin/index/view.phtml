@@ -1,0 +1,81 @@
+<?php
+$baseUrl = '/admin/module/users/';
+$this->headTitle('Просмотр пользователя');
+$this->headScript()->appendFile($this->baseUrl . '/js/admin/users/view.js');
+$this->headScript()->appendScript(	"var backUrl = '".$this->getUrl($baseUrl)."';");
+$this->headScript()->appendScript('var GridBaseUrl = "'.$this->getUrl("/admin/module/users/index/").'";');
+?>
+<?php if($this->dataRow): ?>
+<div id="main">
+	<div class="content">
+		<div id="head">
+			<h2>Просмотр пользователя</h2>
+		</div>
+		<div class="control">
+			<span class="button reset">
+				<a href="<?php echo $this->getUrl($baseUrl); ?>" class="cancel-action">Отмена</a>
+			</span>
+				<?php if($this->checkPermission('users', 'admin_index', 'edit')): ?>
+			<span class="separator">
+				&nbsp;&nbsp;&nbsp;
+			</span>
+			<span class="button edit">
+				<a href="<?= $this->getUrl($baseUrl.'index/edit/id/'.$this->dataRow->id)?>" class="edit-button">Редактировать</a>
+			</span>
+				<?php endif; ?>
+				<?php if($this->checkPermission('users', 'admin_index', 'delete') && $this->canDelete): ?>
+			<span class="separator">
+				&nbsp;&nbsp;&nbsp;
+			</span>
+			<span class="button delete">
+				<button type="delete" id="<?= $this->dataRow->id ?>" class="delete-action">Удалить</button>
+			</span>
+				<?php endif; ?>
+		</div>
+		<div id="viewContent">
+			<table>
+				<tr>
+					<td class="title">E-mail</td>
+					<td class="value"><?= $this->model->getListItemValue($this->dataRow->email, $this->dataRow, 'email'); ?></td>
+				</tr>
+				<tr>
+					<td class="title">Роли</td>
+					<td class="value"><?= $this->model->getListItemValue('', $this->dataRow, 'role'); ?><br /></td>
+				</tr>
+				<tr>
+					<td class="title">Никнейм</td>
+					<td class="value"><?= $this->dataRow->nickname ?></td>
+				</tr>
+				<tr>
+					<td class="title">Фамилия</td>
+					<td class="value"><?= $this->dataRow->l_name ?></td>
+				</tr>
+				<tr>
+					<td class="title">Имя</td>
+					<td class="value"><?= $this->dataRow->f_name ?></td>
+				</tr>
+				<tr>
+					<td class="title">Отчество</td>
+					<td class="value"><?= $this->dataRow->m_name ?></td>
+				</tr>
+				<tr>
+					<td class="title"><i18n>lastname</i18n></td>
+				<td class="value"><?= $this->dataRow->last_name ?></td>
+				</tr>
+				<tr>
+					<td class="title">Подписка на новости</td>
+					<td class="value"><? echo $this->model->getListItemValue($this->dataRow->subscribe, $this->dataRow, 'subscribe'); ?></td>
+				</tr>
+				<tr>
+					<td class="title">Активация</td>
+					<td class="value"><? echo $this->model->getListItemValue($this->dataRow->activated, $this->dataRow, 'activated'); ?></td>
+				</tr>
+				<tr>
+					<td class="title">Статус</td>
+					<td class="value"><? echo $this->model->getListItemValue($this->dataRow->status, $this->dataRow, 'status'); ?></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+<?php endif; ?>

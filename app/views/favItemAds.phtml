@@ -1,0 +1,11 @@
+<div class="post-item type-news">
+    <div class="post-date"><?= $this->formatDate($this->favItem->public_date) ?></div>
+    <h2 class="post-title"><a href="<?= $this->getUrl('ads/show/'.$this->favItem->id) ?>"><?= $this->favItem->title ?></a></h2>
+    <div class="post-category">Category: <a href="<?= $this->getUrl('ads') ?>">Ads</a> <span class="separator">&rarr;</span> <a href="<?= $this->getUrl('ads/category/'.$this->favItem->category_id ) ?>"><?= $this->favItem->getCategoryName() ?></a></div>
+    <div class="post-content"><?= $this->favItem->content ?></div>
+    <ul class="post-meta">
+        <li class="post-views">1542</li>
+        <li class="post-comments"><a href="#comments">42</a></li>
+    </ul>
+    <div class="facebook-like"><img src="/upload/fb-like.jpg" /></div>
+</div>

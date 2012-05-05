@@ -1,0 +1,21 @@
+<?php $i = 1; ?>
+<div class="posts-hot">
+    <div class="head"><h2>Hot news</h2></div>
+    <div id="posts-hot" class="body">
+        <?php foreach ($this->hotNewsList as $newsItem): ?>
+            <?php $currentConfig = $this->hotNewsConfig[$i]; ?>
+            <div class="posts-hot-item <?= $currentConfig['class'] ?>">
+                <div class="post-link"><a href="<?= $this->getUrl('news/show/'.$newsItem->id) ?>"><?= $newsItem->title ?></a></div>
+                <div class="post-image"><img src="<?= Core_Image::getImagePath($newsItem->image, $currentConfig['img_type']) ?>" width="<?= $currentConfig['img_width'] ?>" height="<?= $currentConfig['img_height'] ?>" alt="<?= $newsItem->title ?>" /></div>
+                <div class="post-info">
+                    <h3 class="post-title"><?= $newsItem->title ?></h3>
+                    <p class="post-excerpt"><?= $newsItem->short_content ?></p>
+                </div>
+            </div><!-- .post-hot-item-->
+            <?php $i++; ?>
+            <?php if ($i > 5): ?>
+                <?php break; ?>
+            <?php endif; ?>
+        <?php endforeach; ?>
+    </div><!-- .body-->
+</div>

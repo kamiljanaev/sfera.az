@@ -1,0 +1,29 @@
+<?php
+	$this->headTitle('Редактирование пользователя');
+	$this->headScript()->appendFile($this->baseUrl . '/js/libs/jquery.validate.pack.js');
+	$this->headScript()->appendFile($this->baseUrl . '/js/libs/jquery.validate.methods.js');
+	$this->headScript()->appendFile($this->baseUrl . '/js/libs/jquery.form.js');
+	$this->headScript()->appendFile($this->baseUrl . '/js/admin/users/edit.js');
+	$this->headScript()->appendScript(	"var backUrl = '".$this->returnUrl."';" .
+										"var isAdding = ".($this->isAdding? 'true' : 'false').";");
+
+?>
+<div id="main">
+	<div class="content">
+		<div id="head">
+			<h2>Редактирование пользователя</h2>
+		</div>
+    	<div class="control">
+            <span class="button reset">
+                <a href="<?php echo $this->getUrl(''); ?>" class="cancel-action">Отмена</a>
+            </span>
+            <span class="separator">
+                &nbsp;&nbsp;&nbsp;
+            </span>
+            <span class="button submit" id="submit-button">
+                <button id="submit-add-form" class="add-action">Сохранить</button>
+            </span>
+    	</div>
+		<?= $this->partial('admin/index/form.phtml',null,$this) ?>
+	</div>
+</div>

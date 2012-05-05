@@ -1,0 +1,24 @@
+<?php
+	$this->headTitle($this->msgRolesAdminEditTitle);
+    $this->partial('js_edit_includes.phtml',null,$this);
+    $this->headScript()->appendScript($this->render('admin/index/js/edit.js'));
+?>
+<div id="main">
+	<div class="content">
+		<div id="head">
+			<h2><?= $this->msgRolesAdminEditTitle ?></h2>
+		</div>
+        <div class="control">
+            <span class="button reset">
+                <a href="<?php echo $this->getUrl($this->baseUrl); ?>" class="cancel-action"><?= $this->msgButtonBack ?></a>
+            </span>
+            <span class="separator">
+                &nbsp;&nbsp;&nbsp;
+            </span>
+            <span class="button submit">
+                <button type="submit" name="save" class="add-action"><?= $this->msgButtonSave ?></button>
+            </span>
+        </div>
+		<?= $this->partial('admin/index/form.phtml',null,$this) ?>
+	</div>
+</div>

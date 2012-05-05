@@ -1,0 +1,63 @@
+<?= $this->flashMessages(); ?>
+<?php
+    $this->headLink()->appendStylesheet($this->baseUrl . '/css/jquery.selectBox.css', 'screen, projection');
+    $this->headLink()->appendStylesheet($this->baseUrl . '/css/profile.css', 'screen, projection');
+    $this->headScript()->appendFile($this->baseUrl . '/js/jquery.customselectbox.min.js');
+    $this->headScript()->appendFile($this->baseUrl . '/js/profile.js');
+?>
+
+
+<div id="section-profile">
+    <div class="container">
+        <div class="content">
+            <div class="user-balance short-form">
+                <div class="head"><h1>My balance</h1></div>
+                <div class="body">
+                    <div class="current-balance"><span class="label">Youre current balance:</span> <?= $this->currentProfileData->amount ?> MAN / ? SF</div>
+                    <form action="<?= $this->getUrl('billing/cards/update') ?>" method="POST">
+                        <div class="inputs">
+                            <p class="hint">You can fill up your balance with Scratch-card <a href="#" class="help">Help text</a></p>
+                            <table>
+                                <tr>
+                                    <th><label for="serial-number">Serial number:</label></th>
+                                    <td><input type="text" name="number" id="serial-number" value="" /></td>
+                                    <td class="hint" rowspan="2"><a href="#">What is it?</a></td>
+                                </tr>
+                                <!--tr>
+                                    <th><label for="serial-code">Serial code:</label></th>
+                                    <td><input type="text" name="code" id="serial-code" value="" /></td>
+                                </tr-->
+                            </table>
+                        </div>
+                        <div class="submit">
+                            <input type="submit" value="Full up balance" />
+                        </div>
+                    </form>
+                    <!--div class="hr"></div>
+                    <h3>Money exchange</h3>
+                    <form action="" method="post">
+                        <div class="inputs">
+                            <p class="hint">You can exchange your AZN to SF <a href="#" class="help">Help text</a></p>
+                            <table>
+                                <tr>
+                                    <th><label for="azn-money">AZN money:</label></th>
+                                    <td><input type="text" name="azn" id="azn-money" value="" /></td>
+                                </tr>
+                                <tr>
+                                    <th><label for="sf-money">SF money:</label></th>
+                                    <td><input type="text" name="sf" id="sf-money" value="" /></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="submit">
+                            <input type="submit" value="Exchange" />
+                        </div>
+                    </form-->
+                </div>
+            </div><!-- .user-balance -->
+
+        </div><!-- .content -->
+    </div><!-- .container -->
+
+    <?= $this->partial('frontProfileSidebar.phtml', $this) ?>
+</div><!-- #section-profile -->

@@ -1,0 +1,61 @@
+
+.post-meta {
+	margin: 6px 0 0;
+	overflow: hidden;
+	float: left;
+	padding: 0 6px 0 0;
+}
+
+.post-meta a {
+	text-decoration: underline;
+}
+
+.post-meta a:hover {
+	text-decoration: none;
+}
+
+.post-meta li {
+	display: inline;
+	line-height: 24px;
+	margin: 0 0 0 7px;
+	padding: 0 0 0 20px;
+	position: relative;
+}
+
+.post-meta li:before {
+	background: url(../images/post-meta-ico.png) no-repeat;
+	content: '';
+	position: absolute;
+}
+
+.post-meta li.post-views:before {
+	width:16px;
+	height: 10px;
+	left: 0px;
+	top:2px;
+}
+
+.post-meta li.post-comments:before {
+	background-position:0 -10px;
+	width: 16px;
+	height: 13px;
+	left: 2px;
+	top:0;
+}
+
+.post-meta li.post-fav:before {
+	background-position:0 -23px;
+	width:16px;
+	height: 14px;
+	left: 2px;
+	top: 0;
+}
+
+.facebook-like {
+	margin: 6px 0 0 3px;
+	float: left;	
+}
+
+.post-social {
+	display: none !important;
+}

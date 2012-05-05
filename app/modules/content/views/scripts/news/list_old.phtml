@@ -1,0 +1,35 @@
+<h2>Новости</h2>
+<table>
+	<tbody>
+<?php foreach($this->newsList as $key=>$newsItem): ?>
+		<tr>
+			<td class="news_item">
+				<div class="news_header">
+					<span class="news_date"><?= $newsItem->public_date ?></span><span class="news_title"><a href="<?= $this->getUrl('news/show/'.$newsItem->id) ?>"><?= $newsItem->title ?></a><?php if (!$newsItem->activated):?>(ожидает модерации)<?php endif; ?></span>
+				</div>
+				<?php if (strlen($newsItem->image)): ?>
+				<div class="news_img">
+					<?= Core_Image::getImageHtmlCode($newsItem->image,  Core_Image::LISTS) ?>
+				</div>
+				<?php endif; ?>
+				<div class="news_text">
+					<?= $newsItem->short_content ?>
+				</div>
+				<div class="news_footer">
+					<a href="<?= $this->getUrl('news/show/'.$newsItem->id) ?>">Подробней...</a>
+				</div>
+			</td>
+		</tr>
+		<tr><td><br/></td></tr>
+<?php endforeach; ?>
+	</tbody>
+</table>
+<?php if ($this->totalPages > 1): ?>
+<div class="pager_box">
+	<table align="center">
+		<tr><td>
+			<?= $this->paginatorCode ?>
+		</td></tr>
+	</table>
+</div>
+<?php endif; ?>

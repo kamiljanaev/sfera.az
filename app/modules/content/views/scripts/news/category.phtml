@@ -1,0 +1,115 @@
+<?php
+$this->headLink()->appendStylesheet($this->baseUrl . '/css/site.css', 'screen, projection');
+$this->headLink()->appendStylesheet($this->baseUrl . '/css/news.css', 'screen, projection');
+$this->headScript()->appendFile($this->baseUrl . '/js/index.js');
+?>
+
+
+
+<div id="news-middle">
+    <div class="banners" id="header_banners">
+        <div class="banner-content"><img src="/upload/banner-600x90.jpg" alt="banner-600x90.jpg" width="600" height="90" /></div>
+        <div class="banner-content"><img src="/upload/banner-360x60.jpg" alt="banner-360x60.jpg" width="360" height="90" /></div>
+    </div><!-- #header_banners-->
+
+    <div id="news-container">
+        <div id="news-content">
+
+
+            <div class="news-block">
+                <div class="head"><h3><?= $this->newsCategory->title ?></h3></div>
+                <div class="body">
+                    <div class="news-content wrap">
+                        <?php if (array_key_exists(0, $this->topNewsList)): ?>
+                            <?php $lastNews = $this->topNewsList[0]; ?>
+                            <div class="post-last">
+                                <p class="post-image">
+                                    <img src="<?= Core_Image::getImagePath($lastNews->image, Core_Image::NEWS_HOME_LAST) ?>" alt="<?= $lastNews->title ?>" />
+                                </p>
+                                <p class="post-date"><?= $lastNews->public_date ?></p>
+                                <h3 class="post-title"><a href="<?= $this->getUrl('news/show/'.$lastNews->id) ?>"><?= $lastNews->title ?></a></h3>
+                                <p class="post-excerpt"><?= $lastNews->short_content ?></p>
+                                <ul class="post-meta">
+                                    <li class="post-views"><?= $lastNews->getViewCounter() ?></li>
+                                    <li class="post-comments"><a href="<?= $this->getUrl('news/show/'.$lastNews->id.'#comments') ?>"><?= $this->getCommentsCount($lastNews->id, Core_Db_Comments::C_NEWS) ?></a></li>
+                                    <li class="post-fav"><?= $this->getFavLink(1, $lastNews->id) ?></li>
+                                </ul>
+                                <div class="facebook-like"><img src="/upload/fb-like.jpg" /></div>
+                            </div>
+                        <?php endif; ?>
+
+                        <div class="post-list">
+                            <ul>
+                                <?php $isFirst = true; ?>
+                                <?php $i = 1; ?>
+                                <?php foreach ($this->topNewsList as $newsListItem): ?>
+                                    <?php if ($isFirst): ?>
+                                        <?php $isFirst = false; ?>
+                                        <?php continue; ?>
+                                    <?php endif; ?>
+                                    <li id="post-<?= $i++ ?>" class="post-item">
+                                        <div class="post-image">
+                                            <span class="post-image-container">
+                                                <img src="<?= Core_Image::getImagePath($newsListItem->image, Core_Image::NEWS_HOME_LIST) ?>" alt="<?= $newsListItem->title ?>" />
+                                            </span>
+                                        </div>
+                                        <div class="post-info">
+                                            <h4 class="post-title"><a href="<?= $this->getUrl('news/show/'.$newsListItem->id) ?>"><?= $newsListItem->title ?></a></h4>
+                                            <p class="post-excerpt"><?= $newsListItem->short_content ?></p>
+                                        </div>
+                                    </li><!-- .post-item -->
+                                <?php endforeach; ?>
+                            </ul>
+                        </div><!-- .post-list-->
+                    </div><!-- .news-content-wrap-->
+                </div>
+            </div><!-- .news-block-->
+
+            <div class="banner">
+                <img src="/upload/banner-680x90.jpg" width="680" height="90" alt="banner-680x90" />
+            </div>
+
+            <div class="category-news <?= $this->newsCategory->alias ?>">
+                <div class="body">
+                    <div class="hot-wrap">
+                        <?php foreach ($this->newsHotDataArray as $newsItem): ?>
+                            <div class="post-item hot">
+                                <div class="post-image">
+                                    <span class="post-image-container"><img src="<?= Core_Image::getImagePath($newsItem->image, Core_Image::NEWS_HOME_LIST) ?>" alt="<?= $newsItem->title ?>" /></span>
+                                </div>
+                                <div class="post-info">
+                                    <h4 class="post-title"><a href="<?= $this->getUrl('news/show/'.$newsItem->id) ?>"><?= $newsItem->title ?></a></h4>
+                                    <p class="post-excerpt"><?= $newsItem->short_content ?></p>
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                    <?php $i = 1; ?>
+                    <?php foreach ($this->newsDataArray as $newsItem): ?>
+                        <div class="post-item">
+                            <p class="post-date"><?= $this->formatDate($newsItem->public_date) ?></p>
+                            <h3 class="post-title"><a href="<?= $this->getUrl('news/show/'.$newsItem->id) ?>"><?= $newsItem->title ?></a></h3>
+                            <p class="post-excerpt"><?= $newsItem->short_content ?></p>
+                            <ul class="post-meta">
+                                <li class="post-views"><?= $newsItem->getViewCounter() ?></li>
+                                <li class="post-comments"><a href="<?= $this->getUrl('news/show/'.$newsItem->id.'#comments') ?>"><?= $this->getCommentsCount($newsItem->id, Core_Db_Comments::C_NEWS) ?></a></li>
+                                <li class="post-fav"><?= $this->getFavLink(1, $newsItem->id) ?></li>
+                            </ul>
+                            <div class="facebook-like"><img src="/upload/fb-like.jpg" /></div>
+                        </div>
+                        <?php if (count($this->newsDataArray) != $i++): ?>
+                        <div class="hr"></div>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+                    <?= $this->paginatorCode ?>
+                </div>
+            </div><!-- .category-news.baku -->
+
+        </div><!-- #news-content -->
+    </div><!-- #news-container -->
+
+    <?= $this->partial('news/sidebar.phtml', $this) ?>
+
+
+</div><!-- #news-middle -->
+

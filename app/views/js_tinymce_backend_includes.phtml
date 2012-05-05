@@ -1,0 +1,5 @@
+<?php
+    $systemconfig = Zend_Registry::get('systemconfig');
+    $this->headScript()->appendFile($this->baseUrl . '/js/libs/tinymce/jquery.tinymce.js');
+    $this->headScript()->appendFile($this->baseUrl . '/js/admin/mce_admin.js');
+?>

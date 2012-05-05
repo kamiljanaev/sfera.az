@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+#head, #mainmenu, #footer, h2 a, h2 span, button, input, #aside, ul.pages, .badge, .control, span.button .tree, #paginator{ display:none;}
+
+#body{ padding:0;}
+
+#all{ width:auto; margin:2em; padding-top:9em}
+
+a{ color:#000; text-decoration:none;}
+
+table{ margin:1em 0;}
+
+table tr{ background:#fff;}
+table td,table th{ padding:0.5em;}
+
+th,table thead th{ background:#fff !important; border-bottom:1px solid #000; color:#000;}
+
+div.print_logo{ display:block; background:url(../img/i_logo.png); width:14em; height:9em; position:absolute; left:0; top:0;}
+.print_link{ display:none;}
+
+.content{ border:none;}
+

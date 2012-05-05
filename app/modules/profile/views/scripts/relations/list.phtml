@@ -1,0 +1,23 @@
+    <div class="subscriber-item<?php if (!$this->profileItem->isOnline()) : ?> offlineuser<?php else: ?> onlineuser<?php endif; ?>">
+        <div class="subscriber-avatar" style="background:url(<?= $this->profileItem->getAvatar() ?>)"><?php if ($this->profileItem->is_vip) : ?><div class="vip"></div><?php endif; ?></div>
+        <div class="subscriber-container">
+            <div class="subscriber-content">
+                <div class="subscriber-meta">
+                    Name: <a href="<?= $this->getUrl('profile/id/'.$this->profileItem->id )?>" class="subscriber-link"><?= $this->profileItem->getFullName() ?></a>
+                </div>
+                <div class="subscriber-status">
+                    <?= $this->profileItem->current_status ?>
+                </div>
+            </div>
+        </div>
+        <div class="subscriber-options">
+            <ul>
+                <li><a href="#">Send message</a></li>
+                <?php if ($this->friendsList): ?>
+                <li><a href="<?= $this->getUrl('friend/remove/'.$this->profileItem->id )?>">Delete from subscribes</a></li>
+                <?php endif; ?>
+                <li><a href="#">Add to list</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="hr"></div>

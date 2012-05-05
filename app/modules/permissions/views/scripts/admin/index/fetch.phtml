@@ -1,0 +1,21 @@
+<ul>
+    <?php foreach ($this->modulesData as $moduleItem): ?>
+        <li class="jstree-closed module-leaf" id="<?= $moduleItem['attr']['id'] ?>">
+            <a href="#"><?= $moduleItem['data'] ?></a>
+            <ul>
+                <?php foreach ($moduleItem['controllers'] as $controllerItem): ?>
+                    <li class="jstree-closed controller-leaf" id="<?= $controllerItem['attr']['id'] ?>">
+                        <a href="#"><?= $controllerItem['data'] ?></a>
+                        <ul>
+                            <?php foreach ($controllerItem['actions'] as $actionItem): ?>
+                                <li class="jstree-leaf action-leaf" id="<?= $actionItem['attr']['id'] ?>">
+                                    <input type="checkbox" class="check_access" <?php if ($actionItem['checked']): ?>checked<?php endif; ?> id="check-<?= $actionItem['attr']['id'] ?>" value="<?= $actionItem['attr']['id'] ?>"/><?= $actionItem['data'] ?>
+                                </li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+        </li>
+    <?php endforeach; ?>
+</ul>

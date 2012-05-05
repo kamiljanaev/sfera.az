@@ -1,0 +1,17 @@
+<form action="<?= $this->form->getAction() ?>" method="<?= $this->form->getMethod() ?>" class="w800px" id="add-form" enctype="multipart/form-data">
+	<div id="admin-add-row" class="properties content inputrow">
+        <ul class="form wide">
+            <?= $this->form->type_id ?>
+            <?= $this->form->title ?>
+            <li class="panel">
+                <label for="logo"><?= $this->translate('tags-admin-form-logo') ?></label>
+                <span class="field">
+                    <input type="text" name="logo" id="logo" value="<?= $this->form->logo->getValue() ?>" style="width:300px;"/>&nbsp;&nbsp;
+                    <button id="browse"><?= $this->translate('button-file-manager') ?></button>
+                </span>
+            </li>
+            <?= $this->form->description ?>
+            <?= $this->form->is_paid ?>
+        </ul>
+	</div>
+</form>

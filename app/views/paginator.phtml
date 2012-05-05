@@ -1,0 +1,9 @@
+<?php if ($this->total_pages > 1) : ?>
+<div class="pagination">
+    <ul>
+        <?php for ($i=1;$i<=$this->total_pages;$i++) : ?>
+            <li<?php if($i == $this->page) :?> class="current-page"<?php endif; ?>><a href="<?= $this->getUrl($this->any_page_url.$i) ?>"><?= $i ?></a></li>
+        <?php endfor; ?>
+    </ul>
+</div>
+<?php endif; ?>

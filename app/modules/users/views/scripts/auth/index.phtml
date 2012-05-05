@@ -1,0 +1,49 @@
+<?php
+	$this->headTitle('Auth');
+    $this->headLink()->appendStylesheet($this->baseUrl . '/css/profile.css', 'screen, print');
+?>
+
+<div id="section-auth">
+    <div class="container">
+        <div class="content">
+            <div class="head">
+                <h1>Auth</h1>
+            </div>
+
+            <form action="<?= $this->getUrl('login') ?>" method="POST">
+            <table>
+                <tr class="border-bottom">
+                    <th><label for="login">Sfera login</label></th>
+                    <td>
+                        <input type="text" name="login" id="login" value="" />
+                    </td>
+                </tr>
+                <tr class="border-top">
+                    <th>
+                        <label for="password">Password</label>
+                    </th>
+                    <td>
+                        <input type="password" id="password" name="password" />
+                        <?php if (strlen($this->message)): ?><span class="hint error"><?= $this->message ?></span><?php endif; ?>
+                    </td>
+                    <!-- сервер должен принимать только одно поле с паролем -->
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td colspan="2">
+                        <label><input type="checkbox" name="remember" value="1"> remember me</label>
+                        <ul>
+                            <li><a href="<?= $this->getUrl('reset')?>">Recover password</a></li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+                
+            <div class="submit"><input type="submit" value="login" /></div>
+            </form>
+        </div><!-- .content -->
+    </div><!-- .container -->
+
+</div><!-- #section-auth -->
+
+<!--a href="<?= $this->getUrl('reset')?>">Восстановить пароль</a-->
